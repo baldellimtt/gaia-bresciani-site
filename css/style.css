@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lora', serif;
+  background-color: #f9f9f9;
+  color: #2e2e2e;
+  line-height: 1.7;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 1.5em 2em;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #4f646f;
+  font-family: 'Lora', serif;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8em;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #4f646f;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #7c9c9f;
+}
+
+main {
+  max-width: 1000px;
+  margin: 3em auto;
+  padding: 0 2em;
+}
+
+section {
+  margin-bottom: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2em;
+}
+
+section.reverse {
+  flex-direction: row-reverse;
+}
+
+section img {
+  flex: 1 1 45%;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.text-content {
+  flex: 1 1 50%;
+}
+
+h1, h2, h3 {
+  color: #4f646f;
+  font-family: 'Lora', serif;
+}
+
+ul {
+  padding-left: 1.5em;
+}
+
+a {
+  color: #4f646f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7c9c9f;
+}
+
+footer {
+  background-color: #eaeaea;
+  text-align: center;
+  padding: 2em;
+  font-size: 0.9em;
+  color: #666;
+}

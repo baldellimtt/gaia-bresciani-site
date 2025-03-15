@@ -9,12 +9,49 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .text-block {
+      margin-bottom: 40px;
+    }
+
+    .text-block h1, .text-block h2 {
+      margin-bottom: 20px;
+    }
+
+    .emdr-image {
+      display: block;
+      margin: 30px auto;
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    ul {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .emdr-image {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <nav class="navbar">
-      <a href="index.html" class="logo">Gaia Bresciani</a>
+      <a href="index.html" class="logo">Psicologa e Psicoterapeuta</a>
       <ul class="nav-links">
         <li><a href="chi-sono.html">Chi sono</a></li>
         <li><a href="esperienza.html">Esperienza</a></li>
@@ -28,30 +65,28 @@
 
   <main>
 
-    <section>
-      <div class="text-content">
-        <h1>Terapia EMDR</h1>
-        <p>EMDR (Eye Movement Desensitization and Reprocessing) è un approccio psicoterapeutico riconosciuto a livello internazionale per il trattamento di traumi, eventi stressanti e blocchi emotivi.</p>
-        <p>Attraverso specifiche stimolazioni bilaterali (come i movimenti oculari), è possibile aiutare il cervello a rielaborare ricordi traumatici o esperienze negative, facilitando un processo naturale di guarigione.</p>
-      </div>
-      <img src="assets/terapia-emdr-dummy.jpg" alt="Terapia EMDR Gaia Bresciani Psicologa">
-    </section>
+    <div class="text-block">
+      <h1>Terapia EMDR</h1>
+      <p>EMDR (Eye Movement Desensitization and Reprocessing) è un approccio psicoterapeutico riconosciuto a livello internazionale per il trattamento di traumi, eventi stressanti e blocchi emotivi.</p>
+      <p>Attraverso specifiche stimolazioni bilaterali (come i movimenti oculari), è possibile aiutare il cervello a rielaborare ricordi traumatici o esperienze negative, facilitando un processo naturale di guarigione.</p>
+    </div>
 
-    <section class="reverse">
-      <div class="text-content">
-        <h2>Quando è utile l’EMDR?</h2>
-        <p>La terapia EMDR è indicata per affrontare problematiche come:</p>
-        <ul>
-          <li>Traumi psicologici</li>
-          <li>Lutti o separazioni</li>
-          <li>Disturbi d’ansia o attacchi di panico</li>
-          <li>Blocchi emotivi e senso di inadeguatezza</li>
-          <li>Stress post-traumatico</li>
-        </ul>
-        <p>È una tecnica efficace, veloce e profonda, che permette un’elaborazione integrata e duratura delle esperienze dolorose.</p>
-      </div>
-      <img src="assets/emdr-session-dummy.jpg" alt="Seduta EMDR Psicologa Gaia Bresciani">
-    </section>
+    <img src="assets/terapia-emdr-dummy.jpg" alt="Terapia EMDR Gaia Bresciani Psicologa" class="emdr-image">
+
+    <div class="text-block">
+      <h2>Quando è utile l’EMDR?</h2>
+      <p>La terapia EMDR è indicata per affrontare problematiche come:</p>
+      <ul>
+        <li>Traumi psicologici</li>
+        <li>Lutti o separazioni</li>
+        <li>Disturbi d’ansia o attacchi di panico</li>
+        <li>Blocchi emotivi e senso di inadeguatezza</li>
+        <li>Stress post-traumatico</li>
+      </ul>
+      <p>È una tecnica efficace, veloce e profonda, che permette un’elaborazione integrata e duratura delle esperienze dolorose.</p>
+    </div>
+
+    <img src="assets/emdr-session-dummy.jpg" alt="Seduta EMDR Psicologa Gaia Bresciani" class="emdr-image">
 
   </main>
 

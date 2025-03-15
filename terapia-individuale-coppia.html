@@ -9,12 +9,59 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .text-block {
+      margin-bottom: 40px;
+    }
+
+    .text-block h1, .text-block h2 {
+      margin-bottom: 20px;
+    }
+
+    .therapy-image {
+      display: block;
+      margin: 30px auto;
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Stile specifico per ridurre SOLO l'immagine di Adler */
+    #adler-image {
+      max-width: 300px; /* dimensione ridotta */
+    }
+
+    figure {
+      text-align: center;
+      margin: 30px auto;
+    }
+
+    figcaption {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .therapy-image, #adler-image {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <nav class="navbar">
-      <a href="index.html" class="logo">Gaia Bresciani</a>
+      <a href="index.html" class="logo">Psicologa e Psicoterapeuta</a>
       <ul class="nav-links">
         <li><a href="chi-sono.html">Chi sono</a></li>
         <li><a href="esperienza.html">Esperienza</a></li>
@@ -28,33 +75,42 @@
 
   <main>
 
-    <section>
-      <div class="text-content">
-        <h1>Terapia Psicologica – Approccio Adleriano</h1>
-        <p>Nel mio studio privato mi occupo di bambini, adolescenti, adulti, coppie, genitori in difficoltà che hanno bisogno di aiuto per ritrovare una strada verso se stessi e verso il mondo, per ripristinare un equilibrio sostituito da sintomi fonte di malessere e dolore.</p>
-      </div>
-    </section>
+    <div class="text-block">
+      <h1>Terapia Psicologica</h1>
+      <p>Nel mio studio privato mi occupo di bambini, adolescenti, adulti, coppie, genitori in difficoltà che hanno bisogno di aiuto per ritrovare una strada verso se stessi e verso il mondo, per ripristinare un equilibrio sostituito da sintomi fonte di malessere e dolore.</p>
+    </div>
 
-    <section class="reverse">
-      <img src="assets/alfred-adler.jpg" alt="Ritratto storico di Alfred Adler, fondatore della Psicologia Individuale Adleriana.">
-      <div class="text-content">
-        <h2>La Terapia Adleriana</h2>
-        <p>La Psicologia Individuale Adleriana è una psicologia del profondo. Partendo dall’assunto di base dell’unicità del singolo individuo, si appresta ad indagare la meta inconsapevole, il fine ultimo, che struttura la personalità e le modalità di interazione con il mondo del soggetto spesso non cosciente e disfunzionale.</p>
-      </div>
-    </section>
+    <figure>
+      <a href="https://it.wikipedia.org/wiki/Alfred_Adler" target="_blank">
+        <img src="assets/alfred-adler.jpg" 
+             alt="Ritratto storico di Alfred Adler, fondatore della Psicologia Individuale Adleriana." 
+             class="therapy-image"
+             id="adler-image">
+      </a>
+      <figcaption>Alfred Adler – Fondatore della Psicologia Individuale Adleriana</figcaption>
+    </figure>
 
-    <section>
-      <div class="text-content">
-        <p>Attraverso l’ascolto attivo all’interno di uno spazio protetto e la relazione autentica tra terapeuta e paziente, il quale è il maggior esperto di se stesso, si cerca mediante un lavoro profondo di portare alla luce dinamiche interiori potenzialmente fonte di disagio e sfocianti in disturbi di diversa entità e tipologia.</p>
-      </div>
-      <img src="assets/freud-e-jung.jpg" alt="Sigmund Freud e Carl Gustav Jung in una discussione sulla psicoterapia del profondo.">
-    </section>
+    <div class="text-block">
+      <h2>La Terapia Adleriana</h2>
+      <p>La Psicologia Individuale Adleriana è una psicologia del profondo. Partendo dall’assunto di base dell’unicità del singolo individuo, si appresta ad indagare la meta inconsapevole, il fine ultimo, che struttura la personalità e le modalità di interazione con il mondo del soggetto spesso non cosciente e disfunzionale.</p>
+    </div>
 
-    <section class="reverse">
-      <div class="text-content">
-        <p>Ciascuno di noi ha in sé un potenziale creativo inestimabile, ognuno diverso, unico e speciale; attraverso il lavoro psicoterapeutico, che ha come presupposto il coraggio del paziente di mettersi in gioco si può ritrovare, potenziare e reindirizzare verso il benessere e la salute psicologica questa sua creatività innata che ha subito una battuta di arresto o preso una via sbagliata.</p>
-      </div>
-    </section>
+    <div class="text-block">
+      <p>Attraverso l’ascolto attivo all’interno di uno spazio protetto e la relazione autentica tra terapeuta e paziente, il quale è il maggior esperto di se stesso, si cerca mediante un lavoro profondo di portare alla luce dinamiche interiori potenzialmente fonte di disagio e sfocianti in disturbi di diversa entità e tipologia.</p>
+    </div>
+
+    <figure>
+      <a href="https://it.wikipedia.org/wiki/Sigmund_Freud" target="_blank">
+        <img src="assets/freud-e-jung.jpg" 
+             alt="Sigmund Freud e Carl Gustav Jung in una discussione sulla psicoterapia del profondo." 
+             class="therapy-image">
+      </a>
+      <figcaption>Sigmund Freud e Carl Gustav Jung – Discussione sulla psicoterapia del profondo</figcaption>
+    </figure>
+
+    <div class="text-block">
+      <p>Ciascuno di noi ha in sé un potenziale creativo inestimabile, ognuno diverso, unico e speciale; attraverso il lavoro psicoterapeutico, che ha come presupposto il coraggio del paziente di mettersi in gioco, si può ritrovare, potenziare e reindirizzare verso il benessere e la salute psicologica questa sua creatività innata che ha subito una battuta di arresto o preso una via sbagliata.</p>
+    </div>
 
   </main>
 

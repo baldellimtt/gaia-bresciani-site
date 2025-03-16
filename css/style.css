@@ -54,6 +54,7 @@ header {
   text-decoration: none;
 }
 
+/* NAVBAR - DESKTOP DI DEFAULT */
 .nav-links {
   list-style: none;
   display: flex;
@@ -62,6 +63,7 @@ header {
   margin: 0;
 }
 
+/* LINK MENU STILI COERENTI */
 .nav-links li a {
   text-decoration: none;
   color: #2c3e50;
@@ -71,6 +73,23 @@ header {
 
 .nav-links li a:hover {
   color: #6c5ce7;
+  text-decoration: none;
+}
+
+.nav-links li a:visited {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.nav-links li a:focus,
+.nav-links li a:active {
+  color: #6c5ce7;
+  text-decoration: none;
+}
+
+/* NASCONDI IL MENU TOGGLE SU DESKTOP */
+.menu-toggle {
+  display: none;
 }
 
 /* MAIN LAYOUT */
@@ -157,11 +176,6 @@ footer {
   font-size: 0.9em;
 }
 
-/* NASCONDI IL MENU TOGGLE SU DESKTOP */
-.menu-toggle {
-  display: none;
-}
-
 /* RESPONSIVE MENU - MOBILE */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -175,7 +189,7 @@ footer {
   }
 
   .nav-links {
-    display: none;
+    display: none !important;
     flex-direction: column;
     width: 100%;
     background-color: #fff;
@@ -185,12 +199,12 @@ footer {
     transition: all 0.3s ease-in-out;
   }
 
+  .nav-links.active {
+    display: flex !important;
+  }
+
   .nav-links li {
     margin: 10px 0;
     text-align: center;
-  }
-
-  .nav-links.active {
-    display: flex;
   }
 }

@@ -1,31 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://www.gaiabrescianipsicologa.it/</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
     <loc>https://www.gaiabrescianipsicologa.it/chi-sono.html</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://www.gaiabrescianipsicologa.it/esperienza.html</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://www.gaiabrescianipsicologa.it/terapia-individuale-coppia.html</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://www.gaiabrescianipsicologa.it/terapia-emdr.html</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://www.gaiabrescianipsicologa.it/faq.html</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://www.gaiabrescianipsicologa.it/contatti.html</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
 </urlset>

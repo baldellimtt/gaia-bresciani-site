@@ -130,11 +130,9 @@
       h1 {
         font-size: 2em;
       }
-
       h2 {
         font-size: 1.7em;
       }
-
       .contact-info, .studio-info {
         font-size: 1.1em;
       }
@@ -173,12 +171,14 @@
 
     <h2>Scrivimi direttamente</h2>
 
+    <!-- FORM Formspree -->
     <form action="https://formspree.io/f/xnnpnvqy" method="POST" class="contact-form">
       <label for="name">Nome e Cognome*</label>
       <input type="text" id="name" name="name" required>
 
+      <!-- IMPORTANTE: per ricevere l'email, name="_replyto" -->
       <label for="email">Email*</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="_replyto" required>
 
       <label for="subject">Oggetto</label>
       <input type="text" id="subject" name="subject">
@@ -188,6 +188,7 @@
 
       <button type="submit">Invia messaggio</button>
     </form>
+    <!-- Fine FORM -->
 
     <!-- INIZIO WIDGET MIODOTTORE -->
     <h2>Prenota subito la tua visita</h2>

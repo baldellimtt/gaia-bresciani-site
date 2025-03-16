@@ -41,7 +41,7 @@ header {
 }
 
 .navbar {
-  /* Manteniamo layout orizzontale per desktop */
+  /* Layout orizzontale per desktop */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -158,24 +158,4 @@ footer {
   font-size: 0.9em;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  /* Già presente in origine */
-  ul {
-    padding-left: 15px;
-  }
-
-  /* AGGIUNTA: gestisce la navbar su mobile */
-  .navbar {
-    flex-direction: column;  /* Brand e menu in colonna */
-    align-items: flex-start; /* Allineati a sinistra */
-  }
-
-  .nav-links {
-    display: flex;          /* Già flex, ma ora in colonna */
-    flex-direction: column; 
-    align-items: flex-start; /* Link a sinistra */
-    margin-top: 10px;
-    gap: 10px;              /* Spazio verticale fra i link */
-  }
-}
+/* --- Sezione responsive rimossa --- */

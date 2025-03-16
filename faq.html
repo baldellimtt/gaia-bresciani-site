@@ -84,8 +84,13 @@
             margin-right: 15px;
         }
 
+        .menu-toggle {
+            display: none;
+        }
+
         @media (max-width: 768px) {
             .nav-links {
+                display: none;
                 flex-direction: column;
                 width: 100%;
             }
@@ -94,6 +99,14 @@
                 margin-bottom: 10px;
                 text-align: center;
                 margin-right: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
             }
         }
         </style>
@@ -104,7 +117,8 @@
   <header>
     <nav class="navbar">
       <a href="index.html" class="logo">Psicologa e Psicoterapeuta</a>
-      <ul class="nav-links">
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <ul class="nav-links">
         <li><a href="chi-sono.html">Chi sono</a></li>
         <li><a href="esperienza.html">Esperienza</a></li>
         <li><a href="terapia-individuale-coppia.html">Terapia Individuale e di Coppia</a></li>
@@ -174,3 +188,15 @@
 
 </body>
 </html>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', function() {
+          navLinks.classList.toggle('active');
+        });
+      });
+    </script>
+    

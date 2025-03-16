@@ -11,22 +11,22 @@ h1 {
   font-family: 'Lora', serif;
   color: #2c3e50;
   margin-bottom: 20px;
-  text-align: center; /* Titolo principale centrato */
+  text-align: center;
 }
 
 h2, h3 {
   font-family: 'Lora', serif;
   color: #2c3e50;
   margin-bottom: 20px;
-  text-align: left; /* Titoli secondari allineati a sinistra */
+  text-align: left;
 }
 
 p, ul, li {
-  text-align: left; /* Paragrafi e liste allineati a sinistra */
+  text-align: left;
 }
 
 .text-content {
-  text-align: left; /* Blocchi di testo allineati a sinistra */
+  text-align: left;
   margin-bottom: 40px;
 }
 
@@ -41,11 +41,10 @@ header {
 }
 
 .navbar {
-  /* Layout orizzontale per desktop */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Permette di andare a capo se necessario */
+  flex-wrap: wrap;
 }
 
 .navbar .logo {
@@ -90,7 +89,7 @@ main {
 
 .text-block {
   margin-bottom: 40px;
-  text-align: left; /* Testo allineato a sinistra */
+  text-align: left;
 }
 
 .studio-address {
@@ -149,13 +148,49 @@ main {
   transform: scale(1.1);
 }
 
-/* FOOTER (DEVE RIMANERE CENTRATO) */
+/* FOOTER */
 footer {
   background-color: #2c3e50;
   color: #fff;
-  text-align: center; /* Footer centrato */
+  text-align: center;
   padding: 20px;
   font-size: 0.9em;
 }
 
-/* --- Sezione responsive rimossa --- */
+/* NASCONDI IL MENU TOGGLE SU DESKTOP */
+.menu-toggle {
+  display: none;
+}
+
+/* RESPONSIVE MENU - MOBILE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 1.8em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #2c3e50;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}

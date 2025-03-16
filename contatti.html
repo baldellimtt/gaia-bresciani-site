@@ -137,7 +137,37 @@
         font-size: 1.1em;
       }
     }
-  </style>
+  
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-right: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-links li {
+                margin-bottom: 10px;
+                text-align: center;
+                margin-right: 0;
+            }
+        }
+        </style>
+    
 </head>
 <body>
 

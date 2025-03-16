@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.tuodominio.it/sitemap.xml
+Sitemap: https://www.gaiabrescianipsicologa.it/sitemap.xml
+
+# Aiuta i crawler a trovare pagine importanti
+Allow: /chi-sono.html
+Allow: /terapia-individuale-coppia.html
+Allow: /faq.html

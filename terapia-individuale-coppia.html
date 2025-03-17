@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- AGGIORNATO: Title, Description, Keywords -->
   <title>Terapia Individuale e di Coppia a Credaro (BG) – Dott.ssa Gaia Bresciani</title>
   <meta name="description" content="Percorsi di terapia individuale e di coppia con la Dott.ssa Gaia Bresciani. Studio a Credaro (BG), ideale per chi risiede a Sarnico, Villongo e dintorni.">
   <meta name="keywords" content="Terapia individuale, Terapia di coppia, Psicologa Credaro, Sarnico, Villongo, Gaia Bresciani">
@@ -18,15 +17,12 @@
       margin: 0 auto;
       padding: 40px 20px;
     }
-
     .text-block {
       margin-bottom: 40px;
     }
-
     .text-block h1, .text-block h2 {
       margin-bottom: 20px;
     }
-
     .therapy-image {
       display: block;
       margin: 30px auto;
@@ -35,72 +31,58 @@
       height: auto;
       border-radius: 8px;
     }
-
-    /* Stile specifico per ridurre SOLO l'immagine di Adler */
     #adler-image {
-      max-width: 300px; /* dimensione ridotta */
+      max-width: 300px;
     }
-
     figure {
       text-align: center;
       margin: 30px auto;
     }
-
     figcaption {
       font-size: 0.9em;
       color: #555;
       margin-top: 8px;
     }
-
     @media (max-width: 768px) {
       .therapy-image, #adler-image {
         max-width: 100%;
       }
     }
-  
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .nav-links li {
-            margin-right: 15px;
-        }
-
-        .menu-toggle {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .nav-links li {
-                margin-bottom: 10px;
-                text-align: center;
-                margin-right: 0;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-        }
-        </style>
-    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-links {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+    }
+    .nav-links li {
+      margin-right: 15px;
+    }
+    .menu-toggle {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+      .nav-links li {
+        margin-bottom: 10px;
+        text-align: center;
+        margin-right: 0;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -108,7 +90,7 @@
     <nav class="navbar">
       <a href="index.html" class="logo">Psicologa e Psicoterapeuta</a>
       <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-        <ul class="nav-links">
+      <ul class="nav-links">
         <li><a href="chi-sono.html">Chi sono</a></li>
         <li><a href="esperienza.html">Esperienza</a></li>
         <li><a href="terapia-individuale-coppia.html">Terapia Individuale e di Coppia</a></li>
@@ -128,7 +110,7 @@
 
     <figure>
       <a href="https://it.wikipedia.org/wiki/Alfred_Adler" target="_blank">
-        <img src="assets/alfred-adler.jpg" 
+        <img src="assets/alfred-adler.webp" 
              alt="Ritratto storico di Alfred Adler, fondatore della Psicologia Individuale Adleriana." 
              class="therapy-image"
              id="adler-image">
@@ -147,7 +129,7 @@
 
     <figure>
       <a href="https://it.wikipedia.org/wiki/Sigmund_Freud" target="_blank">
-        <img src="assets/freud-e-jung.jpg" 
+        <img src="assets/freud-e-jung.webp" 
              alt="Sigmund Freud e Carl Gustav Jung in una discussione sulla psicoterapia del profondo." 
              class="therapy-image">
       </a>
@@ -158,23 +140,24 @@
       <p>Ciascuno di noi ha in sé un potenziale creativo inestimabile, ognuno diverso, unico e speciale; attraverso il lavoro psicoterapeutico, che ha come presupposto il coraggio del paziente di mettersi in gioco, si può ritrovare, potenziare e reindirizzare verso il benessere e la salute psicologica questa sua creatività innata che ha subito una battuta di arresto o preso una via sbagliata.</p>
     </div>
 
+    <div class="text-block">
+      <p>Tra gli approcci che utilizzo nel mio lavoro psicoterapeutico, uno dei più efficaci è la <a href="terapia-emdr.html">Terapia EMDR</a>, particolarmente indicata per affrontare traumi, ansia e blocchi emotivi.</p>
+    </div>
+
   </main>
 
   <footer>
     <p>&copy; 2025 Gaia Bresciani – Psicologa e Psicoterapeuta | Sarnico • Villongo • Credaro</p>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuToggle.addEventListener('click', function() {
-          navLinks.classList.toggle('active');
-        });
-      });
-    </script>
-    

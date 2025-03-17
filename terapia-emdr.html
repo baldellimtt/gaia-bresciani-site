@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- AGGIORNATO: Title, Description, Keywords -->
   <title>Terapia EMDR a Credaro (BG) – Gaia Bresciani Psicologa</title>
   <meta name="description" content="Tratta traumi, ansia e blocchi emotivi con la terapia EMDR. Studio principale a Credaro (BG), facilmente raggiungibile da Sarnico, Villongo e zone limitrofe.">
   <meta name="keywords" content="Terapia EMDR, Psicologa Credaro, Sarnico, Villongo, Gaia Bresciani, Traumi, Ansia, Castenedolo">
@@ -47,50 +46,49 @@
         max-width: 100%;
       }
     }
-  
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
 
-        .nav-links {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-        }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .nav-links li {
-            margin-right: 15px;
-        }
+    .nav-links {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+    }
 
-        .menu-toggle {
-            display: none;
-        }
+    .nav-links li {
+      margin-right: 15px;
+    }
 
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-            }
+    .menu-toggle {
+      display: none;
+    }
 
-            .nav-links li {
-                margin-bottom: 10px;
-                text-align: center;
-                margin-right: 0;
-            }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
 
-            .menu-toggle {
-                display: block;
-            }
+      .nav-links li {
+        margin-bottom: 10px;
+        text-align: center;
+        margin-right: 0;
+      }
 
-            .nav-links.active {
-                display: flex;
-            }
-        }
-        </style>
-    
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -98,7 +96,7 @@
     <nav class="navbar">
       <a href="index.html" class="logo">Psicologa e Psicoterapeuta</a>
       <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-        <ul class="nav-links">
+      <ul class="nav-links">
         <li><a href="chi-sono.html">Chi sono</a></li>
         <li><a href="esperienza.html">Esperienza</a></li>
         <li><a href="terapia-individuale-coppia.html">Terapia Individuale e di Coppia</a></li>
@@ -113,11 +111,15 @@
 
     <div class="text-block">
       <h1>Terapia EMDR</h1>
-      <p>EMDR (Eye Movement Desensitization and Reprocessing) è un approccio psicoterapeutico riconosciuto a livello internazionale per il trattamento di traumi, eventi stressanti e blocchi emotivi.</p>
+      <p><a href="https://emdr.it/emdr-2023/" target="_blank" rel="noopener noreferrer"><strong>EMDR</strong></a> (Eye Movement Desensitization and Reprocessing) è un approccio psicoterapeutico riconosciuto a livello internazionale per il trattamento di traumi, eventi stressanti e blocchi emotivi.</p>
       <p>Attraverso specifiche stimolazioni bilaterali (come i movimenti oculari), è possibile aiutare il cervello a rielaborare ricordi traumatici o esperienze negative, facilitando un processo naturale di guarigione.</p>
+      <p>Sono inoltre <strong>iscritta all’elenco ufficiale dei terapeuti EMDR della Lombardia</strong>, visibile a questo link: 
+        <a href="https://emdr.it/terapeuti/lombardia/provincia/bergamo/comune/credaro/" target="_blank" rel="noopener noreferrer">
+        elenco terapeuti EMDR – Credaro (BG)</a>.
+      </p>
     </div>
 
-    <img src="assets/terapia-emdr-dummy.jpg" alt="Terapia EMDR Gaia Bresciani Psicologa" class="emdr-image">
+    <img src="assets/terapia-emdr-grumello.webp" alt="Terapia EMDR Gaia Bresciani Psicologa" class="emdr-image">
 
     <div class="text-block">
       <h2>Quando è utile l’EMDR?</h2>
@@ -132,7 +134,7 @@
       <p>È una tecnica efficace, veloce e profonda, che permette un’elaborazione integrata e duratura delle esperienze dolorose.</p>
     </div>
 
-    <img src="assets/emdr-session-dummy.jpg" alt="Seduta EMDR Psicologa Gaia Bresciani" class="emdr-image">
+    <img src="assets/psicologa-sarnico.webp" alt="Seduta EMDR Psicologa Gaia Bresciani" class="emdr-image">
 
   </main>
 
@@ -140,17 +142,14 @@
     <p>&copy; 2025 Gaia Bresciani – Psicologa e Psicoterapeuta | Sarnico • Villongo • Credaro</p>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuToggle.addEventListener('click', function() {
-          navLinks.classList.toggle('active');
-        });
-      });
-    </script>
-    

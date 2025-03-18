@@ -23,6 +23,7 @@ main{max-width:1000px;margin:auto;padding:40px 20px}
 .social-icons img{width:32px;height:32px;transition:transform 0.3s ease}
 .social-icons a:hover img{transform:scale(1.1)}
 footer{background-color:#2c3e50;color:#fff;text-align:center;padding:20px;font-size:0.9em}
+@media (max-width:768px) {.menu-toggle{display:block;font-size:1.8em;background:none;border:none;cursor:pointer;color:#2c3e50;margin-left:auto;padding-right:16px;padding-top:6px}
 .nav-links{display:none!important;flex-direction:column;width:100%;background-color:#fff;margin-top:10px;padding:10px 0;border-top:1px solid #ddd;transition:all 0.3s ease-in-out}
 .nav-links.active{display:flex!important}
 .nav-links li{margin:10px 0;text-align:center}}
@@ -56,16 +57,3 @@ footer{background-color:#2c3e50;color:#fff;text-align:center;padding:20px;font-s
     background-color: #5e4be0;
 }
 
-@media (max-width:768px) {
-    .menu-toggle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 16px;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-left: auto;
-    }
-}

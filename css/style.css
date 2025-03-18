@@ -82,14 +82,16 @@ footer{background-color:#2c3e50;color:#fff;text-align:center;padding:20px;font-s
   .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Allinea verticalmente gli elementi al centro */
     flex-wrap: wrap;
     position: relative;
+    padding: 10px 20px; /* Aggiungi padding per bilanciare lo spazio */
   }
 
   .navbar .logo {
     font-size: 1.1em;
-    padding-left: 20px; /* Aggiungi spazio a sinistra per bilanciare */
+    display: flex;
+    align-items: center; /* Assicura che il testo sia allineato verticalmente */
   }
 
   .menu-toggle {

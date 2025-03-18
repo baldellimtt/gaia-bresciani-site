@@ -186,6 +186,10 @@ footer {
     cursor: pointer;
     color: #2c3e50;
     margin-left: auto;
+
+    /* ✅ Miglioramento allineamento */
+    padding-right: 16px;
+    padding-top: 6px;
   }
 
   .nav-links {

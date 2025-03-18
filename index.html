@@ -10,28 +10,20 @@
   <meta name="description" content="Sono Gaia Bresciani, psicologa e psicoterapeuta a Credaro (BG), vicino Sarnico e Villongo. Offro terapia individuale, di coppia e online.">
   <meta name="keywords" content="Psicologa Credaro, Psicoterapeuta Sarnico, Terapia Villongo, Gaia Bresciani, Terapia EMDR, Colloqui psicologici, Castenedolo">
 
-  <!-- Favicon -->
   <link rel="icon" href="assets/favicon.png" type="image/png" />
 
-  <!-- Preconnect per ottimizzare i Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Caricamento ottimizzato dei Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Preload CSS principale per evitare render blocking -->
   <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 
-  <!-- Open Graph Tags -->
   <meta property="og:title" content="Psicologa Gaia Bresciani – Credaro, Sarnico, Villongo">
   <meta property="og:description" content="Psicologa e Psicoterapeuta a Credaro (BG), percorsi individuali e di coppia.">
   <meta property="og:image" content="https://www.gaiabrescianipsicologa.it/assets/studio-psicologia-credaro-sarnico-villongo-grumello.webp">
   <meta property="og:url" content="https://www.gaiabrescianipsicologa.it/">
   <meta property="og:type" content="website">
 
-  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,6 +48,28 @@
     ]
   }
   </script>
+
+  <!-- CSS personalizzato per visibilità widget -->
+  <style>
+    .widget-miodottore-desktop {
+      display: block;
+    }
+
+    .widget-miodottore-mobile {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      .widget-miodottore-desktop {
+        display: none;
+      }
+
+      .widget-miodottore-mobile {
+        display: block;
+        margin-top: 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -81,8 +95,7 @@
       <a href="https://it.wikipedia.org/wiki/Wassily_Kandinsky" target="_blank">
         <img
           src="assets/studio-psicologia-credaro-sarnico-villongo-grumello.webp"
-          alt="Studio di Psicologia a Credaro vicino Sarnico, Villongo e Grumello – ambiente terapeutico accogliente"
-        >
+          alt="Studio di Psicologia a Credaro vicino Sarnico, Villongo e Grumello – ambiente terapeutico accogliente">
       </a>
       <p class="quote">
         "Non è ciò che vedete sul quadro l'importante ma quel che vedete dentro di esso"
@@ -113,22 +126,18 @@
       <h2>Contatti</h2>
       <div class="contact-info">
         <p>
-          <a href="tel:+393408389958" style="text-decoration: none; color: inherit;">
-            +39 340 8389 958
-          </a><br>
-          <a href="mailto:gaia.bresciani23@gmail.com" style="text-decoration: none; color: inherit;">
-            gaia.bresciani23@gmail.com
-          </a>
+          <a href="tel:+393408389958" style="text-decoration: none; color: inherit;">+39 340 8389 958</a><br>
+          <a href="mailto:gaia.bresciani23@gmail.com" style="text-decoration: none; color: inherit;">gaia.bresciani23@gmail.com</a>
         </p>
       </div>
     </div>
 
     <div class="text-block">
       <h2>Prenota subito la tua visita</h2>
-      <p style="margin-bottom: 20px;">
-        Puoi prenotare comodamente online grazie al servizio di MioDottore:
-      </p>
-      <div>
+      <p>Puoi prenotare comodamente online grazie al servizio di MioDottore:</p>
+
+      <!-- Widget solo desktop -->
+      <div class="widget-miodottore-desktop">
         <a id="zl-url" class="zl-url"
            href="https://www.miodottore.it/gaia-miriam-teresa-bresciani/psicoterapeuta-psicologo-clinico-psicologo/brescia"
            rel="nofollow"
@@ -138,7 +147,14 @@
            data-zlw-hide-branding="true"
            data-zlw-saas-only="true"
            data-zlw-a11y-title="Widget di prenotazione visite mediche">
-          Gaia Miriam Teresa Bresciani - MioDottore.it
+           Gaia Miriam Teresa Bresciani - MioDottore.it
+        </a>
+      </div>
+
+      <!-- Link mobile -->
+      <div class="widget-miodottore-mobile">
+        <a href="https://www.miodottore.it/gaia-miriam-teresa-bresciani/psicoterapeuta-psicologo-clinico-psicologo/brescia" target="_blank">
+          Vai alla pagina MioDottore
         </a>
       </div>
     </div>
@@ -191,20 +207,32 @@
     <p>&copy; 2025 Gaia Bresciani – Psicologa e Psicoterapeuta | Credaro • Castenedolo</p>
   </footer>
 
-  <!-- Script ottimizzati -->
-  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <!-- Script widget MioDottore -->
+  <script>
+    !function($_x,_s,id){
+      var js,fjs=$_x.getElementsByTagName(_s)[0];
+      if(!$_x.getElementById(id)){
+        js = $_x.createElement(_s);
+        js.id = id;
+        js.src = "//platform.docplanner.com/js/widget.js";
+        fjs.parentNode.insertBefore(js,fjs);
+      }
+    }(document,"script","zl-widget-s");
+  </script>
 
-  <!-- Menu mobile -->
+  <!-- Script menu mobile -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const toggleButton = document.querySelector(".menu-toggle");
       const navLinks = document.querySelector(".nav-links");
-
       toggleButton.addEventListener("click", function() {
         navLinks.classList.toggle("active");
       });
     });
   </script>
+
+  <!-- Script Elfsight -->
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
 
 </body>
 </html>

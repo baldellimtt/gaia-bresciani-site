@@ -27,3 +27,33 @@ footer{background-color:#2c3e50;color:#fff;text-align:center;padding:20px;font-s
 .nav-links{display:none!important;flex-direction:column;width:100%;background-color:#fff;margin-top:10px;padding:10px 0;border-top:1px solid #ddd;transition:all 0.3s ease-in-out}
 .nav-links.active{display:flex!important}
 .nav-links li{margin:10px 0;text-align:center}}
+
+/* Allineamento per il pulsante del menu */
+.menu-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Allineamento per il pulsante di prenotazione MioDottore */
+.zl-url {
+    display: inline-block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background-color: #6c5ce7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.zl-url:hover {
+    background-color: #5e4be0;
+}
+

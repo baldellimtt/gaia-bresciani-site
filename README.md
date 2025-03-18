@@ -1,7 +1,7 @@
 # Sito Web di Gaia Bresciani – Psicologa e Psicoterapeuta
 
 Benvenuti nel repository del sito web della Dott.ssa Gaia Bresciani.  
-Questo sito fornisce informazioni su servizi, esperienze, contatti e FAQ relativi all'attività di psicologia e psicoterapia.
+Questo sito fornisce informazioni su servizi, esperienze, contatti e FAQ relativi all'attività di psicologia e psicoterapia. Il dominio www.gaiabrescianipsicologa.it è preso da TopHost.
 
 ---
 

@@ -165,19 +165,18 @@ footer {
   }
 
   .navbar .logo {
-    font-size: 1em; /* più piccola */
-    white-space: nowrap; /* impedisce il ritorno a capo */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex-shrink: 1;
-    max-width: 75%; /* evita che "spinga fuori" l’hamburger */
-    display: flex;
-    align-items: center;
+    font-size: 1.1em;
+    white-space: nowrap;
+    flex: none;              /* <--- Cambia questo */
+    max-width: unset;        /* <--- Elimina il limite */
+    overflow: visible;       /* <--- Niente tagli */
+    text-overflow: unset;
+    padding-top: 4px;
   }
 
   .menu-toggle {
     display: block;
-    font-size: 1.8em;
+    font-size: 1.6em;
     background: none;
     border: none;
     cursor: pointer;

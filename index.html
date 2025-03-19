@@ -172,17 +172,19 @@
   </footer>
 
   <!-- Script widget MioDottore -->
-  <script>
-    !function($_x,_s,id){
-      var js,fjs=$_x.getElementsByTagName(_s)[0];
-      if(!$_x.getElementById(id)){
-        js = $_x.createElement(_s);
-        js.id = id;
-        js.src = "//platform.docplanner.com/js/widget.js";
-        fjs.parentNode.insertBefore(js,fjs);
-      }
-    }(document,"script","zl-widget-s");
-  </script>
+	<script>
+	  const observer = new IntersectionObserver(entries => {
+		entries.forEach(entry => {
+		  if(entry.isIntersecting) {
+			const script = document.createElement('script');
+			script.src = 'https://platform.docplanner.com/js/widget.js';
+			document.body.appendChild(script);
+			observer.disconnect();
+		  }
+		});
+	  });
+	  observer.observe(document.querySelector('#zl-url'));
+	</script>
 
   <!-- Script menu mobile -->
 <script type="module">

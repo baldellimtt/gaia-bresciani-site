@@ -4,6 +4,6 @@ Allow: /
 Sitemap: https://www.gaiabrescianipsicologa.it/sitemap.xml
 
 # Aiuta i crawler a trovare pagine importanti
-Allow: /chi-sono.html
-Allow: /terapia-individuale-coppia.html
-Allow: /faq.html
+Allow: /psicologa-lago-iseo.html
+Allow: /terapia-psicologica-sarnico.html
+Allow: /faq-psicologa-sarnico.html

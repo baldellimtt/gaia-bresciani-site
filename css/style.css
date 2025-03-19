@@ -154,20 +154,19 @@ footer {
 
 @media (max-width: 768px) {
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
   }
 
   .navbar .logo {
-    font-size: 1.2em; /* Riduci il font su mobile */
-    flex: 1;           /* Spinge il logo a sinistra */
-    line-height: 1.2;
+    font-size: 1.2em;
+    flex: 1;
     display: flex;
     align-items: center;
+    padding-top: 6px;
     margin: 0;
-    padding-top: 6px;  /* Per allineamento verticale */
   }
 
   .menu-toggle {
@@ -177,30 +176,42 @@ footer {
     border: none;
     cursor: pointer;
     color: #2c3e50;
-    align-self: center;  /* Allineamento verticale con la scritta */
+    align-self: center;
     margin-left: auto;
     padding-right: 16px;
-    padding-top: 0;      /* Rimuove disallineamento verticale */
+    padding-top: 0;
+    z-index: 1001;
   }
 
   .nav-links {
-    display: none !important;
-    flex-direction: column;
+    position: absolute;
+    top: 100%; /* subito sotto la navbar */
+    left: 0;
     width: 100%;
     background-color: #fff;
-    margin-top: 10px;
-    padding: 10px 0;
-    border-top: 1px solid #ddd;
-    transition: all 0.3s ease-in-out;
+    display: none;
+    flex-direction: column;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
 
   .nav-links.active {
-    display: flex !important;
+    display: flex;
   }
 
   .nav-links li {
     margin: 10px 0;
     text-align: center;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 10px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    color: #2c3e50;
   }
 
   .quote {

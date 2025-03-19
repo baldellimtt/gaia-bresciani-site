@@ -45,14 +45,19 @@ header {
 }
 
 .navbar .logo {
-  font-size: 1em; /* Ridotto per rimanere su una riga */
-  white-space: nowrap; /* Impedisce il ritorno a capo */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  flex: 1;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none !important;
   display: flex;
   align-items: center;
-  padding-top: 6px;
+}
+
+.logo:visited,
+.logo:hover,
+.logo:focus {
+  color: #2c3e50;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -118,10 +123,10 @@ main {
 }
 
 .closing-image img {
-  max-width: 70%; /* Modifica questa percentuale per ottenere la larghezza desiderata */
+  max-width: 70%;
   height: auto;
   border-radius: 10px;
-  margin: 0 auto; /* Centra l'immagine */
+  margin: 0 auto;
 }
 
 .quote {
@@ -156,6 +161,7 @@ footer {
   font-size: 0.9em;
 }
 
+/* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
   .navbar {
     display: flex;
@@ -165,13 +171,16 @@ footer {
   }
 
   .navbar .logo {
-    font-size: 1.1em;
+    font-size: 1.2em;
     white-space: nowrap;
-    flex: none;              /* <--- Cambia questo */
-    max-width: unset;        /* <--- Elimina il limite */
-    overflow: visible;       /* <--- Niente tagli */
+    flex: none;
+    max-width: unset;
+    overflow: visible;
     text-overflow: unset;
-    padding-top: 4px;
+    color: #2c3e50;
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
   }
 
   .menu-toggle {

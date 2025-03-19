@@ -41,7 +41,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .navbar .logo {
@@ -161,7 +161,7 @@ footer {
   font-size: 0.9em;
 }
 
-/* ---------- MOBILE ---------- */
+/* -------------------- MOBILE -------------------- */
 @media (max-width: 768px) {
   .navbar {
     display: flex;
@@ -174,7 +174,7 @@ footer {
     font-size: 1.2em;
     white-space: nowrap;
     flex: none;
-    max-width: unset;
+    max-width: 100%;
     overflow: visible;
     text-overflow: unset;
     color: #2c3e50;

@@ -181,15 +181,15 @@
   </script>
 
   <!-- Script menu mobile -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const toggleButton = document.querySelector(".menu-toggle");
-      const navLinks = document.querySelector(".nav-links");
-      toggleButton.addEventListener("click", function() {
-        navLinks.classList.toggle("active");
-      });
+<script type="module">
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    toggleButton.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
     });
-  </script>
+  });
+</script>
 
   <!-- Script Elfsight -->
   <script src="https://static.elfsight.com/platform/platform.js" async></script>

@@ -204,6 +204,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  h1 {
+    font-size: 1.7em; /* ✅ adatta la grandezza per schermi piccoli */
+  }
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -265,10 +269,7 @@ footer {
     text-decoration: none;
     font-weight: 600;
   }
-}
 
-
-  /* ✅ IMMAGINE FULL WIDTH SU MOBILE */
   .closing-image img {
     max-width: 100%;
   }

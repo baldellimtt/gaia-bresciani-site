@@ -6,10 +6,6 @@ body {
   color: #333;
 }
 
-html {
-  font-display: swap;
-}
-
 h1, h2, h3 {
   font-family: 'Lora', serif;
   color: #2c3e50;
@@ -18,8 +14,6 @@ h1, h2, h3 {
 
 h1 {
   text-align: center;
-  min-height: 2.5em; /* Spazio riservato per evitare layout shift */
-  padding-bottom: 10px;
 }
 
 h2, h3 {
@@ -104,7 +98,6 @@ main {
 
 .text-block {
   margin-bottom: 40px;
-  min-height: 300px; /* Riserva spazio per prevenire shift */
 }
 
 .studio-address {
@@ -239,13 +232,4 @@ footer {
 
 .widget-info-box {
   min-height: 400px;
-}
-
-/* -------------------- FIX CLS - Widget MioDottore -------------------- */
-#zl-url {
-  display: block;
-  min-height: 450px; /* riserva spazio per evitare shift */
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
 }

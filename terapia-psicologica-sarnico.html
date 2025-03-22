@@ -99,18 +99,18 @@
 </head>
 <body>
 <header>
-<nav class="navbar">
-<a class="logo" href="index.html" title="Psicologa e Psicoterapeuta – Gaia Bresciani Psicologa">Psicologa e Psicoterapeuta</a>
-<button aria-controls="main-menu" aria-expanded="false" aria-label="Menu" class="menu-toggle">☰</button>
-<ul class="nav-links" id="main-menu">
-<li><a href="psicologa-lago-iseo.html" title="Psicologa a Credaro – Chi sono | Gaia Bresciani">Chi sono</a></li>
-<li><a href="esperienza-psicologa-villongo.html" title="Esperienza professionale Psicologa a Credaro e Villongo">Esperienza</a></li>
-<li><a href="terapia-psicologica-sarnico.html" title="Terapia Psicologica a Sarnico e Villongo – Percorsi individuali e di coppia">Terapia Individuale e di Coppia</a></li>
-<li><a href="terapia-emdr-lago-iseo.html" title="Terapia EMDR a Credaro – Trattamento traumi e ansia Sarnico e Villongo">Terapia EMDR</a></li>
-<li><a href="faq-psicologa-sarnico.html" title="Domande frequenti su Psicoterapia a Credaro, Sarnico e Villongo">FAQ</a></li>
-<li><a href="psicologa-sarnico-contatti.html" title="Contatta la Psicologa a Credaro – Richiedi colloquio o informazioni">Contatti</a></li>
-</ul>
-</nav>
+  <nav class="navbar">
+    <a class="logo" href="index.html" title="Psicologa e Psicoterapeuta – Gaia Bresciani Psicologa">Psicologa e Psicoterapeuta</a>
+    <button class="menu-toggle" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="main-menu">
+      <li><a href="psicologa-lago-iseo.html">Chi sono</a></li>
+      <li><a href="esperienza-psicologa-villongo.html">Esperienza</a></li>
+      <li><a href="terapia-psicologica-sarnico.html">Terapia Individuale e di Coppia</a></li>
+      <li><a href="terapia-emdr-lago-iseo.html">Terapia EMDR</a></li>
+      <li><a href="faq-psicologa-sarnico.html">FAQ</a></li>
+      <li><a href="psicologa-sarnico-contatti.html">Contatti</a></li>
+    </ul>
+  </nav>
 </header>
 <main>
 <div class="text-block">
@@ -155,5 +155,13 @@
       });
     });
   </script>
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.getElementById("main-menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+</script>
 </body>
 </html>

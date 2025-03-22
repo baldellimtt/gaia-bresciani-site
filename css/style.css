@@ -248,7 +248,6 @@ footer {
   margin: 0 auto;
 }
 
-/* ===== MEDIA QUERY MOBILE ===== */
 @media (max-width: 768px) {
   h1 {
     font-size: 1.7em;
@@ -256,15 +255,20 @@ footer {
 
   .navbar {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 12px 16px;
+    position: relative;
   }
 
   .navbar .logo {
     font-size: 1.1em;
     white-space: nowrap;
     line-height: 1.2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
 
   .menu-toggle {
@@ -275,9 +279,9 @@ footer {
     cursor: pointer;
     color: #2c3e50;
     padding: 0;
-    align-self: center;
+    position: absolute;
+    right: 16px;
     z-index: 1001;
-    margin-left: 24px;
   }
 
   .nav-links {

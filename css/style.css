@@ -1,138 +1,76 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f9f9f9;
-  color: #2c3e50;
   margin: 0;
-  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 h1, h2, h3 {
   font-family: 'Lora', serif;
   color: #2c3e50;
-  text-align: center;
-}
-
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-h1 {
-  font-size: 2.4em;
-  margin-bottom: 30px;
-}
-
-h2 {
-  font-size: 2em;
-  margin-top: 60px;
   margin-bottom: 20px;
 }
 
-h3 {
-  font-size: 1.5em;
-  margin-top: 40px;
-  margin-bottom: 10px;
-}
-
-.contact-info {
+h1 {
   text-align: center;
-  font-size: 1.2em;
-  line-height: 1.8em;
-  margin-bottom: 30px;
 }
 
-.contact-info a {
-  display: block;
-  color: #2c3e50;
-  font-weight: 600;
-  text-decoration: none;
+h2, h3 {
+  text-align: left;
 }
 
-.contact-info a:hover {
-  text-decoration: underline;
+p, ul, li, .text-content {
+  text-align: left;
 }
 
-.studio-info {
-  text-align: center;
-  font-size: 1.2em;
-  line-height: 1.8em;
-  margin-bottom: 30px;
+.text-content {
+  margin-bottom: 40px;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1em;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #86b6c4;
-  outline: none;
-}
-
-.contact-form button {
-  padding: 14px 24px;
-  background-color: #4a7c8a;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 1.1em;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #3b6a75;
-}
-
-iframe {
-  border-radius: 10px;
-  margin: 40px 0;
-  width: 100%;
-  height: 450px;
-}
-
-footer {
-  background-color: #2c3e50;
-  color: #fff;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 0.9em;
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+}
+
+.logo:visited,
+.logo:hover,
+.logo:focus {
+  color: #2c3e50;
+  text-decoration: none;
 }
 
 .nav-links {
+  list-style: none;
   display: flex;
-  list-style-type: none;
+  gap: 20px;
   padding: 0;
-}
-
-.nav-links li {
-  margin-right: 15px;
+  margin: 0;
 }
 
 .nav-links li a {
   text-decoration: none;
   color: #2c3e50;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
   font-weight: 600;
   transition: color 0.3s ease;
 }
@@ -141,12 +79,37 @@ footer {
   color: #6c5ce7;
 }
 
-.nav-links li a:visited {
-  color: #2c3e50;
-}
-
 .menu-toggle {
   display: none;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.intro-image {
+  max-width: 80%;
+  margin: 0 auto 30px;
+  display: block;
+  border-radius: 12px;
+}
+
+.text-block {
+  margin-bottom: 40px;
+}
+
+.studio-address {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.review-box {
+  margin: 60px auto;
+  text-align: left;
+  max-width: 900px;
+  padding: 20px;
 }
 
 .closing-image {
@@ -163,10 +126,9 @@ footer {
   width: 100%;
   max-width: 700px;
   height: auto;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16/9;
   border-radius: 10px;
   margin: 0 auto;
-  display: block;
 }
 
 .quote {
@@ -193,21 +155,16 @@ footer {
   transform: scale(1.1);
 }
 
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
 /* -------------------- MOBILE -------------------- */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.7em;
-  }
-
-  .contact-info,
-  .studio-info {
-    font-size: 1.1em;
-  }
-
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -217,7 +174,6 @@ footer {
   }
 
   .navbar .logo {
-    margin-right: auto;
     font-size: 1.2em;
     white-space: nowrap;
     flex: none;
@@ -235,10 +191,9 @@ footer {
     cursor: pointer;
     color: #2c3e50;
     margin-left: auto;
-    margin-right: 12px; /* ✅ aggiunto per distanziarlo dal logo */
     padding: 0;
     align-self: center;
-    z-index: 1001;
+    z-index: 1001; /* sopra al menu */
   }
 
   .nav-links {
@@ -250,7 +205,7 @@ footer {
     border-top: 1px solid #ddd;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 60px;
+    top: 60px; /* adatta se il tuo header è alto ~60px */
     left: 0;
     z-index: 1000;
   }
@@ -262,7 +217,6 @@ footer {
   .nav-links li {
     text-align: center;
     padding: 10px 0;
-    margin-right: 0;
   }
 
   .nav-links li a {
@@ -274,4 +228,8 @@ footer {
   .closing-image img {
     max-width: 100%;
   }
+}
+
+.widget-info-box {
+  min-height: 400px;
 }

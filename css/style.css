@@ -112,9 +112,8 @@ header {
   color: #6c5ce7;
 }
 
-/* ===== MENU TOGGLE (hamburger) ===== */
 .menu-toggle {
-  display: none;
+  display: none !important;
   background: none;
   border: none;
   cursor: pointer;
@@ -216,6 +215,14 @@ main {
   margin: 40px 0;
 }
 
+.centered-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .social-icons img {
   width: 32px;
   height: 32px;
@@ -302,7 +309,7 @@ footer {
   }
 
   .menu-toggle {
-    display: block;
+    display: block !important;
     position: absolute;
     right: 16px;
     top: 50%;

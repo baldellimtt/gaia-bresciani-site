@@ -250,8 +250,30 @@ footer {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.5em;
+    font-size: 1.7em;   /* ~27px (già presente) */
   }
+
+  h2 {
+    font-size: 1.4em;   /* ~22-23px → chiaro ma non troppo grande */
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-size: 1.2em;   /* ~19px → secondario ma ben leggibile */
+    margin-bottom: 14px;
+  }
+
+  p, li, .text-content {
+    font-size: 1.05em;  /* ~17px (già buono, puoi tenerlo invariato) */
+    line-height: 1.6;
+  }
+
+  .quote {
+    font-size: 1em;     /* ~16px, tono più delicato */
+    text-align: center;
+  }
+}
+
 
   .navbar {
     flex-direction: row;

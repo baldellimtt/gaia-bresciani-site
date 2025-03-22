@@ -223,3 +223,7 @@ footer {
     font-weight: 600;
   }
 }
+
+.widget-info-box {
+  min-height: 400px; /* o quanto necessario */
+}

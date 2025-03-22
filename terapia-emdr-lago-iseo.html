@@ -16,6 +16,84 @@
 <link href="css/style.css" rel="stylesheet"/>
 <link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v35/mem8YaGs126MiZpBA-UFVZ0e.woff2" type="font/woff2" crossorigin>
 <link rel="preload" as="font" href="https://fonts.gstatic.com/s/lora/v20/0QI6MX1D_JOuAw.woff2" type="font/woff2" crossorigin>
+<style>
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .text-block {
+      margin-bottom: 40px;
+    }
+
+    .text-block h1, .text-block h2 {
+      margin-bottom: 20px;
+    }
+
+    .emdr-image {
+      display: block;
+      margin: 30px auto;
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    ul {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .emdr-image {
+        max-width: 100%;
+      }
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin-right: 15px;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-links li {
+        margin-bottom: 10px;
+        text-align: center;
+        margin-right: 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -61,13 +139,13 @@
 <p>© 2025 Gaia Bresciani – Psicologa e Psicoterapeuta | Sarnico • Villongo • Credaro</p>
 </footer>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    menuToggle.addEventListener('click', function() {
-      navLinks.classList.toggle('active');
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>

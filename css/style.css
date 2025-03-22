@@ -122,13 +122,15 @@ main {
   text-align: center;
 }
 
+/* ✅ MIGLIORAMENTO CLS + RESPONSIVE IMMAGINE */
 .closing-image img {
   width: 100%;
   max-width: 700px;
   height: auto;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
   border-radius: 10px;
   margin: 0 auto;
+  display: block;
 }
 
 .quote {
@@ -193,7 +195,7 @@ footer {
     margin-left: auto;
     padding: 0;
     align-self: center;
-    z-index: 1001; /* sopra al menu */
+    z-index: 1001;
   }
 
   .nav-links {
@@ -205,7 +207,7 @@ footer {
     border-top: 1px solid #ddd;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 60px; /* adatta se il tuo header è alto ~60px */
+    top: 60px;
     left: 0;
     z-index: 1000;
   }
@@ -225,6 +227,7 @@ footer {
     font-weight: 600;
   }
 
+  /* ✅ IMMAGINE FULL WIDTH SU MOBILE */
   .closing-image img {
     max-width: 100%;
   }

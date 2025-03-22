@@ -208,6 +208,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 10px 16px;
+    position: relative;
   }
 
   .navbar .logo {
@@ -219,7 +220,7 @@ footer {
     text-decoration: none !important;
     display: flex;
     align-items: center;
-    margin-right: auto; /* ✅ serve per spingere il menu toggle a destra */
+    margin-right: auto;
   }
 
   .menu-toggle {
@@ -232,7 +233,7 @@ footer {
     padding: 0;
     align-self: center;
     z-index: 1001;
-    margin-left: 24px; /* ✅ questo aggiunge spazio extra visivo */
+    margin-left: 24px;
   }
 
   .nav-links {
@@ -264,6 +265,7 @@ footer {
     font-weight: 600;
   }
 }
+
 
   /* ✅ IMMAGINE FULL WIDTH SU MOBILE */
   .closing-image img {

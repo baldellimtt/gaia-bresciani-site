@@ -349,3 +349,29 @@ footer {
     max-width: 100%;
   }
 }
+
+.map-frame {
+  display: block;
+  margin: 40px auto;
+  width: 100%;
+  max-width: 900px;
+  height: 450px;
+  border: none;
+  border-radius: 10px;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.text-centered h1,
+.text-centered h2,
+.text-centered h3,
+.text-centered p,
+.text-centered ul,
+.text-centered li,
+.text-centered label,
+.text-centered .studio-info,
+.text-centered .contact-info {
+  text-align: center;
+}

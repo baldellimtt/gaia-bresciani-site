@@ -238,5 +238,16 @@ footer {
 }
 
 h1 {
-  font-display: swap; /* già fatto nei Google Fonts */
+  text-align: center;
+  min-height: 2.5em;
+  padding-bottom: 10px;
+  margin-top: 20px; /* opzionale */
+}
+
+#zl-url {
+  display: block;
+  min-height: 450px; /* o misura reale del widget */
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
 }

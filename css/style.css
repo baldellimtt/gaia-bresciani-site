@@ -1,9 +1,55 @@
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+/* Lora Regular */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/lora-v35-latin-regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* Lora Bold */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/lora-v35-latin-700.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* Open Sans - 300 (Light) */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('assets/fonts/open-sans-v40-latin-300.woff2') format('woff2');
+}
+
+/* Open Sans - 400 (Regular) */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/open-sans-v40-latin-regular.woff2') format('woff2');
+}
+
+/* Open Sans - 500 (Medium) */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('assets/fonts/open-sans-v40-latin-500.woff2') format('woff2');
+}
+
+/* Open Sans - 600 (Semi-Bold) */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('assets/fonts/open-sans-v40-latin-600.woff2') format('woff2');
 }
 
 h1, h2, h3 {

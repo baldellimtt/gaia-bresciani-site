@@ -164,7 +164,6 @@ main {
   width: 100%;
   max-width: 700px;
   height: auto;
-  aspect-ratio: 16 / 9;
   border-radius: 10px;
   margin: 0 auto;
   display: block;

@@ -78,7 +78,6 @@ header {
   align-items: center;
   font-size: 1.3em;
   line-height: 1.2;
-  padding-top: 2px;
   font-weight: bold;
   color: #2c3e50;
   text-decoration: none !important;
@@ -248,40 +247,47 @@ footer {
   margin: 0 auto;
 }
 
+/* ===== CENTRA IL TELEFONO ===== */
+.contact-info p {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* ===== MEDIA QUERY MOBILE ===== */
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.7em;   /* ~27px (già presente) */
+    font-size: 1.7em;
   }
 
   h2 {
-    font-size: 1.4em;   /* ~22-23px → chiaro ma non troppo grande */
+    font-size: 1.4em;
     margin-bottom: 16px;
   }
 
   h3 {
-    font-size: 1.2em;   /* ~19px → secondario ma ben leggibile */
+    font-size: 1.2em;
     margin-bottom: 14px;
   }
 
   p, li, .text-content {
-    font-size: 1.05em;  /* ~17px (già buono, puoi tenerlo invariato) */
+    font-size: 1.05em;
     line-height: 1.6;
   }
 
   .quote {
-    font-size: 1em;     /* ~16px, tono più delicato */
+    font-size: 1em;
     text-align: center;
   }
-}
-
 
   .navbar {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 20px 16px; /* aumentato da 12px a 20px */
+    padding: 20px 16px;
     position: relative;
-    min-height: 64px; /* altezza minima comoda */
+    min-height: 64px;
   }
 
   .navbar .logo {
@@ -290,23 +296,17 @@ footer {
     line-height: 1.2;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    transform: translate(-50%, -50%);
     top: 50%;
-    transform: translate(-50%, -50%); /* centrato verticalmente */
+    text-align: center;
   }
 
   .menu-toggle {
     display: block;
-    font-size: 1.3em;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #2c3e50;
-    padding: 0;
     position: absolute;
     right: 16px;
-    z-index: 1001;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .nav-links {
@@ -318,7 +318,7 @@ footer {
     border-top: 1px solid #ddd;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     z-index: 1000;
   }

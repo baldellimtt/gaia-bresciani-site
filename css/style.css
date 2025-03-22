@@ -236,3 +236,7 @@ footer {
 .widget-info-box {
   min-height: 400px;
 }
+
+h1 {
+  font-display: swap; /* già fatto nei Google Fonts */
+}

@@ -19,175 +19,6 @@
 <link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v35/mem8YaGs126MiZpBA-UFVZ0e.woff2" type="font/woff2" crossorigin>
 <link rel="preload" as="font" href="https://fonts.gstatic.com/s/lora/v20/0QI6MX1D_JOuAw.woff2" type="font/woff2" crossorigin>
 <link href="css/style.css" rel="stylesheet"/>
-<style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f9f9f9;
-      color: #2c3e50;
-      margin: 0;
-      padding: 0;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Lora', serif;
-      color: #2c3e50;
-      text-align: center;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    h1 {
-      font-size: 2.4em;
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      font-size: 2em;
-      margin-top: 60px;
-      margin-bottom: 20px;
-    }
-
-    h3 {
-      font-size: 1.5em;
-      margin-top: 40px;
-      margin-bottom: 10px;
-    }
-
-    .contact-info {
-      text-align: center;
-      font-size: 1.2em;
-      line-height: 1.8em;
-      margin-bottom: 30px;
-    }
-
-    .contact-info a {
-      display: block;
-      color: #2c3e50;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
-    .studio-info {
-      text-align: center;
-      font-size: 1.2em;
-      line-height: 1.8em;
-      margin-bottom: 30px;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1em;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: #86b6c4;
-      outline: none;
-    }
-
-    .contact-form button {
-      padding: 14px 24px;
-      background-color: #4a7c8a;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-size: 1.1em;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .contact-form button:hover {
-      background-color: #3b6a75;
-    }
-
-    iframe {
-      border-radius: 10px;
-      margin: 40px 0;
-      width: 100%;
-      height: 450px;
-    }
-
-    footer {
-      background-color: #2c3e50;
-      color: #fff;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 0.9em;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2em;
-      }
-      h2 {
-        font-size: 1.7em;
-      }
-      .contact-info, .studio-info {
-        font-size: 1.1em;
-      }
-    }
-  
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .nav-links li {
-            margin-right: 15px;
-        }
-
-        .menu-toggle {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .nav-links li {
-                margin-bottom: 10px;
-                text-align: center;
-                margin-right: 0;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-        }
-        </style>
 <meta content="Psicologa Gaia Bresciani – Credaro, Sarnico, Villongo" property="og:title"/>
 <meta content="Psicologa e Psicoterapeuta a Credaro (BG), percorsi individuali e di coppia." property="og:description"/>
 <meta content="https://www.gaiabrescianipsicologa.it/assets/studio-psicologia-credaro-sarnico-villongo-grumello.webp" property="og:image"/>
@@ -359,5 +190,14 @@
   });
 </script>
 <script async="" src="https://static.elfsight.com/platform/platform.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+    });
+  });
+</script>
 </body>
 </html>

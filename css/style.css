@@ -123,8 +123,10 @@ main {
 }
 
 .closing-image img {
-  max-width: 70%;
+  width: 100%;
+  max-width: 700px;
   height: auto;
+  aspect-ratio: 16/9;
   border-radius: 10px;
   margin: 0 auto;
 }
@@ -222,8 +224,12 @@ footer {
     text-decoration: none;
     font-weight: 600;
   }
+
+  .closing-image img {
+    max-width: 100%;
+  }
 }
 
 .widget-info-box {
-  min-height: 400px; /* o quanto necessario */
+  min-height: 400px;
 }

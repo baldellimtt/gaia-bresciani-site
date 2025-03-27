@@ -404,6 +404,10 @@ footer .social-icons {
   flex-wrap: nowrap;
 }
 
+.logo:hover {
+  color: #ffa07a !important;
+}
+
 /* ===== CENTRATURA TESTO FOOTER - FINALE ===== */
 footer p {
   text-align: center;

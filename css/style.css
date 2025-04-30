@@ -413,3 +413,20 @@ footer p {
   text-align: center;
   margin: 0 auto;
 }
+
+.foto-contenitore {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* spazio tra il contenuto */
+}
+
+.foto-coppie-famiglie img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.testo-contenuto {
+  max-width: 900px;
+}

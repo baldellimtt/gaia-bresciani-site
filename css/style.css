@@ -430,3 +430,22 @@ footer p {
 .testo-contenuto {
   max-width: 900px;
 }
+/* ===== MEDIA QUERY MOBILE ===== */
+@media (max-width: 768px) {
+  .foto-contenitore {
+    flex-direction: column;
+    align-items: center; /* Centers the image and text */
+  }
+
+  .foto-coppie-famiglie {
+    margin-bottom: 15px; /* Adds some space between the image and text */
+  }
+
+  .foto-coppie-famiglie img {
+    margin-right: 0; /* Removes the margin when the layout is vertical */
+  }
+
+  .testo-contenuto {
+    text-align: center; /* Centers the text for mobile view */
+  }
+}

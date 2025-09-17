@@ -289,8 +289,8 @@ footer {
 /* ===== CENTRA IL TELEFONO ===== */
 .contact-info p {
   text-align: left;
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 1.05em; /* MODIFICATO: Dimensione del testo uniforme */
+  font-weight: normal; /* MODIFICATO: Rimuove il grassetto */
   margin-bottom: 30px;
 }
 
@@ -310,10 +310,15 @@ footer {
 }
 
 .form-container {
-    padding: 30px;
+    padding: 0 30px 30px 30px; /* MODIFICATO: Padding superiore a 0 per allineare */
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info-container h2,
+.form-container h2 {
+    margin-top: 30px; /* AGGIUNTO: Allinea i titoli */
 }
 
 .contact-form {

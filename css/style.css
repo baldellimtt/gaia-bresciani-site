@@ -258,6 +258,10 @@ footer {
     margin-bottom: 15px;
 }
 
+.footer-paragraph {
+    text-align: center;
+}
+
 .footer-socials img {
   width: 32px;
   height: 32px;
@@ -268,9 +272,8 @@ footer {
   transform: scale(1.1);
 }
 
-.footer-text p {
-    margin: 5px 0;
-    line-height: 1.5;
+.footer-text {
+  text-align: center;
 }
 
 /* ===== WIDGET ===== */

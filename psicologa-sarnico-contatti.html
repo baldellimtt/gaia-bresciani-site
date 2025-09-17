@@ -80,70 +80,77 @@
 </nav>
 </header>
 
-<main class="text-centered">
+<main>
 <h1>Contatti</h1>
 
-<div class="contact-info">
-  <p>Telefono: <a href="tel:+393408389958" title="Chiama la Psicologa Gaia Bresciani a Credaro">+39 340 8389 958</a></p>
+<div class="contact-grid">
+    <div class="contact-info-container">
+        <h2>Informazioni di Contatto</h2>
+        <div class="contact-info">
+            <p>Telefono: <a href="tel:+393408389958" title="Chiama la Psicologa Gaia Bresciani a Credaro">+39 340 8389 958</a></p>
+        </div>
+
+        <div class="studio-info">
+            <p><strong>Studio di Credaro (BG):</strong> Via Piave 7 – facilmente raggiungibile da <strong>Sarnico, Villongo, Grumello del Monte, Castelli Calepio, Capriolo</strong></p>
+            <p><strong>Studio Castenedolo (BS):</strong> Piazza Martiri della Libertà 7 – comodo da <strong>Brescia, Montichiari, Rezzato, Ghedi, Prevalle, Mazzano</strong></p>
+            <p><em>Sono disponibili anche colloqui psicologici online</em></p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Scrivimi direttamente</h2>
+        <form action="https://formspree.io/f/xnnpnvqy" class="contact-form" method="POST">
+            <label for="name">Nome e Cognome*</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="_replyto" required>
+
+            <label for="phone">Numero di Telefono</label>
+            <input type="tel" id="phone" name="phone" placeholder="+39 340 0000000">
+
+            <label for="subject">Oggetto</label>
+            <input type="text" id="subject" name="subject">
+
+            <label for="message">Messaggio*</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <div>
+                <input type="checkbox" id="privacy" name="privacy" required>
+                <label for="privacy">
+                    Ho letto e accetto la <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+                </label>
+            </div>
+
+            <button type="submit">Invia messaggio</button>
+        </form>
+    </div>
 </div>
-
-<div class="studio-info">
-  <p><strong>Studio di Credaro (BG):</strong> Via Piave 7 – facilmente raggiungibile da <strong>Sarnico, Villongo, Grumello del Monte, Castelli Calepio, Capriolo</strong></p>
-  <p><strong>Studio Castenedolo (BS):</strong> Piazza Martiri della Libertà 7 – comodo da <strong>Brescia, Montichiari, Rezzato, Ghedi, Prevalle, Mazzano</strong></p>
-  <p><em>Sono disponibili anche colloqui psicologici online</em></p>
-</div>
-
-<h2>Scrivimi direttamente</h2>
-
-<form action="https://formspree.io/f/xnnpnvqy" class="contact-form" method="POST">
-	<label for="name">Nome e Cognome*</label>
-	<input type="text" id="name" name="name" required>
-
-	<label for="email">Email*</label>
-	<input type="email" id="email" name="_replyto" required>
-
-	<label for="phone">Numero di Telefono</label>
-	<input type="tel" id="phone" name="phone" placeholder="+39 340 0000000">
-
-	<label for="subject">Oggetto</label>
-    <input type="text" id="subject" name="subject">
-
-
-  <label for="message">Messaggio*</label>
-  <textarea id="message" name="message" rows="6" required></textarea>
-
-  <div>
-    <input type="checkbox" id="privacy" name="privacy" required>
-    <label for="privacy">
-      Ho letto e accetto la <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
-    </label>
-  </div>
-
-  <button type="submit">Invia messaggio</button>
-</form>
-
 <h2>Posizione degli studi</h2>
 <h3>Contattami per iniziare un percorso psicologico</h3>
 <p class="studio-info">Via Piave 7, 24060 Credaro (BG)</p>
-<iframe class="map-frame" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=Via%20Piave%207,%20Credaro%20BG&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
+<iframe class="map-frame" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=Via%20Piave%207,%20Credaro%20BG&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 
 <h3>Studio di Psicologia – Castenedolo (BS)</h3>
 <p class="studio-info">Piazza Martiri della Libertà 7, 25014 Castenedolo (BS)</p>
-<iframe class="map-frame" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=45.4710,10.3005&amp;z=11&amp;output=embed"></iframe>
+<iframe class="map-frame" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=45.4710,10.3005&z=11&output=embed"></iframe>
 </main>
 
 <footer>
-  <div class="footer-inner">
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/gaia-bresciani-357aa8106/" target="_blank">
-        <img src="assets/icon-linkedin.webp" alt="LinkedIn" />
-      </a>
-      <a href="https://www.facebook.com/StudioPrivatoViaPiave7CredaroBG/" target="_blank">
-        <img src="assets/icon-facebook.webp" alt="Facebook" />
-      </a>
+    <div class="footer-inner">
+        <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/gaia-bresciani-357aa8106/" target="_blank">
+                <img src="assets/icon-linkedin.webp" alt="LinkedIn" />
+            </a>
+            <a href="https://www.facebook.com/StudioPrivatoViaPiave7CredaroBG/" target="_blank">
+                <img src="assets/icon-facebook.webp" alt="Facebook" />
+            </a>
+        </div>
+        <div class="footer-text">
+            <p>© 2025 Gaia Bresciani – Psicologa e Psicoterapeuta – Tutti i diritti riservati | <a href="privacy-policy.html" title="Leggi la nostra informativa sulla privacy" style="color: white;">Privacy Policy</a></p>
+            <p><strong>PSICOLOGIA | PSICOTERAPIA</strong> CREDARO (BG) - via Piave 7 Italia | Tel. +39 340 8389 958 | P.I. 04558220168</p>
+        </div>
     </div>
-    <p>© 2025 Gaia Bresciani – Psicologa e Psicoterapeuta  – Tutti i diritti riservati | <a href="privacy-policy.html" title="Leggi la nostra informativa sulla privacy" style="color: white;">Privacy Policy</a><br><strong></p><strong>PSICOLOGIA | PSICOTERAPIA</strong> CREDARO (BG) - via Piave 7 Italia | Tel. +39 340 8389 958 | P.I. 04558220168</p>
-  </div>
 </footer>
 
 <script>

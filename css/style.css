@@ -233,12 +233,44 @@ main {
   transform: scale(1.1);
 }
 
+/* ===== FOOTER MODIFICATO PER ALLINEAMENTO ===== */
 footer {
   background-color: #2c3e50;
   color: #ffffff;
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
   font-size: 0.9em;
+}
+
+.footer-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-socials img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.footer-socials a:hover img {
+  transform: scale(1.1);
+}
+
+.footer-text p {
+    margin: 5px 0;
+    line-height: 1.5;
 }
 
 /* ===== WIDGET ===== */
@@ -256,10 +288,78 @@ footer {
 
 /* ===== CENTRA IL TELEFONO ===== */
 .contact-info p {
-  text-align: center;
+  text-align: left;
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 30px;
+}
+
+/* NUOVE REGOLE PER IL LAYOUT A DUE COLONNE */
+.contact-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 40px; /* Spazio tra le colonne */
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.contact-info-container,
+.form-container {
+    flex: 1; /* Distribuisce lo spazio equamente tra le due colonne */
+    min-width: 300px;
+}
+
+.form-container {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #86b6c4;
+    box-shadow: 0 0 8px rgba(134, 182, 196, 0.2);
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #555;
+    margin-top: 10px;
+}
+
+.contact-form button {
+    padding: 16px 24px;
+    background-color: #4a7c8a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.contact-form button:hover {
+    background-color: #3b6a75;
+    transform: translateY(-2px);
 }
 
 /* ===== MEDIA QUERY MOBILE ===== */
@@ -349,6 +449,16 @@ footer {
   .closing-image img {
     max-width: 100%;
   }
+
+  /* Imposta il layout a colonna per schermi piccoli */
+  .contact-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
 }
 
 .map-frame {
@@ -394,26 +504,11 @@ footer {
   color: #ffffff !important;
 }
 
-/* ===== CENTRATURA E ALLOGGIAMENTO ICONE SOCIAL FOOTER ===== */
-footer .social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin: 10px auto 20px;
-  flex-wrap: nowrap;
-}
-
 .logo:hover {
   color: #ffa07a !important;
 }
 
 /* ===== CENTRATURA TESTO FOOTER - FINALE ===== */
-footer p {
-  text-align: center;
-  margin: 0 auto;
-}
-
 .foto-contenitore {
   display: flex;
   align-items: center;

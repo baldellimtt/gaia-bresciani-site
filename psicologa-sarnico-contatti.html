@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<link rel="preload" href="fonts/open-sans-v40-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="fonts/lora-v35-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 <meta charset="utf-8"/>
-<link href="assets/favicon.webp" rel="icon" type="image/webp"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#FAF9F6"/>
+<meta name="color-scheme" content="light"/>
 <title>Contatti – Psicologa a Credaro (BG) per Sarnico e Villongo | Gaia Bresciani</title>
 <meta name="description" content="Prenota un colloquio con la Dott.ssa Gaia Bresciani, psicologa e psicoterapeuta a Credaro (BG), vicino a Sarnico e Villongo. Scopri orari, sedi e appuntamenti.">
 <meta name="keywords" content="Contatti Psicologa Credaro, Psicologa Sarnico, Psicoterapeuta Villongo, Colloquio Psicologia online, Psicoterapia Sarnico">
 <link rel="canonical" href="https://www.gaiabrescianipsicologa.it/psicologa-sarnico-contatti.html"/>
+<link rel="preload" href="fonts/open-sans-v40-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="fonts/lora-v35-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link href="assets/favicon.webp" rel="icon" type="image/webp"/>
 <link rel="stylesheet" href="css/style.css"/>
+<!-- Open Graph -->
+<meta property="og:title" content="Contatti – Psicologa a Credaro (BG) per Sarnico e Villongo | Gaia Bresciani"/>
+<meta property="og:description" content="Prenota un colloquio con la Dott.ssa Gaia Bresciani, psicologa e psicoterapeuta a Credaro (BG), vicino a Sarnico e Villongo."/>
+<meta property="og:url" content="https://www.gaiabrescianipsicologa.it/psicologa-sarnico-contatti.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="it_IT"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,9 +105,11 @@
 </style>
 </head>
 <body>
+<!-- Skip to main content per accessibilità -->
+<a href="#main-content" class="skip-link">Vai al contenuto principale</a>
 <header>
 <nav class="navbar">
-  <a class="logo" href="/" title="Psicologa e Psicoterapeuta – Gaia Bresciani Psicologa">Psicologa e Psicoterapeuta</a>
+  <a class="logo" href="index.html" title="Psicologa e Psicoterapeuta – Gaia Bresciani Psicologa">Psicologa e Psicoterapeuta</a>
   <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false" aria-label="Menu">☰</button>
   <ul class="nav-links" id="main-menu">
 	<li><a href="psicologa-lago-iseo.html" title="Chi sono | Gaia Bresciani">Chi sono</a></li>
@@ -112,7 +122,7 @@
 </nav>
 </header>
 
-<main>
+<main id="main-content">
 <h1>Contatti</h1>
 
 <div class="contact-grid">
@@ -131,30 +141,33 @@
 
     <div class="form-container">
         <h2>Scrivimi direttamente</h2>
-        <form action="https://formspree.io/f/xnnpnvqy" class="contact-form" method="POST">
+        <form action="https://formspree.io/f/xnnpnvqy" class="contact-form" method="POST" id="contact-form">
             <label for="name">Nome e Cognome*</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required autocomplete="name" aria-required="true">
 
             <label for="email">Email*</label>
-            <input type="email" id="email" name="_replyto" required>
+            <input type="email" id="email" name="_replyto" required autocomplete="email" aria-required="true">
 
             <label for="phone">Numero di Telefono</label>
-            <input type="tel" id="phone" name="phone" placeholder="+39 340 0000000">
+            <input type="tel" id="phone" name="phone" placeholder="+39 340 0000000" autocomplete="tel">
 
             <label for="subject">Oggetto</label>
-            <input type="text" id="subject" name="subject">
+            <input type="text" id="subject" name="subject" autocomplete="off">
 
             <label for="message">Messaggio*</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+            <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
 
             <div>
-                <input type="checkbox" id="privacy" name="privacy" required>
+                <input type="checkbox" id="privacy" name="privacy" required aria-required="true">
                 <label for="privacy">
-                    Ho letto e accetto la <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+                    Ho letto e accetto la <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>
                 </label>
             </div>
 
-            <button type="submit">Invia messaggio</button>
+            <button type="submit" id="submit-btn">
+                <span class="button-text">Invia messaggio</span>
+                <span class="button-loader" style="display: none;">Invio in corso...</span>
+            </button>
         </form>
     </div>
 </div>
@@ -171,15 +184,15 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-socials">
-            <a href="https://www.linkedin.com/in/gaia-bresciani-357aa8106/" target="_blank">
-                <img src="assets/icon-linkedin.webp" alt="LinkedIn" />
+            <a href="https://www.linkedin.com/in/gaia-bresciani-357aa8106/" target="_blank" rel="noopener noreferrer" aria-label="Visita il profilo LinkedIn di Gaia Bresciani">
+                <img src="assets/icon-linkedin.webp" alt="LinkedIn" loading="lazy" width="32" height="32" />
             </a>
-            <a href="https://www.facebook.com/StudioPrivatoViaPiave7CredaroBG/" target="_blank">
-                <img src="assets/icon-facebook.webp" alt="Facebook" />
+            <a href="https://www.facebook.com/StudioPrivatoViaPiave7CredaroBG/" target="_blank" rel="noopener noreferrer" aria-label="Visita la pagina Facebook dello studio">
+                <img src="assets/icon-facebook.webp" alt="Facebook" loading="lazy" width="32" height="32" />
             </a>
         </div>
 <div class="footer-text">
-    <p class="footer-paragraph">© 2025 Gaia Bresciani – Psicologa e Psicoterapeuta – Tutti i diritti riservati | <a href="privacy-policy.html" target="_blank" title="Leggi la nostra informativa sulla privacy" style="color: white;">Privacy Policy</a></p>
+    <p class="footer-paragraph">© 2025 Gaia Bresciani – Psicologa e Psicoterapeuta – Tutti i diritti riservati | <a href="privacy-policy.html" target="_blank" title="Leggi la nostra informativa sulla privacy">Privacy Policy</a></p>
     <p class="footer-paragraph"><strong>PSICOLOGIA | PSICOTERAPIA</strong> CREDARO (BG) - via Piave 7 Italia | Tel. +39 340 8389 958 | P.I. 04558220168</p>
 </div>
 </footer>
@@ -188,10 +201,40 @@
 document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
-  menuToggle.addEventListener('click', function () {
-	navLinks.classList.toggle('active');
-  });
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', function () {
+      const isActive = navLinks.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+    });
+    
+    // Chiudi menu quando si clicca su un link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Gestione form con feedback utente
+  const form = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const buttonText = submitBtn.querySelector('.button-text');
+  const buttonLoader = submitBtn.querySelector('.button-loader');
+  
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      // Mostra loading state
+      submitBtn.disabled = true;
+      buttonText.style.display = 'none';
+      buttonLoader.style.display = 'inline';
+      
+      // Il form verrà inviato normalmente a Formspree
+      // Formspree gestirà il redirect o la risposta
+    });
+  }
 });
 </script>
+<script defer src="js/enhancements.js"></script>
 </body>
 </html>

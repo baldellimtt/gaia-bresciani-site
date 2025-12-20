@@ -11,13 +11,18 @@
 		location.href = 'https://' + location.hostname + location.pathname + location.search;
 	  }
   </script> -->
-  <!-- Preconnect per risorse esterne -->
+  <!-- DNS Prefetch e Preconnect per risorse esterne -->
+  <link rel="dns-prefetch" href="https://platform.docplanner.com"/>
+  <link rel="dns-prefetch" href="https://static.elfsight.com"/>
+  <link rel="dns-prefetch" href="https://www.miodottore.it"/>
   <link rel="preconnect" href="https://platform.docplanner.com"/>
   <link rel="preconnect" href="https://static.elfsight.com"/>
   <link rel="preconnect" href="https://www.miodottore.it"/>
   <!-- Preload font critici -->
   <link rel="preload" href="fonts/open-sans-v40-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/lora-v35-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <!-- Preload CSS critico -->
+  <link rel="preload" href="css/style.css" as="style">
   <meta content="Psicologa e Psicoterapeuta a Sarnico, Credaro, Villongo e Lago d'Iseo. Terapia psicologica, EMDR, consulenze individuali e di coppia. Studio a Credaro (BG) e Castenedolo (BS). Prenota un colloquio conoscitivo." name="description"/>
   <link href="https://www.gaiabrescianipsicologa.it/" rel="canonical"/>
   <meta content="Psicologa Sarnico, Psicoterapeuta Sarnico, Psicologo Villongo, Psicologa Credaro, Terapia EMDR Sarnico, Colloqui psicologici Grumello del Monte, Ansia Sarnico, Consulenza Psicologica Sarnico, Psicologa Castenedolo" name="keywords"/>
@@ -94,7 +99,7 @@
   
 	<div class="foto-contenitore">
 		<div class="foto-coppie-famiglie">
-			<img src="assets/psicologa-gaia-bresciani.webp" alt="Dott.ssa Gaia Bresciani - Psicologa e Psicoterapeuta a Credaro (BG), specializzata in terapia psicologica, EMDR e consulenze per Sarnico, Villongo e Lago d'Iseo" loading="lazy" width="200" height="200" style="width:200px; height:200px; border-radius:50%; margin-right: 15px;">
+			<img src="assets/psicologa-gaia-bresciani.webp" alt="Dott.ssa Gaia Bresciani - Psicologa e Psicoterapeuta a Credaro (BG), specializzata in terapia psicologica, EMDR e consulenze per Sarnico, Villongo e Lago d'Iseo" loading="eager" fetchpriority="high" width="200" height="200" style="width:200px; height:200px; border-radius:50%; margin-right: 15px;">
 		</div>
 		<div class="testo-contenuto">
 			<p><strong>Vuoi conoscermi meglio? Dai un'occhiata alla sezione <a href="psicologa-lago-iseo.html" title="Chi sono – Psicologa a Credaro e Lago d'Iseo – Gaia Bresciani Psicologa">Chi sono – Psicologa a Credaro, Lago d'Iseo e Castenedolo</a>.</strong></p>
@@ -248,5 +253,20 @@
 
 <script defer src="https://static.elfsight.com/platform/platform.js"></script>
 <script defer src="js/enhancements.js"></script>
+
+<!-- Service Worker per cache delle risorse -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registrato con successo:', registration.scope);
+        })
+        .catch((error) => {
+          console.log('Registrazione Service Worker fallita:', error);
+        });
+    });
+  }
+</script>
 </body>
 </html>

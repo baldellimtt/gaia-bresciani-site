@@ -5,6 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta name="theme-color" content="#FAF9F6"/>
 <meta name="color-scheme" content="light"/>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>Esperienza – Psicologa a Credaro (BG), vicino Villongo e Sarnico</title>
 <link rel="preload" href="fonts/open-sans-v40-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="fonts/lora-v35-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -12,7 +13,11 @@
 <link href="assets/favicon.webp" rel="icon" type="image/webp"/>
 <link rel="canonical" href="https://www.gaiabrescianipsicologa.it/esperienza-psicologa-villongo.html" />
 <meta content="Esperienza psicologa Credaro, Ansia Sarnico, Ansia Villongo, Psicoterapeuta Sarnico, Psicologia Sarnico, Psicologa Villongo, Psicologa Grumello del Monte, Psicologa Castenedolo" name="keywords"/>
-<link href="css/style.css" rel="stylesheet"/>
+<!-- Preload CSS critico - caricamento asincrono per evitare render-blocking -->
+<link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/style.css"></noscript>
+<!-- Polyfill per browser che non supportano onload su link -->
+<script>!function(e){var t=function(t,n){var o=e.document.createElement("link");o.rel="stylesheet",o.href=t,o.media="only x",function e(t){if(e.body)return t();setTimeout(function(){e(t)})}(function(){n.parentNode.insertBefore(o,n)}),setTimeout(function(){o.media="all"})};e.loadCSS||(e.loadCSS=t)}("undefined"!=typeof global?global:this);</script>
 <!-- Open Graph -->
 <meta property="og:title" content="Esperienza – Psicologa a Credaro (BG), vicino Villongo e Sarnico"/>
 <meta property="og:description" content="Scopri l'esperienza professionale di Gaia Bresciani, psicologa e psicoterapeuta con studio a Credaro. Supporto a clienti da Villongo, Sarnico e aree vicine."/>
@@ -155,7 +160,7 @@
         </div>
     </div>
 </footer>
-<script src="js/cookie-banner.js"></script>
+<script defer src="js/cookie-banner.js"></script>
 </body>
 </html>
 <script>

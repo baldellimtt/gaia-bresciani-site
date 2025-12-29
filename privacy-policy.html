@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="assets/favicon.webp" rel="icon" type="image/webp"/>
-
+  <meta name="theme-color" content="#FAF9F6"/>
+  <meta name="color-scheme" content="light"/>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <link href="assets/favicon.webp" rel="icon" type="image/webp"/>
   <title>Privacy Policy – Gaia Bresciani Psicologa</title>
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Preload CSS critico - caricamento asincrono per evitare render-blocking -->
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+  <!-- Polyfill per browser che non supportano onload su link -->
+  <script>!function(e){var t=function(t,n){var o=e.document.createElement("link");o.rel="stylesheet",o.href=t,o.media="only x",function e(t){if(e.body)return t();setTimeout(function(){e(t)})}(function(){n.parentNode.insertBefore(o,n)}),setTimeout(function(){o.media="all"})};e.loadCSS||(e.loadCSS=t)}("undefined"!=typeof global?global:this);</script>
 </head>
 <body>
   <main class="text-block">

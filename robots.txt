@@ -17,5 +17,9 @@ Allow: /psicologa-sarnico-contatti.html
 # Sitemap
 Sitemap: https://www.gaiabrescianipsicologa.it/sitemap.xml
 
+# llms.txt e AI-README.md per AI assistants (ChatGPT, Gemini, Claude)
+Allow: /llms.txt
+Allow: /AI-README.md
+
 # Crawl-delay (opzionale, per non sovraccaricare il server)
 Crawl-delay: 1

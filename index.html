@@ -8,6 +8,9 @@
   <meta name="color-scheme" content="light"/>
   <!-- Sicurezza: GitHub Pages forza già HTTPS, questo meta tag è un'indicazione aggiuntiva -->
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <!-- llms.txt e AI-README.md per ottimizzazione Generative Engine Optimization (GEO) -->
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt - Information for AI assistants">
+  <link rel="alternate" type="text/markdown" href="/AI-README.md" title="AI-README.md - Professional information for AI assistants">
   <!-- DNS Prefetch e Preconnect per risorse esterne -->
   <link rel="dns-prefetch" href="https://platform.docplanner.com"/>
   <link rel="dns-prefetch" href="https://static.elfsight.com"/>
@@ -77,20 +80,49 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Psychologist",
-      "name": "Gaia Bresciani",
-      "image": "https://www.gaiabrescianipsicologa.it/assets/psicologa-gaia-bresciani.webp",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Via Piave 7",
-        "addressLocality": "Credaro",
-        "addressRegion": "BG",
-        "postalCode": "24060",
-        "addressCountry": "IT"
-      },
+      "@type": ["Psychologist", "MedicalBusiness", "LocalBusiness"],
+      "name": "Gaia Bresciani – Psicologa e Psicoterapeuta",
+      "alternateName": "Studio Psicologia Gaia Bresciani",
+      "image": [
+        "https://www.gaiabrescianipsicologa.it/assets/psicologa-gaia-bresciani.webp",
+        "https://www.gaiabrescianipsicologa.it/assets/psicologa-lago-iseo-sarnico.webp"
+      ],
+      "logo": "https://www.gaiabrescianipsicologa.it/assets/psicologa-gaia-bresciani.webp",
+      "description": "Psicologa e Psicoterapeuta specializzata in Psicoterapia Psicodinamica Adleriana e Terapia EMDR. Studio a Credaro (BG) e Castenedolo (BS), servizio per Sarnico, Lago d'Iseo e zone limitrofe. Terapia per ansia, attacchi di panico, traumi e difficoltà relazionali.",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Via Piave 7",
+          "addressLocality": "Credaro",
+          "addressRegion": "BG",
+          "postalCode": "24060",
+          "addressCountry": "IT",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "45.6600",
+            "longitude": "9.9300"
+          }
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Piazza Martiri della Libertà 7",
+          "addressLocality": "Castenedolo",
+          "addressRegion": "BS",
+          "postalCode": "25014",
+          "addressCountry": "IT",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "45.4710",
+            "longitude": "10.3005"
+          }
+        }
+      ],
       "telephone": "+393408389958",
       "email": "gaia.bresciani23@gmail.com",
       "url": "https://www.gaiabrescianipsicologa.it",
+      "priceRange": "€€",
+      "paymentAccepted": "Cash, Bank Transfer",
+      "currenciesAccepted": "EUR",
       "sameAs": [
         "https://www.facebook.com/StudioPrivatoViaPiave7CredaroBG/",
         "https://www.linkedin.com/in/gaia-bresciani-357aa8106/",
@@ -134,6 +166,38 @@
           "name": "Castenedolo"
         }
       ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "45.6600",
+          "longitude": "9.9300"
+        },
+        "geoRadius": {
+          "@type": "Distance",
+          "name": "30 km"
+        }
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servizi di Psicologia e Psicoterapia",
@@ -143,27 +207,132 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Terapia Individuale",
-              "description": "Percorsi di psicoterapia individuale per adulti, adolescenti e bambini"
-            }
+              "description": "Percorsi di psicoterapia individuale per adulti, adolescenti e bambini. Approccio Psicodinamico Adleriano.",
+              "provider": {
+                "@type": "Person",
+                "name": "Gaia Bresciani"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Sarnico"
+              }
+            },
+            "availability": "https://schema.org/InStock"
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
               "name": "Terapia di Coppia",
-              "description": "Supporto psicologico per coppie in difficoltà"
-            }
+              "description": "Supporto psicologico per coppie in difficoltà. Terapia di coppia a Sarnico e Lago d'Iseo.",
+              "provider": {
+                "@type": "Person",
+                "name": "Gaia Bresciani"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Lago d'Iseo"
+              }
+            },
+            "availability": "https://schema.org/InStock"
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
               "name": "Terapia EMDR",
-              "description": "Trattamento per traumi e blocchi emotivi con tecnica EMDR"
-            }
+              "description": "Trattamento per traumi, ansia e blocchi emotivi con tecnica EMDR scientificamente validata.",
+              "provider": {
+                "@type": "Person",
+                "name": "Gaia Bresciani"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Sarnico"
+              }
+            },
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Consulenza Psicologica Online",
+              "description": "Colloqui psicologici online sicuri ed efficaci per chi ha difficoltà logistiche.",
+              "provider": {
+                "@type": "Person",
+                "name": "Gaia Bresciani"
+              }
+            },
+            "availability": "https://schema.org/InStock"
           }
         ]
+      },
+      "medicalSpecialty": [
+        "Psicologia Clinica",
+        "Psicoterapia",
+        "Terapia EMDR",
+        "Psicoterapia Psicodinamica Adleriana"
+      ],
+      "knowsAbout": [
+        "Ansia",
+        "Attacchi di Panico",
+        "Depressione",
+        "Traumi",
+        "Terapia di Coppia",
+        "Psicoterapia Individuale",
+        "EMDR",
+        "Psicologia Adleriana"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional License",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Albo Professionale degli Psicologi e Psicoterapeuti della Lombardia",
+          "identifier": "22433"
+        }
       }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Dove trovo una psicologa a Sarnico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sono una psicologa e psicoterapeuta con studio a Credaro (BG), facilmente raggiungibile da Sarnico e Lago d'Iseo. Offro terapia individuale, di coppia e EMDR per ansia, attacchi di panico e traumi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quale psicoterapeuta tratta l'ansia sul Lago d'Iseo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Offro terapia per ansia e attacchi di panico a Sarnico e Lago d'Iseo utilizzando approcci scientificamente validati, tra cui la Terapia EMDR. Il mio studio a Credaro è facilmente raggiungibile da tutti i comuni del Lago d'Iseo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come posso prenotare una seduta con una psicologa vicino a Sarnico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puoi contattarmi telefonicamente al +39 340 8389 958, via email a gaia.bresciani23@gmail.com, oppure prenotare direttamente online tramite il portale MioDottore. Ricevo su appuntamento a Credaro (BG) e Castenedolo (BS)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quale terapia è indicata per i traumi a Sarnico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La Terapia EMDR è particolarmente efficace per traumi, blocchi emotivi e disturbi d'ansia. Sono iscritta all'elenco ufficiale dei terapeuti EMDR della Lombardia e offro questo trattamento a Sarnico e Lago d'Iseo."
+          }
+        }
+      ]
     }
   </script>
 </head>
@@ -287,6 +456,13 @@
         <img alt="Lago d'Iseo - Panorama sereno e armonioso della zona dove opera la Psicologa Gaia Bresciani a Sarnico, Credaro e Villongo" height="250" src="assets/psicologa-lago-iseo-sarnico.webp" loading="lazy" title="Lago d'Iseo – Zona di intervento Psicologa Gaia Bresciani" width="500"/>
       </a>
     <p class="quote"><strong>"Il compito principale della vita è dare, non ricevere. Il significato della vita è contribuire al benessere dell'umanità"</strong> – Alfred Adler</p>
+  </div>
+
+  <div class="text-block">
+    <h2>Psicologa Zona Lago d'Iseo: Servizio per Sarnico e Dintorni</h2>
+    <h3>Studio facilmente raggiungibile da tutti i comuni del Lago d'Iseo</h3>
+    <p>Il mio studio a <strong>Credaro (BG)</strong> è strategico per chi cerca una <strong>psicologa sul Lago d'Iseo</strong> o a <strong>Sarnico</strong>. Sono facilmente raggiungibile da <strong>Grumello del Monte</strong>, <strong>Paratico</strong>, <strong>Capriolo</strong>, <strong>Castelli Calepio</strong>, <strong>Villongo</strong> e da tutti i comuni che si affacciano sul <strong>Lago d'Iseo</strong>. Offro <strong>terapia per ansia</strong>, <strong>attacchi di panico</strong>, <strong>traumi</strong> e <strong>difficoltà relazionali</strong> utilizzando approcci scientificamente validati come la <strong>Terapia EMDR</strong> e la <strong>Psicoterapia Psicodinamica Adleriana</strong>.</p>
+    <p>Per chi proviene dalla <strong>provincia di Brescia</strong>, ricevo anche a <strong>Castenedolo (BS)</strong>, facilmente raggiungibile da <strong>Brescia</strong>, <strong>Montichiari</strong>, <strong>Rezzato</strong> e dintorni. Disponibili anche <strong>colloqui psicologici online</strong> per chi ha difficoltà logistiche o preferisce ricevere supporto da casa.</p>
   </div>
 
   <div class="text-block">

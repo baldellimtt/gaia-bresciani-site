@@ -1,9 +1,21 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.gaiabrescianipsicologa.it/sitemap.xml
+# Disallow cartelle non necessarie per i crawler
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
 
-# Aiuta i crawler a trovare pagine importanti
+# Pagine importanti
 Allow: /psicologa-lago-iseo.html
 Allow: /terapia-psicologica-sarnico.html
+Allow: /terapia-emdr-lago-iseo.html
+Allow: /esperienza-psicologa-villongo.html
 Allow: /faq-psicologa-sarnico.html
+Allow: /psicologa-sarnico-contatti.html
+
+# Sitemap
+Sitemap: https://www.gaiabrescianipsicologa.it/sitemap.xml
+
+# Crawl-delay (opzionale, per non sovraccaricare il server)
+Crawl-delay: 1

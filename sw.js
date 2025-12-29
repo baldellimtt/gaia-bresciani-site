@@ -1,7 +1,7 @@
 // Service Worker per cache delle risorse statiche
 // Compatibile con GitHub Pages
 
-const CACHE_NAME = 'gaia-bresciani-v1';
+const CACHE_NAME = 'gaia-bresciani-v2';
 const CACHE_DURATION = 31536000; // 1 anno in secondi
 
 // Risorse da cachare immediatamente
@@ -45,7 +45,7 @@ self.addEventListener('activate', (event) => {
   return self.clients.claim();
 });
 
-// Fetch: strategia Cache First per risorse statiche
+// Fetch: strategia di cache per risorse statiche
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   
@@ -54,7 +54,28 @@ self.addEventListener('fetch', (event) => {
     return; // Lascia passare richieste esterne
   }
 
-  // Cache First per risorse statiche
+  // Network First per CSS (per garantire aggiornamenti)
+  if (url.pathname.endsWith('.css')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response.status === 200) {
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseToCache);
+            });
+          }
+          return response;
+        })
+        .catch(() => {
+          // Fallback alla cache se la rete fallisce
+          return caches.match(event.request);
+        })
+    );
+    return;
+  }
+
+  // Cache First per altre risorse statiche
   if (isStaticAsset(event.request)) {
     event.respondWith(
       caches.match(event.request)

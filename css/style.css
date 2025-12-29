@@ -1,3 +1,4 @@
+/* ===== CSS Updated: 2025-01-27 ===== */
 /* ===== FONT FACE ===== */
 @font-face {
   font-family: 'Open Sans';
@@ -392,21 +393,25 @@ main {
   gap: 2rem;
   margin: 3rem 0;
   padding: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 .service-card {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
-  background-color: var(--color-bg-light);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
+  background-color: #FFFFFF !important;
+  border: 2px solid #D4D4D4 !important;
+  border-radius: 8px;
   padding: 2rem;
   text-decoration: none;
-  color: var(--color-text);
+  color: #2C2C2C !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
   position: relative;
   overflow: hidden;
+  min-height: 200px;
+  width: 100%;
 }
 
 .service-card::before {

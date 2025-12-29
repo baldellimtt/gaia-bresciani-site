@@ -172,32 +172,13 @@
     // Il widget viene caricato solo quando visibile tramite IntersectionObserver
   }
 
-  // Aggiungi link per aprire impostazioni cookie nel footer (se presente)
-  function addCookieSettingsLink() {
-    const footerLinks = document.querySelectorAll('.footer-text a[href*="privacy"]');
-    footerLinks.forEach(link => {
-      const cookieLink = document.createElement('a');
-      cookieLink.href = '#';
-      cookieLink.textContent = 'Cookie Policy';
-      cookieLink.title = 'Gestisci le preferenze cookie';
-      cookieLink.style.marginLeft = '0.5rem';
-      cookieLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        showCookieSettings();
-      });
-      link.parentNode.insertBefore(cookieLink, link.nextSibling);
-    });
-  }
-
   // Inizializza quando il DOM è pronto
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       showBannerIfNeeded();
-      addCookieSettingsLink();
     });
   } else {
     showBannerIfNeeded();
-    addCookieSettingsLink();
   }
 
   // Esponi funzione globale per aprire impostazioni da link esterni

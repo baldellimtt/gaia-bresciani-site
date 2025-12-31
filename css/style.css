@@ -1595,3 +1595,68 @@ footer {
     transition: none;
   }
 }
+
+/* ===== CTA BUTTONS ===== */
+.cta-buttons-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+  justify-content: center;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 16px 32px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.cta-button-primary {
+  background-color: #7A9A7A;
+  color: #FFFFFF;
+}
+
+.cta-button-primary:hover,
+.cta-button-primary:focus {
+  background-color: #5B7A5B;
+  color: #FFFFFF;
+}
+
+.cta-button-secondary {
+  background-color: #5B7FA6;
+  color: #FFFFFF;
+}
+
+.cta-button-secondary:hover,
+.cta-button-secondary:focus {
+  background-color: #4a6a8a;
+  color: #FFFFFF;
+}
+
+.cta-button-outline {
+  background-color: #FAF9F6;
+  color: #2C2C2C;
+  border: 2px solid #7A9A7A;
+}
+
+.cta-button-outline:hover,
+.cta-button-outline:focus {
+  background-color: #f0f0eb;
+  color: #2C2C2C;
+}
+
+@media (max-width: 768px) {
+  .cta-buttons-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .cta-button {
+    width: 100%;
+  }
+}

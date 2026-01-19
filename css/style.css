@@ -1138,6 +1138,10 @@ footer {
     padding: 1.5rem;
   }
 
+  .contact-info-container h2 {
+    text-align: center;
+  }
+
   .foto-contenitore {
     flex-direction: column;
     align-items: center;

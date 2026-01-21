@@ -107,7 +107,8 @@
 <header>
 <nav class="navbar">
 <a class="logo" href="index.html" title="Psicologa e Psicoterapeuta – Gaia Bresciani Psicologa">Psicologa e Psicoterapeuta</a>
-<button aria-controls="main-menu" aria-expanded="false" aria-label="Menu" class="menu-toggle">☰</button>
+<button aria-controls="main-menu" aria-expanded="false" aria-label="Menu" class="menu-toggle"><span></span></button>
+<div class="nav-overlay" id="nav-overlay"></div>
 <ul class="nav-links" id="main-menu">
 <li><a href="psicologa-lago-iseo.html" title="Psicologa a Credaro – Chi sono | Gaia Bresciani">Chi sono</a></li>
 <li><a href="esperienza-psicologa-villongo.html" title="Esperienza professionale Psicologa a Credaro e Villongo">Esperienza</a></li>
@@ -186,21 +187,65 @@
 </footer>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', function() {
-      const isActive = navLinks.classList.toggle('active');
-      menuToggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+  const toggleButton = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  const navOverlay = document.querySelector("#nav-overlay");
+  const body = document.body;
+
+  function openMenu() {
+    navLinks.classList.add("active");
+    if (navOverlay) navOverlay.classList.add("active");
+    toggleButton.setAttribute("aria-expanded", "true");
+    body.classList.add("menu-open");
+  }
+
+  function closeMenu() {
+    navLinks.classList.remove("active");
+    if (navOverlay) navOverlay.classList.remove("active");
+    toggleButton.setAttribute("aria-expanded", "false");
+    body.classList.remove("menu-open");
+  }
+
+  if (toggleButton && navLinks) {
+    // Toggle menu
+    toggleButton.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isActive = navLinks.classList.contains("active");
+      if (isActive) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
-    
+
+    // Chiudi menu quando si clicca sull'overlay
+    if (navOverlay) {
+      navOverlay.addEventListener("click", () => {
+        closeMenu();
+      });
+    }
+
     // Chiudi menu quando si clicca su un link
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
+        closeMenu();
       });
     });
+
+    // Chiudi menu con ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains("active")) {
+        closeMenu();
+        toggleButton.focus();
+      }
+    });
+
+    // Previeni scroll quando menu è aperto
+    navLinks.addEventListener('touchmove', (e) => {
+      if (!navLinks.contains(e.target)) {
+        e.preventDefault();
+      }
+    }, { passive: false });
   }
 });
 </script>
@@ -208,3 +253,4 @@ document.addEventListener('DOMContentLoaded', function() {
 <script defer src="js/cookie-banner.js"></script>
 </body>
 </html>
+

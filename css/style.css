@@ -220,22 +220,57 @@ header {
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 1.5rem;
-  color: var(--color-text) !important;
-  padding: 8px 12px;
+  padding: 0;
   min-width: 44px;
   min-height: 44px;
   border-radius: var(--border-radius);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   z-index: 1001;
   align-items: center;
   justify-content: center;
+  position: relative;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.menu-toggle:hover {
-  background-color: var(--color-bg);
-  border-color: var(--color-primary);
-  color: var(--color-primary) !important;
+/* Hamburger Icon - 3 linee */
+.menu-toggle::before,
+.menu-toggle::after,
+.menu-toggle span {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--color-text);
+  border-radius: 3px;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: center;
+}
+
+.menu-toggle span {
+  display: block;
+}
+
+/* Stato attivo - trasformazione in X */
+.menu-toggle[aria-expanded="true"]::before {
+  transform: translateY(9px) rotate(45deg);
+  background-color: var(--color-primary);
+}
+
+.menu-toggle[aria-expanded="true"] span {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.menu-toggle[aria-expanded="true"]::after {
+  transform: translateY(-9px) rotate(-45deg);
+  background-color: var(--color-primary);
+}
+
+.menu-toggle:hover::before,
+.menu-toggle:hover::after,
+.menu-toggle:hover span {
+  background-color: var(--color-primary);
 }
 
 .menu-toggle:focus {
@@ -1071,53 +1106,156 @@ footer {
     font-size: 1.25rem;
     position: static;
     transform: none;
+    z-index: 1002;
+    position: relative;
   }
 
   .menu-toggle {
     display: flex !important;
     visibility: visible;
-    position: static;
-    transform: none;
+    position: relative;
+    z-index: 1002;
+  }
+
+  /* Overlay scuro per il menu mobile */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-overlay.active {
+    display: block;
+    opacity: 1;
   }
 
   .nav-links {
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #E8E6E0;
-    padding: 1rem 0;
-    border-top: 2px solid var(--color-primary);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    position: absolute;
-    top: 100%;
+    max-width: 100%;
+    background: linear-gradient(135deg, #FAF9F6 0%, #E8E6E0 100%);
+    padding: 0;
+    position: fixed;
+    top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 1000;
     gap: 0;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
   }
 
   .nav-links.active {
+    transform: translateX(0);
+  }
+
+  /* Header del menu mobile con titolo */
+  .nav-links::before {
+    content: 'Menu';
     display: flex;
+    align-items: center;
+    padding: 0 28px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
   }
 
   .nav-links li {
     width: 100%;
     text-align: left;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
+
+  .nav-links.active li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Stagger animation per i link */
+  .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
+  .nav-links.active li:nth-child(2) { transition-delay: 0.15s; }
+  .nav-links.active li:nth-child(3) { transition-delay: 0.2s; }
+  .nav-links.active li:nth-child(4) { transition-delay: 0.25s; }
+  .nav-links.active li:nth-child(5) { transition-delay: 0.3s; }
+  .nav-links.active li:nth-child(6) { transition-delay: 0.35s; }
 
   .nav-links li::after {
     display: none;
   }
 
   .nav-links li a {
-    padding: 16px 24px;
-    border-bottom: 1px solid var(--color-border-light);
-    min-height: 44px;
+    padding: 20px 28px;
+    border-bottom: 1px solid rgba(122, 154, 122, 0.1);
+    min-height: 60px;
     display: flex;
     align-items: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--color-text) !important;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .nav-links li a::before {
-    display: none;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--color-primary);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+    transform-origin: center;
+  }
+
+  .nav-links li a:hover,
+  .nav-links li a:focus,
+  .nav-links li a:active {
+    background-color: rgba(122, 154, 122, 0.12);
+    color: var(--color-primary) !important;
+    padding-left: 36px;
+    transform: translateX(4px);
+  }
+
+  .nav-links li a:hover::before,
+  .nav-links li a:focus::before {
+    transform: scaleY(1);
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  /* Previeni scroll del body quando menu è aperto */
+  body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
   }
 
   .text-block {
@@ -1279,6 +1417,37 @@ footer {
   }
 
   .service-card:hover {
+    transform: none !important;
+  }
+
+  /* Menu mobile - animazioni ridotte */
+  .menu-toggle::before,
+  .menu-toggle::after,
+  .menu-toggle span {
+    transition: none !important;
+  }
+
+  .nav-links {
+    transition: transform 0.1s ease !important;
+  }
+
+  .nav-links li {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .nav-overlay {
+    transition: opacity 0.1s ease !important;
+  }
+
+  .nav-links li a {
+    transition: background-color 0.1s ease !important;
+  }
+
+  .nav-links li a:hover,
+  .nav-links li a:focus,
+  .nav-links li a:active {
     transform: none !important;
   }
 }

@@ -1787,6 +1787,12 @@ img.loaded {
 .cta-panel p {
   margin: 0 0 12px;
   color: var(--color-text);
+  text-align: center;
+}
+
+.cta-panel h2,
+.cta-panel h3 {
+  text-align: center;
 }
 
 .article-hero {

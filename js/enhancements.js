@@ -35,30 +35,34 @@
 
   // Aggiungi animazioni al scroll per elementi
   function addScrollAnimations() {
-    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      const animatedElements = document.querySelectorAll('.text-block, .closing-image');
-      animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(el);
-      });
+    const animatedElements = document.querySelectorAll('.text-block, .closing-image');
+    if (!animatedElements.length) {
+      return;
     }
+
+    animatedElements.forEach(el => el.classList.add('js-animate'));
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!('IntersectionObserver' in window) || prefersReducedMotion) {
+      animatedElements.forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    animatedElements.forEach(el => observer.observe(el));
   }
 
   // Migliora l'accessibilità del menu mobile

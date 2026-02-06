@@ -1,7 +1,7 @@
 // Service Worker per cache delle risorse statiche
 // Compatibile con GitHub Pages
 
-const CACHE_NAME = 'gaia-bresciani-v4';
+const CACHE_NAME = 'gaia-bresciani-v5';
 const CACHE_DURATION = 31536000; // 1 anno in secondi
 
 // Risorse da cachare immediatamente
@@ -116,4 +116,3 @@ function isStaticAsset(request) {
     url.pathname.startsWith('/js/')
   );
 }
-

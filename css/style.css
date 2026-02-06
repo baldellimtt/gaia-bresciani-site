@@ -550,22 +550,8 @@ main {
   }
 }
 
-.text-block,
-.service-card,
-.closing-image {
+.service-card {
   animation: fadeInUp 0.6s ease-out;
-}
-
-.text-block:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.text-block:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.text-block:nth-child(3) {
-  animation-delay: 0.3s;
 }
 
 .service-card:nth-child(1) {
@@ -578,6 +564,18 @@ main {
 
 .service-card:nth-child(3) {
   animation-delay: 0.4s;
+}
+
+.js-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.js-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ===== IMMAGINI ===== */
@@ -1389,6 +1387,13 @@ img.loaded {
   .nav-links li a:focus,
   .nav-links li a:active {
     transform: none !important;
+  }
+
+  .js-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
   }
 }
 

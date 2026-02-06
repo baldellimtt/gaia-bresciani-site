@@ -1071,7 +1071,7 @@ img.loaded {
     height: 100vh;
     height: 100dvh;
     background: linear-gradient(135deg, #FAF9F6 0%, #E8E6E0 100%);
-    padding: 70px 0 0;
+    padding: 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -1088,6 +1088,7 @@ img.loaded {
                 opacity 0.4s ease;
     box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
     pointer-events: none;
+    align-items: stretch;
   }
 
   .nav-links.active {
@@ -1101,6 +1102,7 @@ img.loaded {
   .nav-links::before {
     content: 'Menu';
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 0 28px;
     height: 70px;
@@ -1108,7 +1110,7 @@ img.loaded {
     position: sticky;
     top: 0;
     z-index: 1;
-    margin-top: -70px;
+    width: 100%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Lora', serif;
     font-size: 1.5rem;

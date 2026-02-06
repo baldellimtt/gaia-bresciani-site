@@ -770,7 +770,8 @@ img.loaded {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  text-align: left;
+  text-align: center;
+  align-items: center;
 }
 
 .footer-bottom p {

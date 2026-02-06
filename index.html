@@ -27,7 +27,6 @@
   <!-- Polyfill per browser che non supportano onload su link -->
   <script>!function(e){var t=function(t,n){var o=e.document.createElement("link");o.rel="stylesheet",o.href=t,o.media="only x",function e(t){if(e.body)return t();setTimeout(function(){e(t)})}(function(){n.parentNode.insertBefore(o,n)}),setTimeout(function(){o.media="all"})};e.loadCSS||(e.loadCSS=t)}("undefined"!=typeof global?global:this);</script>
   <meta content="Psicologa e Psicoterapeuta a Sarnico e Lago d'Iseo. Studio a Credaro (BG). Terapia psicologica, EMDR, consulenze individuali e di coppia. Terapia per ansia e attacchi di panico." name="description"/>
-  <meta name="keywords" content="psicologa sarnico, terapia sarnico, consulenza psicologia sarnico, ansia lago d'iseo, terapia coppia sarnico, attacchi panico lago d'iseo, psicologa lago d'iseo, psicoterapeuta sarnico, consulenza psicologica lago d'iseo"/>
   <link href="https://www.gaiabrescianipsicologa.it/" rel="canonical"/>
   <link href="assets/favicon.webp" rel="icon" type="image/webp"/>
   <!-- Open Graph / Facebook -->
@@ -81,6 +80,7 @@
     {
       "@context": "https://schema.org",
       "@type": ["Psychologist", "MedicalBusiness", "LocalBusiness"],
+      "@id": "https://www.gaiabrescianipsicologa.it/#localbusiness",
       "name": "Gaia Bresciani – Psicologa e Psicoterapeuta",
       "alternateName": "Studio Psicologia Gaia Bresciani",
       "image": [
@@ -88,6 +88,11 @@
         "https://www.gaiabrescianipsicologa.it/assets/psicologa-lago-iseo-sarnico.webp"
       ],
       "logo": "https://www.gaiabrescianipsicologa.it/assets/psicologa-gaia-bresciani.webp",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "45.6600",
+        "longitude": "9.9300"
+      },
       "description": "Psicologa e Psicoterapeuta specializzata in Psicoterapia Psicodinamica Adleriana e Terapia EMDR. Studio a Credaro (BG) e Castenedolo (BS), servizio per Sarnico, Lago d'Iseo e zone limitrofe. Terapia per ansia, attacchi di panico, traumi e difficoltà relazionali.",
       "address": [
         {
@@ -445,12 +450,16 @@
       <li><a href="esperienza-psicologa-villongo.html" title="Esperienza professionale Psicologa a Credaro e Villongo">Esperienza</a></li>
       <li><a href="terapia-psicologica-sarnico.html" title="Terapia Psicologica a Sarnico e Lago d'Iseo – Terapia di coppia Sarnico, percorsi individuali">Terapia Individuale e di Coppia</a></li>
       <li><a href="terapia-emdr-lago-iseo.html" title="Terapia EMDR a Credaro – Trattamento traumi e ansia Sarnico e Villongo">Terapia EMDR</a></li>
+      <li><a href="approfondimenti.html" title="Approfondimenti di psicologia e psicoterapia">Approfondimenti</a></li>
       <li><a href="faq-psicologa-sarnico.html" title="Domande frequenti su Psicoterapia a Credaro, Sarnico e Villongo">FAQ</a></li>
       <li><a href="psicologa-sarnico-contatti.html" title="Contatta la Psicologa a Credaro – Richiedi colloquio o informazioni">Contatti</a></li>
     </ul>
   </nav>
 </header>
 <main id="main-content">
+  <div class="text-block">
+    <h1>Psicologa Lago d'Iseo e Sarnico<br/>Terapia Psicologica personalizzata</h1>
+  </div>
   <div class="text-block service-notice-block">
     <div class="service-notice">
       <strong class="notice-title">Comunicazione di Servizio – Sospensione Temporanea delle Attività</strong>
@@ -459,10 +468,49 @@
     <p>La data precisa di riapertura verrà pubblicata su questo sito non appena disponibile.</p>
     </div>
   </div>
+
+  <section class="waitlist-panel">
+    <h2>Richiedi una prenotazione per la riapertura</h2>
+    <p>Se desideri essere ricontattato/a alla riapertura, puoi lasciare i tuoi dati. Ti risponderò appena riprenderanno le attività.</p>
+    <form action="https://formspree.io/f/xnnpnvqy" class="waitlist-form" method="POST" id="waitlist-form">
+      <input type="hidden" name="subject" value="Lista attesa riapertura - Sito Gaia Bresciani">
+      <label for="waitlist-name">Nome e Cognome*</label>
+      <input type="text" id="waitlist-name" name="name" required autocomplete="name" aria-required="true">
+
+      <label for="waitlist-email">Email*</label>
+      <input type="email" id="waitlist-email" name="_replyto" required autocomplete="email" aria-required="true">
+
+      <label for="waitlist-phone">Numero di Telefono</label>
+      <input type="tel" id="waitlist-phone" name="phone" placeholder="+39 340 0000000" autocomplete="tel">
+
+      <label for="waitlist-city">Comune di residenza</label>
+      <input type="text" id="waitlist-city" name="city" placeholder="Es. Sarnico, Paratico, Bergamo" autocomplete="address-level2">
+
+      <label for="waitlist-message">Messaggio (opzionale)</label>
+      <textarea id="waitlist-message" name="message" rows="4"></textarea>
+
+      <div>
+        <input type="checkbox" id="waitlist-privacy" name="privacy" required aria-required="true">
+        <label for="waitlist-privacy">
+          Ho letto e accetto la <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        </label>
+      </div>
+
+      <button type="submit">Richiedi ricontatto</button>
+    </form>
+  </section>
   <div class="text-block">
-    <h1>Psicologa Lago d'Iseo e Sarnico<br/>Terapia Psicologica personalizzata</h1>
     <p>Se stai cercando una <strong>Psicologa</strong> a <strong>Sarnico</strong>, sul <strong>Lago d'Iseo</strong>, a <strong>Grumello del Monte</strong>, <strong>Paratico</strong>, <strong>Capriolo</strong>, <strong>Castelli Calepio</strong> o nelle zone limitrofe, sei nel posto giusto. Mi chiamo <strong>Gaia Bresciani</strong>, sono <strong>Psicologa Clinica</strong> e <strong>Psicoterapeuta Psicodinamica Adleriana</strong>, e offro percorsi terapeutici personalizzati per adulti, bambini, adolescenti, coppie e famiglie.</p>
     <p>Accolgo nel mio studio persone che vivono momenti di difficoltà, sofferenza interiore o desiderano semplicemente migliorare il proprio <strong>benessere psicologico</strong>. La terapia può aiutare a ritrovare equilibrio, serenità e consapevolezza di sé.</p>
+  </div>
+
+  <div class="cta-panel">
+    <p><strong>Vuoi iniziare un percorso psicologico?</strong> Sono disponibile per colloqui in studio a Credaro e Castenedolo o online.</p>
+    <div class="cta-buttons-container">
+      <a href="tel:+393408389958" class="cta-button cta-button-primary" title="Chiama la Psicologa Gaia Bresciani">Chiama Ora</a>
+      <a href="psicologa-sarnico-contatti.html#contact-form" class="cta-button cta-button-secondary" title="Scrivi alla Psicologa Gaia Bresciani">Scrivimi</a>
+      <a href="mailto:gaia.bresciani23@gmail.com" class="cta-button cta-button-outline" title="Invia email a Gaia Bresciani">Email</a>
+    </div>
   </div>
   
 	<div class="foto-contenitore">
@@ -501,6 +549,59 @@
       <span class="service-card-link">Scopri di più →</span>
     </a>
   </div>
+
+  <section class="insights-section">
+    <div class="insights-header">
+      <h2>Approfondimenti</h2>
+      <p>Guide pratiche su ansia, attacchi di panico e relazioni per chi cerca supporto psicologico a Sarnico e Lago d'Iseo.</p>
+    </div>
+    <div class="insights-grid">
+      <a href="approfondimenti-ansia-panico-sarnico.html" class="insights-card" title="Ansia e attacchi di panico: quando chiedere aiuto">
+        <div class="insights-meta">6 febbraio 2026 · 6 minuti di lettura</div>
+        <h3>Ansia e attacchi di panico: quando chiedere aiuto a Sarnico e dintorni</h3>
+        <p>Segnali, falsi miti e primi passi concreti per chi vive ansia o attacchi di panico.</p>
+        <div class="insights-tags">
+          <span class="insights-tag">Ansia</span>
+          <span class="insights-tag">Attacchi di panico</span>
+          <span class="insights-tag">Sarnico</span>
+        </div>
+      </a>
+      <a href="approfondimenti-terapia-coppia-primo-colloquio.html" class="insights-card" title="Terapia di coppia: segnali e primo colloquio">
+        <div class="insights-meta">6 febbraio 2026 · 5 minuti di lettura</div>
+        <h3>Terapia di coppia: segnali precoci e cosa aspettarsi dal primo colloquio</h3>
+        <p>Quando è utile chiedere un supporto di coppia e come funziona il primo incontro.</p>
+        <div class="insights-tags">
+          <span class="insights-tag">Coppia</span>
+          <span class="insights-tag">Relazioni</span>
+          <span class="insights-tag">Lago d'Iseo</span>
+        </div>
+      </a>
+    </div>
+    <div class="cta-buttons-container">
+      <a href="approfondimenti.html" class="cta-button cta-button-primary" title="Vai alla sezione Approfondimenti">Vedi tutti gli approfondimenti</a>
+      <a href="psicologa-sarnico-contatti.html#contact-form" class="cta-button cta-button-outline" title="Contatta la Psicologa Gaia Bresciani">Contatti</a>
+    </div>
+  </section>
+
+  <section class="insights-section">
+    <div class="insights-header">
+      <h2>Zone Servite</h2>
+      <p>Informazioni pratiche per chi cerca una psicoterapeuta a Sarnico, Lago d'Iseo e provincia di Bergamo.</p>
+    </div>
+    <div class="local-cards">
+      <a href="zona-sarnico-lago-iseo.html" class="local-card" title="Psicoterapeuta a Sarnico e Lago d'Iseo">
+        <h3>Zona Sarnico – Lago d'Iseo</h3>
+        <p>Indicazioni, servizi, comuni serviti e come raggiungere lo studio a Credaro.</p>
+      </a>
+      <a href="psicoterapeuta-bergamo-provincia.html" class="local-card" title="Psicoterapeuta in provincia di Bergamo">
+        <h3>Provincia di Bergamo</h3>
+        <p>Supporto psicologico per i principali comuni della provincia e percorsi disponibili.</p>
+      </a>
+    </div>
+    <div class="cta-buttons-container">
+      <a href="psicologa-sarnico-contatti.html#contact-form" class="cta-button cta-button-primary" title="Contatta la Psicologa Gaia Bresciani">Richiedi informazioni</a>
+    </div>
+  </section>
   
     <div class="closing-image">
     <a href="https://it.wikipedia.org/wiki/Wassily_Kandinsky" target="_blank" rel="noopener noreferrer" title="Wassily Kandinsky – Arte e Psicologia">
@@ -603,6 +704,9 @@
                 <li><a href="esperienza-psicologa-villongo.html" title="Esperienza professionale">Esperienza</a></li>
                 <li><a href="terapia-psicologica-sarnico.html" title="Terapia Individuale e di Coppia">Terapia Individuale e di Coppia</a></li>
                 <li><a href="terapia-emdr-lago-iseo.html" title="Terapia EMDR">Terapia EMDR</a></li>
+                <li><a href="approfondimenti.html" title="Approfondimenti">Approfondimenti</a></li>
+                <li><a href="zona-sarnico-lago-iseo.html" title="Zona Sarnico – Lago d'Iseo">Zona Sarnico – Lago d'Iseo</a></li>
+                <li><a href="psicoterapeuta-bergamo-provincia.html" title="Psicoterapeuta in provincia di Bergamo">Provincia di Bergamo</a></li>
                 <li><a href="faq-psicologa-sarnico.html" title="Domande frequenti">FAQ</a></li>
                 <li><a href="psicologa-sarnico-contatti.html" title="Contatti">Contatti</a></li>
             </ul>

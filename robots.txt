@@ -1,11 +1,6 @@
 User-agent: *
 Allow: /
 
-# Disallow cartelle non necessarie per i crawler
-Disallow: /js/
-Disallow: /css/
-Disallow: /fonts/
-
 # Pagine importanti
 Allow: /psicologa-lago-iseo.html
 Allow: /terapia-psicologica-sarnico.html
@@ -13,6 +8,9 @@ Allow: /terapia-emdr-lago-iseo.html
 Allow: /esperienza-psicologa-villongo.html
 Allow: /faq-psicologa-sarnico.html
 Allow: /psicologa-sarnico-contatti.html
+Allow: /approfondimenti.html
+Allow: /zona-sarnico-lago-iseo.html
+Allow: /psicoterapeuta-bergamo-provincia.html
 
 # Sitemap
 Sitemap: https://www.gaiabrescianipsicologa.it/sitemap.xml

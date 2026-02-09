@@ -52,9 +52,16 @@
 
   <url>
     <loc>https://www.gaiabrescianipsicologa.it/approfondimenti.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.gaiabrescianipsicologa.it/approfondimenti-social-network-adolescenza.html</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>

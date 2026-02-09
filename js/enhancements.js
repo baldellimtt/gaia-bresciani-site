@@ -69,12 +69,20 @@
   function enhanceMobileMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
     
     if (menuToggle && navLinks) {
+      // Assicura che lo stato del body sia coerente con il menu
+      if (!navLinks.classList.contains('active')) {
+        body.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+
       // Chiudi menu quando si clicca fuori
       document.addEventListener('click', (e) => {
         if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
           navLinks.classList.remove('active');
+          body.classList.remove('menu-open');
           menuToggle.setAttribute('aria-expanded', 'false');
         }
       });
@@ -83,6 +91,7 @@
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navLinks.classList.contains('active')) {
           navLinks.classList.remove('active');
+          body.classList.remove('menu-open');
           menuToggle.setAttribute('aria-expanded', 'false');
           menuToggle.focus();
         }
@@ -117,6 +126,8 @@
   }
 
   function init() {
+    // Reset eventuale stato di blocco scroll lasciato dal menu
+    document.body.classList.remove('menu-open');
     enhanceImageLoading();
     addScrollAnimations();
     enhanceMobileMenu();

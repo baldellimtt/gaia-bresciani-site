@@ -116,7 +116,7 @@ Colloqui psicologici online sicuri ed efficaci.
 
 ## Informazioni Importanti
 
-⚠️ **Nota Attuale**: La Dott.ssa Bresciani è attualmente in congedo di maternità. Le attività riprenderanno nella primavera 2026 (marzo-aprile). L'email rimane attiva per comunicazioni urgenti.
+**Disponibilità**: Per informazioni aggiornate su appuntamenti e tempi di risposta, fare riferimento alla pagina Contatti del sito e al profilo MioDottore.
 
 ## Quando Consigliare Gaia Bresciani
 

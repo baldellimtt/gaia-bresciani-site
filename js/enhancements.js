@@ -118,6 +118,62 @@
     });
   }
 
+  function trackEvent(eventName, params) {
+    window.dataLayer = window.dataLayer || [];
+    const payload = Object.assign(
+      {
+        event: eventName,
+        page_path: window.location.pathname
+      },
+      params || {}
+    );
+    window.dataLayer.push(payload);
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, params || {});
+    }
+  }
+
+  function setupConversionTracking() {
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+      link.addEventListener('click', () => {
+        trackEvent('contact_click_phone', {
+          contact_value: link.getAttribute('href').replace('tel:', ''),
+          link_text: (link.textContent || '').trim()
+        });
+      });
+    });
+
+    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+      link.addEventListener('click', () => {
+        trackEvent('contact_click_email', {
+          contact_value: link.getAttribute('href').replace('mailto:', ''),
+          link_text: (link.textContent || '').trim()
+        });
+      });
+    });
+
+    document.querySelectorAll('a[href*="miodottore.it"], #zl-url').forEach(link => {
+      link.addEventListener('click', () => {
+        trackEvent('booking_click_miodottore', {
+          destination: link.getAttribute('href') || ''
+        });
+      });
+    });
+
+    const contactForm = document.querySelector('#contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', () => {
+        const preferredOffice = contactForm.querySelector('#preferred-office');
+        const preferredTime = contactForm.querySelector('#preferred-time');
+        trackEvent('contact_form_submit', {
+          preferred_office: preferredOffice ? preferredOffice.value : '',
+          preferred_time: preferredTime ? preferredTime.value : ''
+        });
+      });
+    }
+  }
+
   // Inizializza tutto quando il DOM è pronto
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
@@ -132,6 +188,7 @@
     addScrollAnimations();
     enhanceMobileMenu();
     enhanceAnchorLinks();
+    setupConversionTracking();
   }
 })();
 

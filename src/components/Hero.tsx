@@ -93,24 +93,26 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
-            className="lg:col-span-2 relative"
+            className="lg:col-span-2 flex justify-center lg:justify-end"
           >
-            <div className="relative aspect-[3/4] max-w-[220px] mx-auto lg:max-w-[250px] rounded-3xl overflow-hidden shadow-soft-lg">
-              <Image
-                src="/assets/psicologa-gaia-bresciani.webp"
-                alt="Dott.ssa Gaia Bresciani, psicologa e psicoterapeuta a Sarnico e Lago d'Iseo"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 220px, 250px"
-                fetchPriority="high"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />
-            </div>
+            <div className="relative">
+              <div className="relative aspect-[3/4] w-[220px] lg:w-[250px] rounded-3xl overflow-hidden shadow-soft-lg">
+                <Image
+                  src="/assets/psicologa-gaia-bresciani.webp"
+                  alt="Dott.ssa Gaia Bresciani, psicologa e psicoterapeuta a Sarnico e Lago d'Iseo"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 220px, 250px"
+                  fetchPriority="high"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />
+              </div>
 
-            <div className="absolute -bottom-4 -left-4 card-base py-4 px-5 max-w-[220px]">
-              <p className="text-xs text-primary/50 font-medium uppercase tracking-wider">Albo Psicologi</p>
-              <p className="text-sm font-semibold text-primary mt-0.5">N. 22433 &mdash; Lombardia</p>
+              <div className="absolute -bottom-3 -left-6 card-base py-3 px-4 shadow-soft">
+                <p className="text-[0.65rem] text-primary/50 font-medium uppercase tracking-wider">Albo Psicologi</p>
+                <p className="text-sm font-semibold text-primary mt-0.5">N. 22433 &mdash; Lombardia</p>
+              </div>
             </div>
           </motion.div>
         </div>

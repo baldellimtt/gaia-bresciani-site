@@ -1,45 +1,92 @@
-# Sito Web di Gaia Bresciani – Psicologa e Psicoterapeuta
+# Gaia Bresciani -- Psicologa e Psicoterapeuta
 
-Benvenuti nel repository del sito web della Dott.ssa Gaia Bresciani.  
-Questo sito fornisce informazioni su servizi, esperienze, contatti e FAQ relativi all'attività di psicologia e psicoterapia. Il dominio www.gaiabrescianipsicologa.it è preso da TopHost.
+Sito web della Dott.ssa Gaia Bresciani, psicologa e psicoterapeuta a Credaro (BG) e Castenedolo (BS).
 
----
+## Stack tecnico
 
-## Struttura del progetto
+- **Next.js 14** con App Router e static export (`output: 'export'`)
+- **React 18** + **TypeScript 5**
+- **Tailwind CSS 3.4** con design system custom
+- **Framer Motion 11** per animazioni
+- **Lucide React** per icone
 
-- **index.html**  
-  Pagina principale: presentazione generale, servizi offerti, disturbi trattati, recensioni, ecc.
+## Sviluppo locale
 
-- **chi-sono.html**  
-  Approfondimento sul percorso formativo e professionale della Dott.ssa.
+```bash
+npm install
+npm run dev
+```
 
-- **esperienza.html**  
-  Dettaglio esperienze lavorative e collaborazioni.
+Il sito sara disponibile su `http://localhost:3000`.
 
-- **terapia-individuale-coppia.html**  
-  Informazioni sulla terapia individuale e di coppia, approccio adleriano, ecc.
+## Build di produzione
 
-- **terapia-emdr.html**  
-  Introduzione alla terapia EMDR, vantaggi e indicazioni per la gestione di traumi e ansia.
+```bash
+npm run build
+```
 
-- **faq.html**  
-  Domande frequenti (FAQ) dei pazienti o visitatori.
+L'output statico viene generato nella cartella `out/`.
 
-- **contatti.html**  
-  Recapiti, indirizzi degli studi, form di contatto basato su Formspree, mappe Google e widget per prenotare visite online.
+## Deploy su GitHub Pages
 
-- **style.css**  
-  File CSS principale, con stili tipografici, layout, navbar, immagini, footer, ecc.
+Il deploy avviene automaticamente tramite GitHub Actions ad ogni push su `main`.
 
-- **assets/**  
-  Cartella con immagini (logo, foto dello studio, icone social, ecc.).
+### Prima configurazione (una sola volta)
 
----
+1. Vai su **Settings > Pages** del repository GitHub
+2. In **Source** seleziona **GitHub Actions**
+3. Committa e pusha su `main` -- il workflow `.github/workflows/deploy.yml` fara il resto
 
-## Come visualizzare localmente
+### Dominio personalizzato
 
-1. **Clona** o scarica il repository (ZIP) da GitHub o altra piattaforma.
-2. Apri `index.html` in un browser. Non è necessario alcun server web per i file statici.
-3. (Facoltativo) Se preferisci un server locale, puoi usare ad esempio Python 3:
-   ```bash
-   python3 -m http.server 8080
+Per collegare `www.gaiabrescianipsicologa.it`:
+
+1. In **Settings > Pages > Custom domain** inserisci `www.gaiabrescianipsicologa.it`
+2. Spunta **Enforce HTTPS**
+3. Nel pannello DNS del provider (TopHost) configura:
+
+| Tipo  | Nome | Valore                          |
+|-------|------|---------------------------------|
+| CNAME | www  | `<username>.github.io`          |
+| A     | @    | `185.199.108.153`               |
+| A     | @    | `185.199.109.153`               |
+| A     | @    | `185.199.110.153`               |
+| A     | @    | `185.199.111.153`               |
+
+4. Crea il file `public/CNAME` con il contenuto:
+
+```
+www.gaiabrescianipsicologa.it
+```
+
+5. Attendi 10-30 minuti per la propagazione DNS
+
+### Verifica deploy
+
+Dopo il push, controlla lo stato in **Actions** nel repository. Il sito sara raggiungibile all'URL configurato.
+
+## Struttura progetto
+
+```
+src/
+  app/              # Pagine (App Router)
+    layout.tsx       # Layout globale con SEO e Schema.org
+    page.tsx         # Homepage
+    chi-sono/        # Chi sono
+    terapia/         # Servizi
+    emdr/            # EMDR
+    faq/             # FAQ
+    contatti/        # Contatti
+    approfondimenti/ # Articoli
+    zona-sarnico/    # Area locale
+    esperienza/      # Esperienza
+    privacy-policy/  # Privacy Policy
+    cookie-policy/   # Cookie Policy
+    sitemap.ts       # Sitemap XML generato
+    robots.ts        # Robots.txt generato
+  components/        # Componenti React
+  lib/               # Utility (motion barrel)
+public/
+  assets/            # Immagini WebP
+  manifest.json      # Web App Manifest
+```

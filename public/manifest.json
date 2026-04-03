@@ -1,0 +1,16 @@
+{
+  "name": "Gaia Bresciani – Psicologa e Psicoterapeuta",
+  "short_name": "Gaia Bresciani",
+  "description": "Psicologa e Psicoterapeuta a Sarnico, Lago d'Iseo e Castenedolo. Percorsi per ansia, relazioni, autostima e traumi.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9F7F2",
+  "theme_color": "#2D464C",
+  "icons": [
+    {
+      "src": "/assets/favicon.webp",
+      "sizes": "any",
+      "type": "image/webp"
+    }
+  ]
+}

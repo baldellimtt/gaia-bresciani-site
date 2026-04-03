@@ -2,6 +2,7 @@
 
 import { motion, useInView } from '@/lib/motion';
 import { useRef } from 'react';
+import Image from 'next/image';
 import { MapPin, Building2, Laptop } from 'lucide-react';
 
 const locations = [
@@ -14,6 +15,7 @@ const locations = [
     link: '/zona-sarnico',
     linkLabel: 'Come raggiungermi',
     primary: true,
+    image: '/assets/studio-psicologia-credaro.webp',
   },
   {
     icon: Building2,
@@ -23,6 +25,7 @@ const locations = [
       'Piazza Martiri della Libert\u00e0 7 \u2014 riferimento per Brescia, Rezzato, Mazzano e dintorni.',
     link: '/contatti',
     linkLabel: 'Informazioni sede',
+    image: '/assets/studio-psicologa-sarnico.webp',
   },
   {
     icon: Laptop,
@@ -32,6 +35,7 @@ const locations = [
       'Colloqui da remoto sicuri e riservati, per chi ha difficolt\u00e0 logistiche o vive fuori zona.',
     link: '#contatti',
     linkLabel: 'Prenota online',
+    image: '/assets/consulenza-psicologica-online-bergamo.webp',
   },
 ];
 
@@ -81,32 +85,43 @@ export default function LocationCards() {
                 key={loc.title}
                 href={loc.link}
                 variants={cardVariants}
-                className={`group card-base card-hover p-7 lg:p-8 flex flex-col ${
-                  loc.primary
-                    ? 'ring-2 ring-accent/20 relative overflow-hidden'
-                    : ''
+                className={`group card-base card-hover flex flex-col overflow-hidden ${
+                  loc.primary ? 'ring-2 ring-accent/20 relative' : ''
                 }`}
               >
-                {loc.primary && (
-                  <span className="absolute top-4 right-4 text-[0.65rem] font-bold uppercase tracking-widest text-accent bg-accent/10 px-3 py-1 rounded-full">
-                    Sede principale
-                  </span>
+                {loc.image && (
+                  <div className="relative h-40 w-full">
+                    <Image
+                      src={loc.image}
+                      alt={`Studio ${loc.title}`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    {loc.primary && (
+                      <span className="absolute top-3 right-3 text-[0.65rem] font-bold uppercase tracking-widest text-accent bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                        Sede principale
+                      </span>
+                    )}
+                  </div>
                 )}
 
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
-                  <Icon size={22} strokeWidth={1.6} className="text-accent" />
+                <div className="p-7 lg:p-8 flex flex-col flex-1">
+                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
+                    <Icon size={22} strokeWidth={1.6} className="text-accent" />
+                  </div>
+
+                  <h3 className="heading-md mb-1">{loc.title}</h3>
+                  <p className="text-sm text-accent font-medium mb-3">
+                    {loc.subtitle}
+                  </p>
+                  <p className="body-md flex-1">{loc.description}</p>
+
+                  <span className="mt-5 text-sm font-medium text-primary group-hover:text-accent transition-colors flex items-center gap-1.5">
+                    {loc.linkLabel}
+                    <span className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+                  </span>
                 </div>
-
-                <h3 className="heading-md mb-1">{loc.title}</h3>
-                <p className="text-sm text-accent font-medium mb-3">
-                  {loc.subtitle}
-                </p>
-                <p className="body-md flex-1">{loc.description}</p>
-
-                <span className="mt-5 text-sm font-medium text-primary group-hover:text-accent transition-colors flex items-center gap-1.5">
-                  {loc.linkLabel}
-                  <span className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
-                </span>
               </motion.a>
             );
           })}

@@ -42,8 +42,8 @@ export default function Hero() {
               custom={1}
               className="heading-xl text-balance"
             >
-              Trova il tuo equilibrio,
-              <span className="block text-accent"> un passo alla volta</span>
+              So che chiedere aiuto
+              <span className="block text-accent">non &egrave; facile</span>
             </motion.h1>
 
             <motion.p
@@ -53,9 +53,9 @@ export default function Hero() {
               custom={2}
               className="body-lg max-w-xl"
             >
-              Percorsi di psicoterapia personalizzati per ansia, relazioni,
-              autostima e traumi. In uno spazio protetto tra le colline
-              del Lago d&apos;Iseo.
+              Se l&apos;ansia ti blocca, le relazioni ti pesano o senti che
+              qualcosa non va &mdash; non devi affrontare tutto da sola.
+              Un primo colloquio per capire insieme da dove partire.
             </motion.p>
 
             <motion.div

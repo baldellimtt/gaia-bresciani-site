@@ -28,12 +28,12 @@ export default function QuoteSection() {
 
             <blockquote className="relative z-10">
               <p className="text-xl sm:text-2xl lg:text-[1.75rem] font-serif text-primary leading-relaxed italic">
-                Non &egrave; ci&ograve; che vedi sul quadro l&apos;importante,
-                ma ci&ograve; che riesci a vedere dentro di esso.
+                L&apos;individuo non &egrave; vittima del proprio passato,
+                ma creatore del proprio futuro.
               </p>
               <footer className="mt-6">
                 <cite className="not-italic text-sm text-primary/50 font-sans">
-                  Wassily Kandinsky
+                  Alfred Adler &mdash; Fondatore della Psicologia Individuale
                 </cite>
               </footer>
             </blockquote>

@@ -45,12 +45,14 @@ const studios = [
     address: 'Via Piave 7, 24060',
     area: 'Area Sarnico, Lago d\'Iseo, Grumello, Paratico, Capriolo, Villongo',
     mapSrc: 'https://maps.google.com/maps?q=Via%20Piave%207,%20Credaro%20BG&t=&z=13&ie=UTF8&iwloc=&output=embed',
+    mapsUrl: 'https://www.google.com/maps/search/Via+Piave+7,+Credaro+BG',
   },
   {
     name: 'Castenedolo (BS)',
     address: 'Piazza Martiri della Libert\u00e0 7, 25014',
     area: 'Area Brescia, Montichiari, Rezzato, Ghedi, Prevalle, Mazzano',
     mapSrc: 'https://maps.google.com/maps?q=45.4710,10.3005&z=11&output=embed',
+    mapsUrl: 'https://www.google.com/maps/search/Piazza+Martiri+della+Libertà+7,+Castenedolo+BS',
   },
 ];
 
@@ -149,6 +151,7 @@ export default function ContattiPage() {
                   src={studio.mapSrc}
                   title={`Mappa ${studio.name}`}
                   className="w-full h-[300px] rounded-2xl"
+                  mapsUrl={studio.mapsUrl}
                 />
               </div>
             </AnimatedSection>

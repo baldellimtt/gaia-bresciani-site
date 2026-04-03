@@ -59,9 +59,19 @@ const faqItems = [
       'Una seduta dura circa 50 minuti. Anche nel percorso EMDR la durata standard resta di 50 minuti.',
   },
   {
+    question: 'Quanto costa una seduta?',
+    answer:
+      'Il costo di una seduta è compreso tra 70 e 100 euro, a seconda del tipo di percorso (individuale, di coppia, EMDR). Il compenso viene concordato nel primo colloquio. Le spese per sedute psicologiche e psicoterapeutiche sono detraibili al 19% nella dichiarazione dei redditi (modello 730 o Redditi PF), come previsto dalla normativa fiscale italiana. È sufficiente conservare la fattura rilasciata.',
+  },
+  {
+    question: 'Quali sono le modalità di pagamento?',
+    answer:
+      'È possibile pagare in contanti o tramite bonifico bancario. Ad ogni seduta viene rilasciata regolare fattura sanitaria, valida per la detrazione fiscale.',
+  },
+  {
     question: 'Come posso fissare un appuntamento?',
     answer:
-      'Puoi contattarmi via telefono, email o modulo nella sezione Contatti. Indica sede preferita e fascia oraria: ricevi una risposta entro 24 ore lavorative.',
+      'Puoi contattarmi via telefono, email, modulo nella sezione Contatti o tramite MioDottore. Indica sede preferita e fascia oraria: ricevi una risposta entro 24 ore lavorative.',
   },
   {
     question: 'Lavori anche nel weekend o in orari serali?',

@@ -42,6 +42,23 @@ export default function ChiSonoPage() {
               </p>
             </div>
 
+            <div className="card-base p-6 bg-accent/[0.04] border-l-4 border-accent/30 space-y-3">
+              <h3 className="font-serif font-semibold text-base text-primary">
+                Perch&eacute; faccio questo lavoro
+              </h3>
+              <p className="body-md">
+                Ho scelto di diventare psicoterapeuta perch&eacute; credo che ognuno
+                meriti uno spazio in cui sentirsi ascoltato senza giudizio.
+                So che chiedere aiuto &egrave; difficile &mdash; spesso chi arriva in
+                studio ci ha pensato a lungo prima di farlo.
+              </p>
+              <p className="body-md">
+                Il mio obiettivo &egrave; creare le condizioni perch&eacute; quel
+                primo passo non sia spaventoso, ma l&apos;inizio di un cambiamento
+                reale e sostenibile.
+              </p>
+            </div>
+
             <div className="space-y-4">
               <p className="body-md">
                 Mi sono formata in Psicologia Clinica e della Salute e sono

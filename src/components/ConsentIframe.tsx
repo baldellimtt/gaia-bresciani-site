@@ -8,9 +8,10 @@ interface ConsentIframeProps {
   src: string;
   title: string;
   className?: string;
+  mapsUrl?: string;
 }
 
-export default function ConsentIframe({ src, title, className }: ConsentIframeProps) {
+export default function ConsentIframe({ src, title, className, mapsUrl }: ConsentIframeProps) {
   const [allowed, setAllowed] = useState(false);
 
   useEffect(() => {
@@ -41,15 +42,28 @@ export default function ConsentIframe({ src, title, className }: ConsentIframePr
       <div>
         <p className="text-sm font-medium text-primary mb-1">Mappa non disponibile</p>
         <p className="text-xs text-primary/55 leading-relaxed max-w-xs">
-          Per visualizzare la mappa di Google Maps, accetta i cookie funzionali.
+          Per visualizzare la mappa interattiva, accetta i cookie funzionali.
         </p>
       </div>
-      <button
-        onClick={() => window.dispatchEvent(new Event('open-cookie-preferences'))}
-        className="btn-outline py-2 px-4 text-xs"
-      >
-        Gestisci cookie
-      </button>
+      <div className="flex flex-wrap items-center justify-center gap-2.5">
+        <button
+          onClick={() => window.dispatchEvent(new Event('open-cookie-preferences'))}
+          className="btn-outline py-2 px-4 text-xs"
+        >
+          Gestisci cookie
+        </button>
+        {mapsUrl && (
+          <a
+            href={mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-accent py-2 px-4 text-xs gap-1.5"
+          >
+            <MapPin size={13} />
+            Apri in Google Maps
+          </a>
+        )}
+      </div>
     </div>
   );
 }

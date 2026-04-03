@@ -308,10 +308,12 @@ export default function RootLayout({
         <SchemaOrgJsonLd />
         <meta httpEquiv="X-DNS-Prefetch-Control" content="on" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://formspree.io; upgrade-insecure-requests" />
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://platform.docplanner.com; style-src 'self' 'unsafe-inline' https://platform.docplanner.com; img-src 'self' data: https:; font-src 'self' https://platform.docplanner.com; frame-src https://www.google.com https://maps.google.com https://www.miodottore.it; connect-src 'self' https://formspree.io https://platform.docplanner.com; upgrade-insecure-requests" />
         <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
         <link rel="dns-prefetch" href="https://formspree.io" />
         <link rel="preconnect" href="https://formspree.io" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://platform.docplanner.com" />
+        <link rel="preconnect" href="https://platform.docplanner.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google.com" />
       </head>
       <body className="bg-background text-primary antialiased">

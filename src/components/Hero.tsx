@@ -79,7 +79,7 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               custom={4}
-              className="flex items-center gap-6 pt-4 text-sm text-primary/50"
+              className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-4 text-sm text-primary/50"
             >
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-500" />

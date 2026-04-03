@@ -83,7 +83,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setMenuOpen((prev) => !prev)}
-          className="lg:hidden relative z-50 w-10 h-10 flex items-center justify-center"
+          className="lg:hidden relative z-50 w-11 h-11 flex items-center justify-center -mr-1"
           aria-label={menuOpen ? 'Chiudi menu' : 'Apri menu'}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"

@@ -250,7 +250,7 @@ export default function ContactForm() {
         )}
       </div>
 
-      <div className="flex items-start gap-3">
+      <label htmlFor="privacy" className="flex items-start gap-3 cursor-pointer py-2 -my-2">
         <input
           type="checkbox"
           id="privacy"
@@ -258,15 +258,15 @@ export default function ContactForm() {
           checked={data.privacy}
           onChange={handleChange}
           onBlur={() => handleBlur('privacy')}
-          className="mt-1 h-4 w-4 rounded border-primary/20 text-accent focus:ring-accent/30"
+          className="mt-1 h-5 w-5 shrink-0 rounded border-primary/20 text-accent focus:ring-accent/30"
         />
-        <label htmlFor="privacy" className="text-sm text-primary/60 leading-relaxed">
+        <span className="text-sm text-primary/60 leading-relaxed">
           Ho letto e accetto la{' '}
           <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
             Privacy Policy
           </a>
-        </label>
-      </div>
+        </span>
+      </label>
       {errors.privacy && touched.has('privacy') && (
         <p className="text-red-500 text-xs -mt-3">{errors.privacy}</p>
       )}

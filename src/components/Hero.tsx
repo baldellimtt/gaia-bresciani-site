@@ -95,14 +95,14 @@ export default function Hero() {
             transition={{ duration: 0.9, delay: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
             className="lg:col-span-2 relative"
           >
-            <div className="relative aspect-[3/4] max-w-[260px] mx-auto lg:max-w-[300px] rounded-3xl overflow-hidden shadow-soft-lg">
+            <div className="relative aspect-[3/4] max-w-[220px] mx-auto lg:max-w-[250px] rounded-3xl overflow-hidden shadow-soft-lg">
               <Image
                 src="/assets/psicologa-gaia-bresciani.webp"
                 alt="Dott.ssa Gaia Bresciani, psicologa e psicoterapeuta a Sarnico e Lago d'Iseo"
                 fill
                 className="object-cover"
                 priority
-                sizes="(max-width: 768px) 260px, 300px"
+                sizes="(max-width: 768px) 220px, 250px"
                 fetchPriority="high"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />

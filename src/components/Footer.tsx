@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { MapPin, Phone, Mail } from 'lucide-react';
 
@@ -123,6 +125,12 @@ export default function Footer() {
             <Link href="/cookie-policy" className="hover:text-white/60 transition-colors">
               Cookie Policy
             </Link>
+            <button
+              onClick={() => window.dispatchEvent(new Event('open-cookie-preferences'))}
+              className="hover:text-white/60 transition-colors"
+            >
+              Gestisci cookie
+            </button>
           </div>
         </div>
       </div>

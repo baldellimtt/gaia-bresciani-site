@@ -116,7 +116,7 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-primary/20 backdrop-blur-sm z-30 lg:hidden"
+              className="fixed inset-0 bg-primary/60 backdrop-blur-md z-30 lg:hidden"
               onClick={closeMenu}
               aria-hidden="true"
             />
@@ -130,7 +130,7 @@ export default function Navbar() {
               exit={{ opacity: 0, x: '100%' }}
               transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
               className="fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-background z-40 lg:hidden
-                         flex flex-col pt-24 px-8 pb-8 shadow-soft-xl"
+                         flex flex-col pt-24 px-8 pb-8 shadow-soft-xl overflow-y-auto overscroll-contain"
             >
               <div className="flex flex-col gap-1">
                 {navLinks.map((link, i) => (

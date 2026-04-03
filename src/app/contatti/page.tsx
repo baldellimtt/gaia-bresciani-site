@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import ContactForm from '@/components/ContactForm';
+import ConsentIframe from '@/components/ConsentIframe';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -144,12 +145,10 @@ export default function ContattiPage() {
                     </div>
                   </div>
                 </div>
-                <iframe
+                <ConsentIframe
                   src={studio.mapSrc}
                   title={`Mappa ${studio.name}`}
-                  loading="lazy"
-                  allowFullScreen
-                  className="w-full h-[300px] rounded-2xl border border-primary/[0.06]"
+                  className="w-full h-[300px] rounded-2xl"
                 />
               </div>
             </AnimatedSection>

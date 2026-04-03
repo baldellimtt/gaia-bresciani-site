@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Lora, Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import CookieBanner from '@/components/CookieBanner';
 import MotionProvider from '@/components/MotionProvider';
 import './globals.css';
 
@@ -307,7 +308,7 @@ export default function RootLayout({
         <SchemaOrgJsonLd />
         <meta httpEquiv="X-DNS-Prefetch-Control" content="on" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; frame-src https://www.google.com https://maps.google.com https://www.miodottore.it; connect-src 'self' https://formspree.io; upgrade-insecure-requests" />
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://formspree.io; upgrade-insecure-requests" />
         <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
         <link rel="dns-prefetch" href="https://formspree.io" />
         <link rel="preconnect" href="https://formspree.io" crossOrigin="anonymous" />
@@ -324,6 +325,7 @@ export default function RootLayout({
           <Navbar />
           <main id="main-content">{children}</main>
           <Footer />
+          <CookieBanner />
         </MotionProvider>
       </body>
     </html>

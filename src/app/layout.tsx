@@ -145,7 +145,7 @@ function SchemaOrgJsonLd() {
         addressCountry: 'IT',
       },
     ],
-    geo: { '@type': 'GeoCoordinates', latitude: '45.6600', longitude: '9.9300' },
+    geo: { '@type': 'GeoCoordinates', latitude: '45.6337', longitude: '9.9328' },
     hasMap: 'https://www.google.com/maps/place/Gaia+Bresciani+Psicologa/',
     telephone: '+393408389958',
     email: 'gaia.bresciani23@gmail.com',
@@ -159,10 +159,22 @@ function SchemaOrgJsonLd() {
       'https://www.google.com/maps/place/Gaia+Bresciani+Psicologa/',
     ],
     areaServed: [
-      'Sarnico', 'Lago d\'Iseo', 'Iseo', 'Paratico', 'Capriolo',
-      'Villongo', 'Credaro', 'Castelli Calepio', 'Grumello del Monte',
-      'Palazzolo sull\'Oglio', 'Bergamo', 'Brescia', 'Castenedolo',
-    ].map((name) => ({ '@type': 'City', name })),
+      {
+        '@type': 'City',
+        name: 'Sarnico',
+        sameAs: 'https://it.wikipedia.org/wiki/Sarnico',
+        geo: { '@type': 'GeoCoordinates', latitude: '45.6690', longitude: '9.9615' },
+      },
+      ...['Lago d\'Iseo', 'Iseo', 'Paratico', 'Capriolo',
+        'Villongo', 'Credaro', 'Castelli Calepio', 'Grumello del Monte',
+        'Palazzolo sull\'Oglio', 'Bergamo', 'Brescia', 'Castenedolo',
+      ].map((name) => ({ '@type': 'City', name })),
+    ],
+    serviceArea: {
+      '@type': 'GeoCircle',
+      geoMidpoint: { '@type': 'GeoCoordinates', latitude: '45.6690', longitude: '9.9615' },
+      geoRadius: '20000',
+    },
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

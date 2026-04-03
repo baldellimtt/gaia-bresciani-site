@@ -71,14 +71,21 @@ export default function ZonaSarnicoPage() {
             <div className="space-y-4">
               <h2 className="heading-lg">Un punto di riferimento vicino a Sarnico</h2>
               <p className="body-md">
-                Lo studio di Credaro &egrave; facilmente raggiungibile da Sarnico e dai
-                comuni del basso Lago d&apos;Iseo, con tempi di spostamento contenuti e
-                possibilit&agrave; di organizzare appuntamenti in fasce orarie compatibili
-                con lavoro e famiglia.
+                Lo studio di Credaro si trova a <strong>soli 2 km dal centro di
+                Sarnico</strong>, raggiungibile in circa 5 minuti in auto lungo
+                la SP469. Dalla zona lungolago di Sarnico bastano pochi minuti
+                per arrivare allo studio di Via Piave 7.
               </p>
               <p className="body-md">
-                Le richieste pi&ugrave; frequenti riguardano ansia intensa, attacchi di panico,
-                stress prolungato, difficolt&agrave; relazionali, cambiamenti familiari e fasi di
+                Questo rende il percorso pratico anche per chi vive a Paratico,
+                Villongo, Capriolo e nei comuni del basso Lago d&apos;Iseo,
+                con tempi di spostamento contenuti e la possibilit&agrave; di
+                organizzare appuntamenti compatibili con lavoro e famiglia.
+              </p>
+              <p className="body-md">
+                Le richieste pi&ugrave; frequenti da Sarnico e dintorni riguardano
+                ansia intensa, attacchi di panico, stress prolungato,
+                difficolt&agrave; relazionali, cambiamenti familiari e
                 stanchezza emotiva.
               </p>
             </div>
@@ -112,6 +119,32 @@ export default function ZonaSarnicoPage() {
                 </Link>.
               </p>
             </div>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="section-container pb-16">
+        <AnimatedSection>
+          <div className="max-w-3xl space-y-4">
+            <h2 className="heading-lg">Come raggiungere lo studio da Sarnico</h2>
+            <p className="body-md">
+              Da <strong>Sarnico centro</strong>: percorri Via Lantieri verso sud
+              e prosegui sulla SP469 in direzione Credaro. Lo studio si trova in
+              Via Piave 7, sulla destra. Tempo di percorrenza: circa 5 minuti.
+            </p>
+            <p className="body-md">
+              Da <strong>Paratico e Capriolo</strong>: segui la SP469 direzione
+              Sarnico. Credaro si incontra prima di raggiungere Sarnico.
+              Parcheggio libero nelle vicinanze dello studio.
+            </p>
+            <p className="body-md">
+              Se preferisci evitare lo spostamento, &egrave; possibile iniziare
+              o proseguire il percorso con{' '}
+              <Link href="/contatti" className="text-accent hover:underline">
+                colloqui online
+              </Link>{' '}
+              sicuri e riservati.
+            </p>
           </div>
         </AnimatedSection>
       </section>

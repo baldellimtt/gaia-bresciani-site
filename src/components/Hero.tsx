@@ -109,10 +109,15 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />
               </div>
 
-              <div className="absolute -bottom-3 -left-6 card-base py-3 px-4 shadow-soft">
+              <a
+                href="https://www.opl.it/psicologi/22433/Bresciani-Gaia-Miriam-Teresa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute -bottom-3 -left-6 card-base py-3 px-4 shadow-soft block no-underline hover:shadow-soft-lg transition-shadow duration-300"
+              >
                 <p className="text-[0.65rem] text-primary/50 font-medium uppercase tracking-wider">Albo Psicologi</p>
                 <p className="text-sm font-semibold text-primary mt-0.5">N. 22433 &mdash; Lombardia</p>
-              </div>
+              </a>
             </div>
           </motion.div>
         </div>

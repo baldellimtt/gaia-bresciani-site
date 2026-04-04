@@ -47,7 +47,7 @@ export default function PageHeader({ eyebrow, title, subtitle }: PageHeaderProps
             initial="hidden"
             animate="visible"
             custom={2}
-            className="body-lg max-w-2xl"
+            className="body-md max-w-2xl"
           >
             {subtitle}
           </motion.p>

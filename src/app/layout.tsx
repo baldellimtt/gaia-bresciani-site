@@ -315,6 +315,12 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://platform.docplanner.com" />
         <link rel="preconnect" href="https://platform.docplanner.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google.com" />
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/psicologa-sarnico-gaia-bresciani.webp"
+          type="image/webp"
+        />
       </head>
       <body className="bg-background text-primary antialiased">
         <a

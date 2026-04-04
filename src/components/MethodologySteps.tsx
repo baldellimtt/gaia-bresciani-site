@@ -41,10 +41,11 @@ const containerVariants = {
 };
 
 const stepVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 30, willChange: 'transform, opacity' as const },
   visible: {
     opacity: 1,
     y: 0,
+    willChange: 'auto' as const,
     transition: { duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] },
   },
 };

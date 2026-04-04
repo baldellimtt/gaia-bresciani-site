@@ -15,6 +15,14 @@
     "framer-motion": "^11.0.0",
     "lucide-react": "^0.400.0"
   },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "not dead",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "typescript": "^5.0.0",
     "@types/react": "^18.3.0",

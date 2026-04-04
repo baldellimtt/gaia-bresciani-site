@@ -5,10 +5,11 @@ import { ArrowRight, MapPin } from 'lucide-react';
 import Image from 'next/image';
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 30, willChange: 'transform, opacity' as const },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
+    willChange: 'auto' as const,
     transition: { duration: 0.7, delay: 0.15 * i, ease: [0.21, 0.47, 0.32, 0.98] },
   }),
 };
@@ -16,9 +17,9 @@ const fadeUp = {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 -right-32 w-[500px] h-[500px] rounded-full bg-accent/[0.07] blur-3xl" />
-        <div className="absolute -bottom-20 -left-32 w-[400px] h-[400px] rounded-full bg-primary/[0.04] blur-3xl" />
+      <div className="absolute inset-0 -z-10" aria-hidden="true">
+        <div className="absolute top-20 -right-32 w-[500px] h-[500px] rounded-full bg-accent/[0.07] blur-3xl gpu" />
+        <div className="absolute -bottom-20 -left-32 w-[400px] h-[400px] rounded-full bg-primary/[0.04] blur-3xl gpu" />
       </div>
 
       <div className="section-container w-full pt-24 pb-16 lg:pt-28 lg:pb-20">
@@ -106,7 +107,6 @@ export default function Hero() {
                   sizes="(max-width: 768px) 300px, 350px"
                   fetchPriority="high"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />
               </div>
 
               <a

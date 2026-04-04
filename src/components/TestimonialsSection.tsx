@@ -44,10 +44,11 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 25 },
+  hidden: { opacity: 0, y: 25, willChange: 'transform, opacity' as const },
   visible: {
     opacity: 1,
     y: 0,
+    willChange: 'auto' as const,
     transition: { duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] },
   },
 };

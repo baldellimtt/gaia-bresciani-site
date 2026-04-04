@@ -66,10 +66,11 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 30, willChange: 'transform, opacity' as const },
   visible: {
     opacity: 1,
     y: 0,
+    willChange: 'auto' as const,
     transition: { duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] },
   },
 };
@@ -103,8 +104,7 @@ export default function ServicesBentoGrid() {
               <motion.div
                 key={service.title}
                 variants={cardVariants}
-                whileHover={{ y: -6, transition: { duration: 0.25 } }}
-                className={`group relative card-base p-7 lg:p-8 cursor-default transition-shadow duration-300 hover:shadow-soft-lg ${service.span} ${
+                className={`group relative card-base p-7 lg:p-8 cursor-default hover:shadow-soft-lg hover:-translate-y-1.5 transition-[box-shadow,transform] duration-300 ${service.span} ${
                   service.accent
                     ? 'bg-gradient-to-br from-primary to-primary-light text-white'
                     : ''

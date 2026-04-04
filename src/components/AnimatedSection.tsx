@@ -30,11 +30,11 @@ export default function AnimatedSection({
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, ...offset }}
+      initial={{ opacity: 0, ...offset, willChange: 'transform, opacity' }}
       animate={
         isInView
-          ? { opacity: 1, x: 0, y: 0 }
-          : { opacity: 0, ...offset }
+          ? { opacity: 1, x: 0, y: 0, willChange: 'auto' }
+          : { opacity: 0, ...offset, willChange: 'transform, opacity' }
       }
       transition={{
         duration: 0.7,

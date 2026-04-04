@@ -10,8 +10,8 @@ export default function CtaSection() {
       <div className="section-container space-y-12">
         <AnimatedSection>
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary to-primary-dark p-10 sm:p-14 lg:p-20 text-center">
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-accent/10 blur-3xl -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl translate-y-1/2 -translate-x-1/2" />
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-accent/10 blur-3xl -translate-y-1/2 translate-x-1/2 gpu" aria-hidden="true" />
+            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl translate-y-1/2 -translate-x-1/2 gpu" aria-hidden="true" />
 
             <div className="relative z-10 max-w-2xl mx-auto">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white mb-5 text-balance">

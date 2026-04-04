@@ -96,14 +96,14 @@ export default function Hero() {
             className="lg:col-span-2 flex justify-center lg:justify-end"
           >
             <div className="relative">
-              <div className="relative aspect-[3/4] w-[280px] lg:w-[320px] rounded-3xl overflow-hidden shadow-soft-lg">
+              <div className="relative aspect-[3/4] w-[300px] lg:w-[350px] rounded-3xl overflow-hidden shadow-soft-lg">
                 <Image
                   src="/assets/psicologa-sarnico-gaia-bresciani.webp"
                   alt="Dott.ssa Gaia Bresciani, psicologa e psicoterapeuta a Sarnico e Lago d'Iseo"
                   fill
                   className="object-cover"
                   priority
-                  sizes="(max-width: 768px) 280px, 320px"
+                  sizes="(max-width: 768px) 300px, 350px"
                   fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />

@@ -54,9 +54,10 @@ export default function Hero() {
               custom={2}
               className="body-lg max-w-xl"
             >
-              Se l&apos;ansia ti blocca, le relazioni ti pesano o senti che
-              qualcosa non va, non devi affrontare tutto da solo/a.
-              Un primo colloquio per capire insieme da dove partire.
+              Se senti che qualcosa non va, se la fatica si accumula
+              o le giornate pesano pi&ugrave; del solito, non devi affrontare
+              tutto da solo/a. Un primo colloquio per capire insieme
+              da dove partire.
             </motion.p>
 
             <motion.div

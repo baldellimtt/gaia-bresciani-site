@@ -20,6 +20,14 @@ export const metadata: Metadata = {
 const articles = [
   {
     href: '/approfondimenti',
+    date: '7 aprile 2026',
+    readTime: '7 min',
+    title: 'Dipendenza affettiva: quando l&apos;amore diventa un bisogno',
+    excerpt: 'Riconoscere i segnali della dipendenza affettiva, capire da dove nasce e quali sono i primi passi per ritrovare un equilibrio nelle relazioni.',
+    tags: ['Relazioni', 'Dipendenza affettiva'],
+  },
+  {
+    href: '/approfondimenti',
     date: '24 marzo 2026',
     readTime: '6 min',
     title: 'Ruminazione mentale e overthinking: segnali e come fermarsi',

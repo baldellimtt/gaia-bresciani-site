@@ -7,6 +7,14 @@ import { ArrowUpRight, Clock } from 'lucide-react';
 const insights = [
   {
     href: '/approfondimenti',
+    date: '7 aprile 2026',
+    readTime: '7 min',
+    title: 'Dipendenza affettiva: quando l&apos;amore diventa un bisogno',
+    excerpt:
+      'Riconoscere i segnali e capire da dove nasce il bisogno costante dell&apos;altro.',
+  },
+  {
+    href: '/approfondimenti',
     date: '2 marzo 2026',
     readTime: '6 min',
     title: 'Stanchezza emotiva: segnali, cause e primi passi utili',
@@ -28,14 +36,6 @@ const insights = [
     title: 'Ansia e attacchi di panico: quando chiedere aiuto',
     excerpt:
       'Segnali utili per capire quando pu\u00f2 essere il momento di parlare con una professionista.',
-  },
-  {
-    href: '/approfondimenti',
-    date: '6 febbraio 2026',
-    readTime: '5 min',
-    title: 'Terapia di coppia: cosa aspettarsi dal primo colloquio',
-    excerpt:
-      'Una guida semplice per arrivare al primo incontro con pi\u00f9 tranquillit\u00e0.',
   },
 ];
 

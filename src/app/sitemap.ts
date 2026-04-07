@@ -1,11 +1,12 @@
 import type { MetadataRoute } from 'next';
+import { getAllSlugs } from '@/lib/articles';
 
 const BASE = 'https://www.gaiabrescianipsicologa.it';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();
 
-  const routes = [
+  const pages = [
     { path: '/', priority: 1.0, changeFrequency: 'weekly' as const },
     { path: '/chi-sono/', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/terapia/', priority: 0.9, changeFrequency: 'monthly' as const },
@@ -19,7 +20,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/cookie-policy/', priority: 0.2, changeFrequency: 'yearly' as const },
   ];
 
-  return routes.map(({ path, priority, changeFrequency }) => ({
+  const articleRoutes = getAllSlugs().map((slug) => ({
+    path: `/approfondimenti/${slug}/`,
+    priority: 0.7 as const,
+    changeFrequency: 'monthly' as const,
+  }));
+
+  return [...pages, ...articleRoutes].map(({ path, priority, changeFrequency }) => ({
     url: `${BASE}${path}`,
     lastModified: now,
     changeFrequency,

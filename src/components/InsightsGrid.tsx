@@ -3,41 +3,9 @@
 import { motion, useInView } from '@/lib/motion';
 import { useRef } from 'react';
 import { ArrowUpRight, Clock } from 'lucide-react';
+import { getAllArticles } from '@/lib/articles';
 
-const insights = [
-  {
-    href: '/approfondimenti',
-    date: '7 aprile 2026',
-    readTime: '7 min',
-    title: 'Dipendenza affettiva: quando l&apos;amore diventa un bisogno',
-    excerpt:
-      'Riconoscere i segnali e capire da dove nasce il bisogno costante dell&apos;altro.',
-  },
-  {
-    href: '/approfondimenti',
-    date: '2 marzo 2026',
-    readTime: '6 min',
-    title: 'Stanchezza emotiva: segnali, cause e primi passi utili',
-    excerpt:
-      'Una guida pratica per riconoscere la fatica emotiva e capire da dove iniziare.',
-  },
-  {
-    href: '/approfondimenti',
-    date: '16 febbraio 2026',
-    readTime: '7 min',
-    title: 'Autostima bassa: segnali e percorso psicologico',
-    excerpt:
-      'Come riconoscere autosvalutazione e paura del giudizio, con primi passi concreti.',
-  },
-  {
-    href: '/approfondimenti',
-    date: '6 febbraio 2026',
-    readTime: '6 min',
-    title: 'Ansia e attacchi di panico: quando chiedere aiuto',
-    excerpt:
-      'Segnali utili per capire quando pu\u00f2 essere il momento di parlare con una professionista.',
-  },
-];
+const insights = getAllArticles().slice(0, 4);
 
 const containerVariants = {
   hidden: {},
@@ -85,7 +53,7 @@ export default function InsightsGrid() {
           {insights.map((article) => (
             <motion.a
               key={article.title}
-              href={article.href}
+              href={`/approfondimenti/${article.slug}`}
               variants={cardVariants}
               className="group card-base p-6 flex flex-col card-hover"
             >

@@ -3,6 +3,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
+import { getAllArticles } from '@/lib/articles';
 import { ArrowUpRight, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -17,64 +18,7 @@ export const metadata: Metadata = {
   },
 };
 
-const articles = [
-  {
-    href: '/approfondimenti',
-    date: '7 aprile 2026',
-    readTime: '7 min',
-    title: 'Dipendenza affettiva: quando l&apos;amore diventa un bisogno',
-    excerpt: 'Riconoscere i segnali della dipendenza affettiva, capire da dove nasce e quali sono i primi passi per ritrovare un equilibrio nelle relazioni.',
-    tags: ['Relazioni', 'Dipendenza affettiva'],
-  },
-  {
-    href: '/approfondimenti',
-    date: '24 marzo 2026',
-    readTime: '6 min',
-    title: 'Ruminazione mentale e overthinking: segnali e come fermarsi',
-    excerpt: 'Il rimuginio mentale pu\u00f2 consumare energie e lucidit\u00e0. Una guida pratica per riconoscerlo e interrompere il circolo.',
-    tags: ['Benessere emotivo', 'Overthinking'],
-  },
-  {
-    href: '/approfondimenti',
-    date: '2 marzo 2026',
-    readTime: '6 min',
-    title: 'Stanchezza emotiva: segnali, cause e primi passi utili',
-    excerpt: 'Quando la fatica emotiva dura da tempo, pu\u00f2 influenzare sonno, relazioni e lucidit\u00e0.',
-    tags: ['Benessere emotivo', 'Stress'],
-  },
-  {
-    href: '/approfondimenti',
-    date: '16 febbraio 2026',
-    readTime: '7 min',
-    title: 'Autostima bassa: segnali, errori comuni e percorso psicologico',
-    excerpt: 'Come riconoscere autosvalutazione e paura del giudizio, con primi passi concreti.',
-    tags: ['Autostima', 'Benessere emotivo'],
-  },
-  {
-    href: '/approfondimenti',
-    date: '9 febbraio 2026',
-    readTime: '6 min',
-    title: 'Social network e adolescenza: rischi, segnali e strategie',
-    excerpt: 'Come i social influenzano autostima, relazioni e sonno nei pi\u00f9 giovani.',
-    tags: ['Adolescenza', 'Social network'],
-  },
-  {
-    href: '/approfondimenti',
-    date: '6 febbraio 2026',
-    readTime: '6 min',
-    title: 'Ansia e attacchi di panico: quando chiedere aiuto',
-    excerpt: 'Segnali, falsi miti e primi passi concreti per capire quando \u00e8 utile un supporto psicologico.',
-    tags: ['Ansia', 'Attacchi di panico'],
-  },
-  {
-    href: '/approfondimenti',
-    date: '6 febbraio 2026',
-    readTime: '5 min',
-    title: 'Terapia di coppia: segnali precoci e cosa aspettarsi dal primo colloquio',
-    excerpt: 'Quando \u00e8 utile chiedere un supporto di coppia e come si svolge il primo incontro.',
-    tags: ['Coppia', 'Relazioni'],
-  },
-];
+const articles = getAllArticles();
 
 export default function ApprofondimentiPage() {
   return (
@@ -91,7 +35,7 @@ export default function ApprofondimentiPage() {
           {articles.map((article, i) => (
             <AnimatedSection key={article.title} delay={i * 0.06}>
               <a
-                href={article.href}
+                href={`/approfondimenti/${article.slug}`}
                 className="group card-base card-hover p-6 flex flex-col h-full"
               >
                 <div className="flex items-center gap-3 text-xs text-primary/45 mb-4">

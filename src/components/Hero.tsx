@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from '@/lib/motion';
-import { ArrowRight, MapPin } from 'lucide-react';
+import { ArrowRight, Clock3, MapPin, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
@@ -72,11 +72,50 @@ export default function Hero() {
               custom={2}
               className="body-lg max-w-xl"
             >
-              Ricevo a Credaro, in una sede facilmente raggiungibile anche da
-              Sarnico e dai comuni vicini del Lago d&apos;Iseo. Lavoro con adulti
-              e coppie su ansia, relazioni, autostima e traumi, iniziando da un
-              primo colloquio orientativo.
+              Ricevo a Credaro, vicino a Sarnico, e lavoro con adulti e coppie
+              che stanno attraversando ansia, difficoltà relazionali, momenti di
+              blocco o esperienze traumatiche. Il mio approccio unisce ascolto
+              clinico, chiarezza e obiettivi condivisi già dal primo colloquio.
             </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              custom={2.5}
+              className="grid gap-3 max-w-2xl sm:grid-cols-3"
+            >
+              <div className="card-base p-4">
+                <div className="flex items-center gap-2 text-sm font-medium text-primary">
+                  <ShieldCheck size={16} className="text-accent shrink-0" />
+                  Approccio chiaro
+                </div>
+                <p className="mt-2 text-sm text-primary/65">
+                  Psicoterapia psicodinamica adleriana, con integrazione EMDR
+                  quando indicata.
+                </p>
+              </div>
+              <div className="card-base p-4">
+                <div className="flex items-center gap-2 text-sm font-medium text-primary">
+                  <MapPin size={16} className="text-accent shrink-0" />
+                  Studio comodo
+                </div>
+                <p className="mt-2 text-sm text-primary/65">
+                  Credaro, vicino a Sarnico, con parcheggio privato presso lo
+                  studio.
+                </p>
+              </div>
+              <div className="card-base p-4">
+                <div className="flex items-center gap-2 text-sm font-medium text-primary">
+                  <Clock3 size={16} className="text-accent shrink-0" />
+                  Primo passo semplice
+                </div>
+                <p className="mt-2 text-sm text-primary/65">
+                  Un primo contatto chiaro, senza pressione, per capire se questo
+                  percorso è adatto a te.
+                </p>
+              </div>
+            </motion.div>
 
             <motion.div
               variants={fadeUp}
@@ -106,6 +145,7 @@ export default function Hero() {
                 Primo colloquio orientativo
               </span>
               <span>Credaro (BG) &middot; Vicino a Sarnico</span>
+              <span>Parcheggio privato &middot; Online quando utile</span>
             </motion.div>
           </div>
 

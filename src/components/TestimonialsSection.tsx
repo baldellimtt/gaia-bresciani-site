@@ -66,7 +66,12 @@ export default function TestimonialsSection() {
             Cosa dicono i pazienti
           </h2>
           <p className="body-lg">
-            Le esperienze di chi ha iniziato un percorso.
+            Recensioni verificate di chi ha iniziato un percorso in studio o
+            online.
+          </p>
+          <p className="text-sm text-primary/60 mt-4">
+            Una parte delle persone che mi contatta arriva per ansia, momenti di
+            blocco, difficoltà relazionali o eventi emotivamente intensi.
           </p>
         </div>
 

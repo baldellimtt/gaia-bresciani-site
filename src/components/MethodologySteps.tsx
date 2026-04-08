@@ -11,28 +11,28 @@ const steps = [
     number: '01',
     title: 'Primo Contatto',
     description:
-      'Scrivimi o chiamami per un confronto informale. Capiamo insieme se il percorso pu\u00f2 essere utile.',
+      'Scrivimi o chiamami indicando in breve cosa stai vivendo, la sede preferita e la fascia oraria pi\u00f9 comoda.',
   },
   {
     icon: Compass,
     number: '02',
     title: 'Colloquio Conoscitivo',
     description:
-      'Ci incontriamo per esplorare la tua situazione attuale e definire gli obiettivi del lavoro.',
+      'Nel primo incontro raccogliamo la situazione attuale, chiarisco come lavoro e valutiamo insieme gli obiettivi.',
   },
   {
     icon: ClipboardList,
     number: '03',
     title: 'Piano Personalizzato',
     description:
-      'Costruiamo un percorso su misura, con tempi, modalit\u00e0 e frequenza chiari fin dall\'inizio.',
+      'Se il percorso \u00e8 adatto, definiamo modalit\u00e0, frequenza, sede e tipo di lavoro pi\u00f9 utile per te.',
   },
   {
     icon: TrendingUp,
     number: '04',
     title: 'Percorso Terapeutico',
     description:
-      'Lavoriamo con regolarit\u00e0, verificando i progressi e adattando il percorso ad ogni tappa.',
+      'Lavoriamo con continuit\u00e0 monitorando l\'andamento del percorso e adattandolo quando serve.',
   },
 ];
 
@@ -66,6 +66,11 @@ export default function MethodologySteps() {
           <p className="body-lg">
             Un percorso strutturato e trasparente, pensato per
             accompagnarti con chiarezza in ogni fase.
+          </p>
+          <p className="text-sm text-primary/60 mt-4">
+            Ti rispondo entro 24 ore lavorative. Il primo colloquio serve a
+            capire se questo spazio pu\u00f2 essere davvero utile per la tua
+            situazione.
           </p>
           <p className="text-sm text-primary/60 mt-4">
             Se vuoi capire come raggiungere lo studio, puoi vedere anche{' '}

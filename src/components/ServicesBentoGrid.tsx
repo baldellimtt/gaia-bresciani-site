@@ -16,29 +16,29 @@ const services = [
     icon: Brain,
     title: 'Ansia e Attacchi di Panico',
     description:
-      'Strumenti concreti per gestire l\'ansia e ritrovare stabilit\u00e0 nel quotidiano.',
+      'Quando senti di essere sempre in allerta, fatichi a respirare o perdi lucidità nei momenti di stress.',
     span: 'md:col-span-2',
     accent: true,
   },
   {
     icon: Heart,
-    title: 'Difficolt\u00e0 Relazionali',
+    title: 'Relazioni che fanno soffrire',
     description:
-      'Migliorare la comunicazione e costruire relazioni pi\u00f9 equilibrate e autentiche.',
+      'Per capire cosa si ripete nei rapporti affettivi, familiari o personali e ritrovare più equilibrio.',
     span: '',
   },
   {
     icon: Shield,
-    title: 'Autostima e Identit\u00e0',
+    title: 'Autostima e senso di sé',
     description:
-      'Riconoscere il proprio valore e superare la paura del giudizio.',
+      'Quando prevalgono giudizio, insicurezza, fatica a scegliere o bisogno costante di conferme.',
     span: '',
   },
   {
     icon: Sparkles,
     title: 'Terapia EMDR',
     description:
-      'Elaborare traumi e blocchi emotivi con un metodo scientificamente validato.',
+      'Per elaborare traumi, esperienze che tornano addosso e blocchi emotivi che il solo ragionamento non scioglie.',
     span: 'md:col-span-2',
     accent: true,
   },
@@ -46,14 +46,14 @@ const services = [
     icon: Users,
     title: 'Terapia di Coppia',
     description:
-      'Superare crisi, incomprensioni e ritrovare dialogo nella relazione.',
+      'Quando il dialogo si rompe, i conflitti si ripetono o la relazione sembra ferma sempre negli stessi punti.',
     span: '',
   },
   {
     icon: Monitor,
     title: 'Sedute Online',
     description:
-      'Continuit\u00e0 e flessibilit\u00e0 per chi ha difficolt\u00e0 logistiche o di tempo.',
+      'Una possibilità utile quando serve continuità, hai poco tempo o non riesci a raggiungere lo studio con regolarità.',
     span: '',
   },
 ];
@@ -86,8 +86,8 @@ export default function ServicesBentoGrid() {
           <p className="eyebrow">Aree di intervento</p>
           <h2 className="heading-lg mb-4">Come posso aiutarti</h2>
           <p className="body-lg">
-            Ogni percorso nasce dalla tua storia e dal problema che stai
-            vivendo, senza soluzioni preconfezionate.
+            Non parto da etichette generiche, ma da quello che nella tua vita in
+            questo momento pesa, si ripete o ti sta bloccando.
           </p>
         </div>
 

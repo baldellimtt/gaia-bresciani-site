@@ -134,7 +134,7 @@ export default function ZonaSarnicoPage() {
             <p className="body-md">
               Da <strong>Paratico e Capriolo</strong>: segui la SP469 direzione
               Sarnico. Credaro si incontra prima di raggiungere Sarnico.
-              Parcheggio libero nelle vicinanze dello studio.
+              Parcheggio privato presente presso lo studio.
             </p>
             <p className="body-md">
               Per molte persone questo aspetto pratico conta: poter raggiungere

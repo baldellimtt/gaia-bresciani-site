@@ -110,12 +110,15 @@ export default function ContattiPage() {
               </h3>
               <ul className="space-y-2 text-sm text-primary/65">
                 <li>Raggiungibile in pochi minuti da Sarnico, Paratico, Villongo e Capriolo.</li>
-                <li>Parcheggio comodo nelle vicinanze dello studio.</li>
+                <li>Parcheggio privato presente presso lo studio.</li>
                 <li>Una sede tranquilla, utile per dare continuità al percorso.</li>
               </ul>
             </div>
 
-            <div className="card-base p-5 bg-accent/[0.04]">
+            <div className="card-base p-5 space-y-3">
+              <h3 className="font-serif font-semibold text-base text-primary">
+                Altre modalità disponibili
+              </h3>
               <p className="text-sm text-primary/65 leading-relaxed">
                 La sede di riferimento è a Credaro; quando utile, sono disponibili
                 anche colloqui online e una seconda sede a Castenedolo. Approfondisci{' '}

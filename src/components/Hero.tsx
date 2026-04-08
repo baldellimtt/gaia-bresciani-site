@@ -38,10 +38,6 @@ export default function Hero() {
           className="absolute -bottom-20 -left-32 w-[400px] h-[400px] rounded-full bg-primary/[0.04] blur-3xl gpu"
           style={{ y: -offsetY * 0.05 }}
         />
-        <motion.div
-          className="absolute left-[18%] top-12 h-20 w-20 rounded-full border border-accent/20 bg-white/30 backdrop-blur-sm"
-          style={{ y: offsetY * 0.04 }}
-        />
       </div>
 
       <div className="section-container w-full pt-24 pb-16 lg:pt-28 lg:pb-20">
@@ -138,7 +134,7 @@ export default function Hero() {
                 href="https://www.opl.it/psicologi/22433/Bresciani-Gaia-Miriam-Teresa"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute left-4 bottom-4 md:left-5 md:bottom-5 lg:-bottom-3 lg:-left-6 card-base card-glow py-3 px-4 shadow-soft block no-underline hover:shadow-soft-lg transition-shadow duration-300"
+                className="absolute bottom-4 left-4 md:bottom-5 md:left-5 lg:-left-7 lg:bottom-6 lg:max-w-[240px] card-base card-glow py-3 px-4 shadow-soft block no-underline hover:shadow-soft-lg transition-shadow duration-300"
               >
                 <p className="text-[0.65rem] text-primary/50 font-medium uppercase tracking-wider">Albo Psicologi</p>
                 <p className="text-sm font-semibold text-primary mt-0.5">N. 22433 &mdash; Lombardia</p>

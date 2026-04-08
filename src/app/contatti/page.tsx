@@ -8,14 +8,14 @@ import ConsentIframe from '@/components/ConsentIframe';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Contatti e primo colloquio | Psicologa Credaro e Castenedolo',
+  title: 'Contatti e primo colloquio | Studio a Credaro per chi arriva da Sarnico',
   description:
-    'Contatti per primo colloquio psicologico a Credaro o Castenedolo: telefono, email e modulo per indicare sede, fascia oraria e richiesta.',
+    'Contatti per un primo colloquio psicologico nello studio di Credaro, comodo per chi arriva da Sarnico e dal basso Lago d\'Iseo.',
   alternates: { canonical: '/contatti' },
   openGraph: {
-    title: 'Contatti \u2013 Psicologa Lago d\'Iseo e Sarnico | Gaia Bresciani',
+    title: 'Contatti | Studio a Credaro vicino Sarnico',
     description:
-      'Contatti rapidi per primo colloquio psicologico con studio a Credaro e Castenedolo, anche con possibilit\u00e0 di percorso online.',
+      'Contatti rapidi per fissare un primo colloquio e chiarire sede, orari e modalità del percorso.',
   },
 };
 
@@ -35,7 +35,7 @@ const contactInfo = [
   {
     icon: Clock,
     label: 'Orari',
-    value: 'Lun\u2013Ven 9\u201318, Sab 9\u201313',
+    value: 'Lun-Ven 9-18, Sab 9-13',
   },
 ];
 
@@ -49,7 +49,7 @@ const studios = [
   },
   {
     name: 'Castenedolo (BS)',
-    address: 'Piazza Martiri della Libert\u00e0 7, 25014',
+    address: 'Piazza Martiri della Libertà 7, 25014',
     area: 'Area Brescia, Montichiari, Rezzato, Ghedi, Prevalle, Mazzano',
     mapSrc: 'https://maps.google.com/maps?q=45.4710,10.3005&z=11&output=embed',
     mapsUrl: 'https://www.google.com/maps/search/Piazza+Martiri+della+Libertà+7,+Castenedolo+BS',
@@ -63,7 +63,7 @@ export default function ContattiPage() {
       <PageHeader
         eyebrow="Contatti"
         title="Contatti e primo colloquio"
-        subtitle="Per aiutarti in modo preciso, indica sede preferita, fascia oraria e una breve descrizione della situazione."
+        subtitle="Se vuoi, puoi indicarmi sede preferita, fascia oraria e una breve descrizione della situazione, così da orientare meglio il primo contatto."
       />
 
       <section className="section-container pb-16">
@@ -104,11 +104,23 @@ export default function ContattiPage() {
               </div>
             </div>
 
+            <div className="card-base p-5 space-y-3">
+              <h3 className="font-serif font-semibold text-base text-primary">
+                Perché molte persone scelgono Credaro
+              </h3>
+              <ul className="space-y-2 text-sm text-primary/65">
+                <li>Raggiungibile in pochi minuti da Sarnico, Paratico, Villongo e Capriolo.</li>
+                <li>Parcheggio comodo nelle vicinanze dello studio.</li>
+                <li>Una sede tranquilla, utile per dare continuità al percorso.</li>
+              </ul>
+            </div>
+
             <div className="card-base p-5 bg-accent/[0.04]">
               <p className="text-sm text-primary/65 leading-relaxed">
-                Disponibili anche colloqui online. Approfondisci:{' '}
+                La sede di riferimento è a Credaro; quando utile, sono disponibili
+                anche colloqui online e una seconda sede a Castenedolo. Approfondisci{' '}
                 <Link href="/zona-sarnico" className="text-accent hover:underline">
-                  zona Sarnico e Lago d&apos;Iseo
+                  la pagina dedicata a Sarnico e Lago d&apos;Iseo
                 </Link>{' '}
                 e{' '}
                 <Link href="/terapia" className="text-accent hover:underline">
@@ -121,6 +133,11 @@ export default function ContattiPage() {
           <AnimatedSection delay={0.15} className="lg:col-span-3">
             <div className="card-base p-6 sm:p-8" id="contact-form">
               <h2 className="heading-md mb-6">Scrivimi direttamente</h2>
+              <p className="text-sm text-primary/60 mb-6">
+                Se per te è comodo raggiungere Credaro, puoi indicarlo nel modulo:
+                è la sede che propongo di default per chi arriva dalla zona di
+                Sarnico e del basso Lago d&apos;Iseo.
+              </p>
               <ContactForm />
             </div>
           </AnimatedSection>
@@ -129,7 +146,7 @@ export default function ContattiPage() {
 
       <section className="section-container pb-16">
         <AnimatedSection>
-          <h2 className="heading-lg mb-10">Posizione degli studi</h2>
+          <h2 className="heading-lg mb-10">Le sedi</h2>
         </AnimatedSection>
         <div className="grid md:grid-cols-2 gap-8">
           {studios.map((studio, i) => (

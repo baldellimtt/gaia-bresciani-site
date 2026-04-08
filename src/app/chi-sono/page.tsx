@@ -7,12 +7,12 @@ import InlineCta from '@/components/InlineCta';
 import { GraduationCap, Target, Handshake } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Chi sono | Psicologa tra Sarnico, Lago d\'Iseo e Castenedolo',
+  title: 'Chi sono | Psicologa vicino Sarnico con studio a Credaro',
   description:
-    'Conosci Gaia Bresciani, psicologa e psicoterapeuta a Credaro e Castenedolo. Approccio adleriano ed EMDR per ansia, relazioni, autostima e traumi.',
+    'Conosci Gaia Bresciani, psicologa e psicoterapeuta con studio a Credaro, punto di riferimento per chi vive tra Sarnico e basso Lago d\'Iseo.',
   alternates: { canonical: '/chi-sono' },
   openGraph: {
-    title: 'Chi sono | Psicologa tra Sarnico, Lago d\'Iseo e Castenedolo',
+    title: 'Chi sono | Psicologa vicino Sarnico con studio a Credaro',
     description:
       'Approccio clinico adleriano ed EMDR, con percorsi personalizzati per ansia, relazioni, autostima e momenti di crisi.',
   },
@@ -34,11 +34,12 @@ export default function ChiSonoPage() {
             <div className="space-y-4">
               <p className="body-md">
                 Sono Gaia Bresciani, <strong>psicologa e psicoterapeuta</strong>.
-                Ricevo a Credaro, vicino a Sarnico e al Lago d&apos;Iseo, e a
-                Castenedolo per l&apos;area di Brescia.
+                Ricevo a Credaro, in una sede facilmente raggiungibile anche da
+                Sarnico e dai comuni vicini del Lago d&apos;Iseo.
               </p>
               <p className="body-md">
-                Se necessario, il percorso pu&ograve; proseguire anche online.
+                Quando necessario, il percorso pu&ograve; proseguire anche online
+                o essere organizzato nella sede secondaria di Castenedolo.
               </p>
             </div>
 
@@ -148,8 +149,8 @@ export default function ChiSonoPage() {
           <div className="max-w-3xl space-y-4">
             <h2 className="heading-lg mb-4">Per chi cerca un supporto in zona</h2>
             <p className="body-md">
-              Se vivi tra Sarnico, Lago d&apos;Iseo e Brescia, puoi contare su un
-              riferimento stabile in presenza.
+              Se vivi tra Sarnico e il basso Lago d&apos;Iseo, puoi contare su
+              un riferimento stabile in presenza a Credaro.
             </p>
             <p className="body-md">
               L&apos;obiettivo &egrave; aiutarti a <strong>ritrovare equilibrio</strong>,

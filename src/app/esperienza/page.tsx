@@ -7,14 +7,14 @@ import InlineCta from '@/components/InlineCta';
 import { Briefcase, Users, BookOpen, Shield } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Esperienza clinica e metodo | Psicologa a Credaro e Castenedolo',
+  title: 'Esperienza clinica e metodo | Psicologa vicino Sarnico, studio a Credaro',
   description:
-    'Esperienza clinica e metodo di Gaia Bresciani: psicologa e psicoterapeuta a Credaro e Castenedolo. Primo colloquio per definire obiettivi e percorso.',
+    'Esperienza clinica e metodo di Gaia Bresciani, psicologa e psicoterapeuta con studio a Credaro per chi vive tra Sarnico e basso Lago d\'Iseo.',
   alternates: { canonical: '/esperienza' },
   openGraph: {
     title: 'Esperienza clinica e metodo | Gaia Bresciani Psicologa',
     description:
-      'Metodo clinico chiaro e personalizzato, con studi a Credaro e Castenedolo e possibilit\u00e0 di colloqui online.',
+      'Metodo clinico chiaro e personalizzato, con studio a Credaro per chi cerca un riferimento vicino a Sarnico e basso Lago d\'Iseo.',
   },
 };
 
@@ -36,8 +36,9 @@ export default function EsperienzaPage() {
               in modo da dare direzione gi&agrave; dal primo colloquio.
             </p>
             <p className="body-md">
-              Ricevo in studio a Credaro e Castenedolo. Quando necessario,
-              il percorso pu&ograve; proseguire anche online.
+              Ricevo principalmente in studio a Credaro. Quando necessario,
+              il percorso può proseguire anche online o nella sede secondaria
+              di Castenedolo.
             </p>
           </AnimatedSection>
 
@@ -110,8 +111,8 @@ export default function EsperienzaPage() {
               Un ambiente riservato, tempi chiari e un piano di lavoro condiviso.
             </p>
             <p className="body-md">
-              Se vivi tra Sarnico, basso Lago d&apos;Iseo o Brescia sud-est,
-              puoi trovare un riferimento vicino e continuativo.
+              Se vivi tra Sarnico e il basso Lago d&apos;Iseo, puoi trovare a
+              Credaro un riferimento vicino e continuativo.
             </p>
           </div>
         </AnimatedSection>

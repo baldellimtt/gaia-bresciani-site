@@ -15,12 +15,12 @@ export default function CtaSection() {
 
             <div className="relative z-10 max-w-2xl mx-auto">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white mb-5 text-balance">
-                Non devi avere tutto chiaro per iniziare
+                Possiamo iniziare con un primo colloquio
               </h2>
               <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-10 max-w-lg mx-auto">
-                Basta un messaggio o una telefonata. Ti rispondo entro
-                24 ore e insieme decidiamo sede, orario e come procedere.
-                Senza impegno.
+                Se per te &egrave; pi&ugrave; comodo raggiungere Credaro, possiamo
+                fissare un appuntamento in presenza e valutare insieme come
+                procedere. Ti rispondo entro 24 ore lavorative.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -29,7 +29,7 @@ export default function CtaSection() {
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-accent-light hover:shadow-soft active:scale-[0.98]"
                 >
                   <Phone size={17} />
-                  Chiamami ora
+                  Prenota un colloquio
                 </a>
                 <a
                   href="/contatti/#contact-form"

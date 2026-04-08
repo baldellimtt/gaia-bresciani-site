@@ -33,7 +33,7 @@ export default function Hero() {
               className="eyebrow flex items-center gap-2"
             >
               <MapPin size={14} strokeWidth={2.5} />
-              Psicologa e Psicoterapeuta a Sarnico e Lago d&apos;Iseo
+              Studio a Credaro
             </motion.p>
 
             <motion.h1
@@ -54,10 +54,10 @@ export default function Hero() {
               custom={2}
               className="body-lg max-w-xl"
             >
-              Se senti che qualcosa non va, se la fatica si accumula
-              o le giornate pesano pi&ugrave; del solito, non devi affrontare
-              tutto da solo/a. Un primo colloquio per capire insieme
-              da dove partire.
+              Ricevo a Credaro, in una sede facilmente raggiungibile anche da
+              Sarnico e dai comuni vicini del Lago d&apos;Iseo. Lavoro con adulti
+              e coppie su ansia, relazioni, autostima e traumi, iniziando da un
+              primo colloquio orientativo.
             </motion.p>
 
             <motion.div
@@ -85,9 +85,9 @@ export default function Hero() {
             >
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-500" />
-                Disponibilit&agrave; questa settimana
-              </span>
-              <span>Credaro (BG) &middot; Castenedolo (BS)</span>
+                  Primo colloquio orientativo
+                </span>
+              <span>Credaro (BG) &middot; Vicino a Sarnico</span>
             </motion.div>
           </div>
 

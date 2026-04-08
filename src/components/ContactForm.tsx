@@ -188,7 +188,7 @@ export default function ContactForm() {
             className={fieldClass('preferred_office')}
           >
             <option value="">Seleziona una sede</option>
-            <option value="Credaro (BG)">Credaro (BG)</option>
+            <option value="Credaro (BG)">Credaro (BG) - consigliata per Sarnico e Lago d'Iseo</option>
             <option value="Castenedolo (BS)">Castenedolo (BS)</option>
             <option value="Online">Online</option>
           </select>
@@ -227,16 +227,20 @@ export default function ContactForm() {
             name="subject"
             value={data.subject}
             onChange={handleChange}
+            placeholder="Richiesta primo colloquio"
             className={fieldClass('subject')}
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-primary/70 mb-1.5">
-          Messaggio *
-        </label>
-        <textarea
+          <label htmlFor="message" className="block text-sm font-medium text-primary/70 mb-1.5">
+            Messaggio *
+          </label>
+          <p className="text-xs text-primary/45 mb-2">
+            Se vuoi, puoi indicare anche da quale zona arrivi e se preferisci un appuntamento a Credaro.
+          </p>
+          <textarea
           id="message"
           name="message"
           value={data.message}

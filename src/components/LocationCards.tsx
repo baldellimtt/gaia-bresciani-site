@@ -20,7 +20,7 @@ const locations = [
   {
     icon: Building2,
     title: 'Castenedolo (BS)',
-    subtitle: 'Area Brescia',
+    subtitle: 'Sede secondaria area Brescia',
     description:
       'Piazza Martiri della Libert\u00e0 7 \u2014 riferimento per Brescia, Rezzato, Mazzano e dintorni.',
     link: '/contatti',
@@ -64,11 +64,12 @@ export default function LocationCards() {
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="eyebrow">Dove ricevo</p>
           <h2 className="heading-lg mb-4">
-            Due sedi e la possibilit&agrave; online
+            Ricevo a Credaro e, in alcuni casi, anche a Castenedolo
           </h2>
           <p className="body-lg">
-            Per facilitare continuit&agrave;, organizzazione e
-            accessibilit&agrave; del tuo percorso tra Bergamo e Brescia.
+            La sede di Credaro &egrave; il riferimento principale per chi vive tra
+            Sarnico e il basso Lago d&apos;Iseo; Castenedolo resta disponibile
+            come alternativa per l&apos;area di Brescia.
           </p>
         </div>
 
@@ -102,6 +103,11 @@ export default function LocationCards() {
                     {loc.primary && (
                       <span className="absolute top-3 right-3 text-[0.65rem] font-bold uppercase tracking-widest text-accent bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
                         Sede principale
+                      </span>
+                    )}
+                    {!loc.primary && loc.title === 'Castenedolo (BS)' && (
+                      <span className="absolute top-3 right-3 text-[0.65rem] font-bold uppercase tracking-widest text-primary/70 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                        Sede secondaria
                       </span>
                     )}
                   </div>

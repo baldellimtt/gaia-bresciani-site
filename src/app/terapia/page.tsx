@@ -8,9 +8,9 @@ import InlineCta from '@/components/InlineCta';
 import { Compass, Layers, RefreshCw } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Terapia individuale e di coppia | Sarnico, Lago d\'Iseo e Castenedolo',
+  title: 'Terapia individuale e di coppia vicino Sarnico | Studio a Credaro',
   description:
-    'Terapia individuale e di coppia a Credaro e Castenedolo per ansia, relazioni, autostima e crisi personali. Primo colloquio per definire obiettivi e metodo.',
+    'Terapia individuale e di coppia con studio a Credaro, facilmente raggiungibile da Sarnico e basso Lago d\'Iseo. Primo colloquio per definire obiettivi e metodo.',
   alternates: { canonical: '/terapia' },
   openGraph: {
     title: 'Terapia individuale e di coppia | Gaia Bresciani',
@@ -38,8 +38,9 @@ export default function TerapiaPage() {
               direzione.
             </p>
             <p className="body-md">
-              Ricevo a Credaro, vicino a Sarnico e al basso Lago d&apos;Iseo, e
-              a Castenedolo per chi vive nell&apos;area di Brescia.
+              Ricevo a Credaro, in una sede comoda anche per chi arriva da
+              Sarnico e dal basso Lago d&apos;Iseo. Quando serve, resta
+              disponibile anche una sede secondaria nell&apos;area di Brescia.
             </p>
           </div>
         </AnimatedSection>

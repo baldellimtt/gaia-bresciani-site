@@ -28,17 +28,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Psicologa a Sarnico, Lago d\'Iseo e Castenedolo | Gaia Bresciani',
+  title: 'Psicologa a Credaro vicino Sarnico e Lago d\'Iseo | Gaia Bresciani',
   description:
-    'Psicologa e psicoterapeuta a Credaro e Castenedolo (vicino Sarnico e Lago d\'Iseo). Percorsi per ansia, relazioni, autostima e traumi con primo colloquio orientativo.',
+    'Gaia Bresciani, psicologa e psicoterapeuta a Credaro, vicino a Sarnico e Lago d\'Iseo. Percorsi in presenza per ansia, relazioni, autostima e traumi.',
   metadataBase: new URL('https://www.gaiabrescianipsicologa.it'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Psicologa a Sarnico, Lago d\'Iseo e Castenedolo | Gaia Bresciani',
+    title: 'Psicologa a Credaro vicino Sarnico e Lago d\'Iseo | Gaia Bresciani',
     description:
-      'Percorsi psicologici a Credaro e Castenedolo per ansia, relazioni, autostima e traumi. Primo colloquio per capire come iniziare.',
+      'Studio di psicologia a Credaro, comodo per Sarnico e basso Lago d\'Iseo. Primo colloquio per ansia, relazioni, autostima e traumi.',
     url: 'https://www.gaiabrescianipsicologa.it/',
     siteName: 'Gaia Bresciani Psicologa',
     images: [
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Psicologa a Sarnico, Lago d\'Iseo e Castenedolo | Gaia Bresciani',
+    title: 'Psicologa a Credaro vicino Sarnico e Lago d\'Iseo | Gaia Bresciani',
     description:
-      'Percorso psicologico in presenza o online, con primo colloquio orientato ai tuoi obiettivi.',
+      'Percorsi psicologici in presenza a Credaro, vicino a Sarnico e Lago d\'Iseo, con primo colloquio orientativo.',
     images: ['/assets/psicologa-gaia-bresciani.webp'],
   },
   robots: {
@@ -308,7 +308,7 @@ export default function RootLayout({
         <SchemaOrgJsonLd />
         <meta httpEquiv="X-DNS-Prefetch-Control" content="on" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://platform.docplanner.com; style-src 'self' 'unsafe-inline' https://platform.docplanner.com; img-src 'self' data: https:; font-src 'self' https://platform.docplanner.com; frame-src https://www.google.com https://maps.google.com https://www.miodottore.it; connect-src 'self' https://formspree.io https://platform.docplanner.com; upgrade-insecure-requests" />
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://platform.docplanner.com; style-src 'self' 'unsafe-inline' https://platform.docplanner.com; img-src 'self' data: https:; font-src 'self' https://platform.docplanner.com; frame-src https://www.google.com https://maps.google.com https://www.miodottore.it; connect-src 'self' https://formspree.io https://platform.docplanner.com; form-action 'self' https://formspree.io https://www.miodottore.it; object-src 'none'; base-uri 'self'; upgrade-insecure-requests; block-all-mixed-content" />
         <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
         <link rel="dns-prefetch" href="https://formspree.io" />
         <link rel="preconnect" href="https://formspree.io" crossOrigin="anonymous" />

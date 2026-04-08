@@ -10,8 +10,8 @@ interface InlineCtaProps {
 }
 
 export default function InlineCta({
-  title = 'Vuoi capire se questo percorso fa per te?',
-  subtitle = 'Scrivimi senza impegno: nel primo contatto definiamo sede, tempi e obiettivo del colloquio.',
+  title = 'Vuoi fissare un primo colloquio?',
+  subtitle = 'Scrivimi senza impegno: nel primo contatto definiamo orario, modalita e obiettivo del colloquio.',
 }: InlineCtaProps) {
   return (
     <AnimatedSection className="section-container py-14 lg:py-20">

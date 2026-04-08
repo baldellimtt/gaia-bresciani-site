@@ -7,14 +7,14 @@ import InlineCta from '@/components/InlineCta';
 import { MapPin, Users, Clock, Target } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Psicologa vicino Sarnico | Studio a Credaro e colloqui online',
+  title: 'Psicologa vicino Sarnico | Studio a Credaro per il basso Lago d\'Iseo',
   description:
-    'Informazioni pratiche per chi cerca una psicologa vicino Sarnico: studio a Credaro, aree servite nel basso Lago d\'Iseo e primo colloquio in presenza o online.',
+    'Informazioni pratiche per chi vive tra Sarnico e il basso Lago d\'Iseo e desidera raggiungere lo studio di Credaro per un primo colloquio.',
   alternates: { canonical: '/zona-sarnico' },
   openGraph: {
-    title: 'Psicologa vicino Sarnico | Studio a Credaro e online',
+    title: 'Psicologa vicino Sarnico | Studio a Credaro',
     description:
-      'Sedi, aree servite e modalit\u00e0 del primo colloquio per chi vive tra Sarnico e basso Lago d\'Iseo.',
+      'Tempi di percorrenza, aree servite e prime informazioni utili per chi desidera raggiungere la sede di Credaro.',
   },
 };
 
@@ -26,13 +26,13 @@ const highlights = [
   },
   {
     icon: Users,
-    title: 'Modalit\u00e0 di incontro',
-    text: 'Primo colloquio in presenza a Credaro (BG) oppure online, in base alle esigenze organizzative.',
+    title: 'Primo colloquio',
+    text: 'Di norma il primo incontro si svolge in presenza a Credaro; in alcuni casi puo essere utile valutare anche la modalita online.',
   },
   {
     icon: Target,
     title: 'Ambiti frequenti',
-    text: 'Ansia, attacchi di panico, stress, difficolt\u00e0 relazionali, crisi di coppia, traumi e transizioni.',
+    text: 'Ansia, attacchi di panico, stress, difficolta relazionali, crisi di coppia, traumi e transizioni.',
   },
 ];
 
@@ -42,8 +42,8 @@ export default function ZonaSarnicoPage() {
       <Breadcrumb items={[{ label: 'Zona Sarnico e Lago d\'Iseo' }]} />
       <PageHeader
         eyebrow="Area servita"
-        title="Psicologa vicino Sarnico: studio a Credaro e online"
-        subtitle="Informazioni pratiche per chi vive tra Sarnico e basso Lago d'Iseo: sede, aree coperte, primo colloquio."
+        title="Una sede comoda per chi vive tra Sarnico e Lago d'Iseo"
+        subtitle="Qui trovi alcune informazioni pratiche se stai valutando un primo colloquio a Credaro."
       />
 
       <section className="section-container pb-16">
@@ -74,19 +74,18 @@ export default function ZonaSarnicoPage() {
                 Lo studio di Credaro si trova a <strong>soli 2 km dal centro di
                 Sarnico</strong>, raggiungibile in circa 5 minuti in auto lungo
                 la SP469. Dalla zona lungolago di Sarnico bastano pochi minuti
-                per arrivare allo studio di Via Piave 7.
+                per arrivare allo studio di Via Piave 7, Credaro (BG).
               </p>
               <p className="body-md">
                 Questo rende il percorso pratico anche per chi vive a Paratico,
                 Villongo, Capriolo e nei comuni del basso Lago d&apos;Iseo,
-                con tempi di spostamento contenuti e la possibilit&agrave; di
+                con tempi di spostamento contenuti e la possibilita di
                 organizzare appuntamenti compatibili con lavoro e famiglia.
               </p>
               <p className="body-md">
-                Le richieste pi&ugrave; frequenti da Sarnico e dintorni riguardano
-                ansia intensa, attacchi di panico, stress prolungato,
-                difficolt&agrave; relazionali, cambiamenti familiari e
-                stanchezza emotiva.
+                Molte persone arrivano in studio per affrontare ansia,
+                stanchezza emotiva, difficolta relazionali o momenti di
+                cambiamento che stanno diventando difficili da sostenere da soli.
               </p>
             </div>
 
@@ -94,25 +93,25 @@ export default function ZonaSarnicoPage() {
               <h2 className="heading-lg">Come funziona il primo colloquio</h2>
               <p className="body-md">
                 Il primo incontro serve a comprendere la domanda di aiuto e valutare la
-                strada pi&ugrave; adatta. Raccogliamo i principali elementi del problema, la
-                sua evoluzione e le risorse gi&agrave; presenti.
+                strada piu adatta. Raccogliamo i principali elementi del problema, la
+                sua evoluzione e le risorse gia presenti.
               </p>
               <p className="body-md">
-                Si chiariscono anche aspetti pratici: frequenza, modalit&agrave; in presenza
-                o online, e aspettative realistiche sul percorso. L&apos;obiettivo &egrave;
-                ridurre l&apos;incertezza iniziale.
+                Si chiariscono anche aspetti pratici: frequenza, modalita in presenza
+                o online, e aspettative realistiche sul percorso. L&apos;obiettivo e
+                dare una prima cornice chiara, senza forzare decisioni premature.
               </p>
             </div>
 
             <div className="space-y-4">
               <h2 className="heading-lg">Obiettivi del percorso e tempi</h2>
               <p className="body-md">
-                Il lavoro inizia con la riduzione dei sintomi pi&ugrave; urgenti: gestione
+                Il lavoro inizia con la riduzione dei sintomi piu urgenti: gestione
                 dell&apos;ansia, miglioramento del sonno, regolazione emotiva. In una fase
                 successiva si approfondiscono i nodi relazionali e gli schemi ricorrenti.
               </p>
               <p className="body-md">
-                Quando indicato, pu&ograve; essere integrato un lavoro specifico sul
+                Quando indicato, puo essere integrato un lavoro specifico sul
                 trauma con{' '}
                 <Link href="/emdr" className="text-accent hover:underline">
                   approccio EMDR
@@ -130,7 +129,7 @@ export default function ZonaSarnicoPage() {
             <p className="body-md">
               Da <strong>Sarnico centro</strong>: percorri Via Lantieri verso sud
               e prosegui sulla SP469 in direzione Credaro. Lo studio si trova in
-              Via Piave 7, sulla destra. Tempo di percorrenza: circa 5 minuti.
+              Via Piave 7, Credaro (BG), sulla destra. Tempo di percorrenza: circa 5 minuti.
             </p>
             <p className="body-md">
               Da <strong>Paratico e Capriolo</strong>: segui la SP469 direzione
@@ -138,7 +137,12 @@ export default function ZonaSarnicoPage() {
               Parcheggio libero nelle vicinanze dello studio.
             </p>
             <p className="body-md">
-              Se preferisci evitare lo spostamento, &egrave; possibile iniziare
+              Per molte persone questo aspetto pratico conta: poter raggiungere
+              lo studio senza spostamenti lunghi o complessi aiuta a mantenere
+              costanza e continuita nel percorso.
+            </p>
+            <p className="body-md">
+              Se preferisci evitare lo spostamento, e possibile iniziare
               o proseguire il percorso con{' '}
               <Link href="/contatti" className="text-accent hover:underline">
                 colloqui online
@@ -168,8 +172,8 @@ export default function ZonaSarnicoPage() {
       </section>
 
       <InlineCta
-        title="Vuoi verificare disponibilità e sede migliore?"
-        subtitle="Indicami zona e fascia oraria preferita: ti rispondo entro 24 ore lavorative."
+        title="Vuoi verificare disponibilita per un primo colloquio?"
+        subtitle="Indicami la zona da cui arrivi e la fascia oraria preferita: ti rispondo entro 24 ore lavorative."
       />
     </>
   );

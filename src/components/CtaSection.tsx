@@ -26,7 +26,7 @@ export default function CtaSection() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href="tel:+393408389958"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-accent-light hover:shadow-soft active:scale-[0.98]"
+                  className="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-accent-light hover:shadow-soft active:scale-[0.98]"
                 >
                   <Phone size={17} />
                   Prenota un colloquio
@@ -48,7 +48,7 @@ export default function CtaSection() {
         </AnimatedSection>
 
         <AnimatedSection delay={0.1}>
-          <div className="card-base p-6 sm:p-8 max-w-2xl mx-auto">
+          <div className="card-base card-glow p-6 sm:p-8 max-w-2xl mx-auto">
             <h3 className="heading-md mb-4 text-center">Prenota su MioDottore</h3>
             <p className="body-md text-center mb-6">
               Scegli data e orario direttamente dal calendario.

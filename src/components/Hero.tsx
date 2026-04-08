@@ -3,6 +3,7 @@
 import { motion } from '@/lib/motion';
 import { ArrowRight, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30, willChange: 'transform, opacity' as const },
@@ -15,11 +16,32 @@ const fadeUp = {
 };
 
 export default function Hero() {
+  const [offsetY, setOffsetY] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setOffsetY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute top-20 -right-32 w-[500px] h-[500px] rounded-full bg-accent/[0.07] blur-3xl gpu" />
-        <div className="absolute -bottom-20 -left-32 w-[400px] h-[400px] rounded-full bg-primary/[0.04] blur-3xl gpu" />
+        <motion.div
+          className="absolute top-20 -right-32 w-[500px] h-[500px] rounded-full bg-accent/[0.07] blur-3xl gpu"
+          style={{ y: offsetY * 0.08 }}
+        />
+        <motion.div
+          className="absolute -bottom-20 -left-32 w-[400px] h-[400px] rounded-full bg-primary/[0.04] blur-3xl gpu"
+          style={{ y: -offsetY * 0.05 }}
+        />
+        <motion.div
+          className="absolute left-[18%] top-12 h-20 w-20 rounded-full border border-accent/20 bg-white/30 backdrop-blur-sm"
+          style={{ y: offsetY * 0.04 }}
+        />
       </div>
 
       <div className="section-container w-full pt-24 pb-16 lg:pt-28 lg:pb-20">
@@ -67,7 +89,7 @@ export default function Hero() {
               custom={3}
               className="flex flex-wrap gap-4 pt-2"
             >
-              <a href="#contatti" className="btn-primary gap-2">
+              <a href="#contatti" className="btn-primary btn-shine gap-2">
                 Prenota un colloquio
                 <ArrowRight size={16} />
               </a>
@@ -85,8 +107,8 @@ export default function Hero() {
             >
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-500" />
-                  Primo colloquio orientativo
-                </span>
+                Primo colloquio orientativo
+              </span>
               <span>Credaro (BG) &middot; Vicino a Sarnico</span>
             </motion.div>
           </div>
@@ -99,6 +121,7 @@ export default function Hero() {
           >
             <div className="relative">
               <div className="relative aspect-[3/4] w-[300px] lg:w-[350px] rounded-3xl overflow-hidden shadow-soft-lg">
+                <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }} className="absolute inset-0">
                 <Image
                   src="/assets/psicologa-sarnico-gaia-bresciani.webp"
                   alt="Dott.ssa Gaia Bresciani, psicologa e psicoterapeuta a Sarnico e Lago d'Iseo"
@@ -108,13 +131,14 @@ export default function Hero() {
                   sizes="(max-width: 768px) 300px, 350px"
                   fetchPriority="high"
                 />
+                </motion.div>
               </div>
 
               <a
                 href="https://www.opl.it/psicologi/22433/Bresciani-Gaia-Miriam-Teresa"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute -bottom-3 -left-6 card-base py-3 px-4 shadow-soft block no-underline hover:shadow-soft-lg transition-shadow duration-300"
+                className="absolute -bottom-3 -left-6 card-base card-glow py-3 px-4 shadow-soft block no-underline hover:shadow-soft-lg transition-shadow duration-300"
               >
                 <p className="text-[0.65rem] text-primary/50 font-medium uppercase tracking-wider">Albo Psicologi</p>
                 <p className="text-sm font-semibold text-primary mt-0.5">N. 22433 &mdash; Lombardia</p>

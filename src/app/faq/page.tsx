@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'FAQ - Domande su psicoterapia e primo colloquio | Gaia Bresciani',
     description:
-      'Risposte pratiche su psicoterapia: sedi, primo incontro, approccio clinico, durata del percorso e modalit\u00e0 online.',
+      'Risposte pratiche su psicoterapia: sedi, primo incontro, approccio clinico, durata del percorso e modalità online.',
   },
 };
 
@@ -21,12 +22,12 @@ const faqItems = [
   {
     question: 'Dove si trova lo studio?',
     answer:
-      'Ricevo in due sedi per offrire maggiore flessibilit\u00e0: Credaro (BG), Via Piave 7, comodo per Sarnico, Villongo, Paratico, Capriolo e basso Lago d\'Iseo; Castenedolo (BS), Piazza Martiri della Libert\u00e0 7, pratico per Brescia, Montichiari, Rezzato, Mazzano, Ghedi e dintorni. In entrambe le sedi ricevo su appuntamento.',
+      'Ricevo in due sedi per offrire maggiore flessibilità: Credaro (BG), Via Piave 7, comodo per Sarnico, Villongo, Paratico, Capriolo e basso Lago d\'Iseo; Castenedolo (BS), Piazza Martiri della Libertà 7, pratico per Brescia, Montichiari, Rezzato, Mazzano, Ghedi e dintorni. In entrambe le sedi ricevo su appuntamento.',
   },
   {
-    question: '\u00c8 previsto un primo incontro conoscitivo?',
+    question: 'È previsto un primo incontro conoscitivo?',
     answer:
-      'S\u00ec. Il primo incontro \u00e8 conoscitivo: ci aiuta a chiarire la richiesta, definire gli obiettivi e capire quale percorso pu\u00f2 essere davvero utile per te.',
+      'Sì. Il primo incontro è conoscitivo: ci aiuta a chiarire la richiesta, definire gli obiettivi e capire quale percorso può essere davvero utile per te.',
   },
   {
     question: 'Quali approcci psicoterapeutici utilizza?',
@@ -34,14 +35,14 @@ const faqItems = [
       'Il mio metodo integra psicoterapia psicodinamica adleriana e, quando necessario, terapia EMDR per traumi, blocchi emotivi ed eventi ad alto impatto.',
   },
   {
-    question: 'Con quali problematiche pu\u00f2 aiutarmi la psicoterapia?',
+    question: 'Con quali problematiche può aiutarmi la psicoterapia?',
     answer:
-      'La psicoterapia pu\u00f2 aiutare in caso di ansia e attacchi di panico, stress e difficolt\u00e0 relazionali, autostima fragile e insicurezza, crisi personali, separazioni e lutti, traumi e ricordi emotivamente invasivi.',
+      'La psicoterapia può aiutare in caso di ansia e attacchi di panico, stress e difficoltà relazionali, autostima fragile e insicurezza, crisi personali, separazioni e lutti, traumi e ricordi emotivamente invasivi.',
   },
   {
-    question: '\u00c8 possibile fare terapia online?',
+    question: 'È possibile fare terapia online?',
     answer:
-      'S\u00ec, sono disponibili colloqui online in videochiamata. \u00c8 una modalit\u00e0 efficace per chi ha tempi stretti, spostamenti complessi o vive lontano.',
+      'Sì, sono disponibili colloqui online in videochiamata. È una modalità efficace per chi ha tempi stretti, spostamenti complessi o vive lontano.',
   },
   {
     question: 'Lavora solo con adulti o anche con bambini e adolescenti?',
@@ -51,7 +52,7 @@ const faqItems = [
   {
     question: 'Quanto dura un percorso psicologico?',
     answer:
-      'La durata dipende dagli obiettivi e dalla complessit\u00e0 della situazione. In alcuni casi bastano pochi incontri, in altri serve pi\u00f9 tempo: lo definiamo insieme in modo trasparente.',
+      'La durata dipende dagli obiettivi e dalla complessità della situazione. In alcuni casi bastano pochi incontri, in altri serve più tempo: lo definiamo insieme in modo trasparente.',
   },
   {
     question: 'Quanto dura una seduta di psicoterapia?',
@@ -94,6 +95,17 @@ export default function FaqPage() {
         <AnimatedSection>
           <div className="max-w-3xl mx-auto">
             <Accordion items={faqItems} />
+            <p className="text-sm text-primary/60 mt-8">
+              Se vuoi informazioni pratiche sugli spostamenti, puoi vedere anche la pagina{' '}
+              <Link href="/psicologa-sarnico" className="text-accent hover:underline">
+                dedicata a Sarnico e al basso Lago d&apos;Iseo
+              </Link>
+              . Per una panoramica sui percorsi disponibili puoi consultare anche{' '}
+              <Link href="/terapia" className="text-accent hover:underline">
+                terapia individuale e di coppia
+              </Link>
+              .
+            </p>
           </div>
         </AnimatedSection>
       </section>

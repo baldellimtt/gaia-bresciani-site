@@ -12,7 +12,7 @@ const locations = [
     subtitle: 'Area Sarnico e Lago d\'Iseo',
     description:
       'Via Piave 7 \u2014 comodo per Sarnico, Villongo, Paratico, Capriolo e Grumello del Monte.',
-    link: '/zona-sarnico',
+    link: '/psicologa-sarnico',
     linkLabel: 'Come raggiungermi',
     primary: true,
     image: '/assets/studio-psicologia-credaro.webp',
@@ -59,7 +59,7 @@ export default function LocationCards() {
   const isInView = useInView(ref, { once: true, margin: '-60px' });
 
   return (
-    <section id="dove-ricevo" className="section-padding section-lazy">
+    <section id="dove-ricevo" className="section-padding section-lazy section-wash">
       <div className="section-container">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="eyebrow">Dove ricevo</p>
@@ -87,19 +87,25 @@ export default function LocationCards() {
                 key={loc.title}
                 href={loc.link}
                 variants={cardVariants}
-                className={`group card-base card-hover flex flex-col overflow-hidden ${
+                className={`group card-base card-hover card-glow flex flex-col overflow-hidden ${
                   loc.primary ? 'ring-2 ring-accent/20 relative' : ''
                 }`}
               >
                 {loc.image && (
                   <div className="relative h-40 w-full">
-                    <Image
-                      src={loc.image}
-                      alt={`Studio ${loc.title}`}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
+                    <motion.div
+                      whileHover={{ scale: 1.04 }}
+                      transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
+                      className="absolute inset-0"
+                    >
+                      <Image
+                        src={loc.image}
+                        alt={`Studio ${loc.title}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    </motion.div>
                     {loc.primary && (
                       <span className="absolute top-3 right-3 text-[0.65rem] font-bold uppercase tracking-widest text-accent bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
                         Sede principale
@@ -118,13 +124,13 @@ export default function LocationCards() {
                     <Icon size={22} strokeWidth={1.6} className="text-accent" />
                   </div>
 
-                  <h3 className="heading-md mb-1">{loc.title}</h3>
+                  <h3 className="heading-md mb-1 transition-transform duration-300 group-hover:translate-x-0.5">{loc.title}</h3>
                   <p className="text-sm text-accent font-medium mb-3">
                     {loc.subtitle}
                   </p>
                   <p className="body-md flex-1">{loc.description}</p>
 
-                  <span className="mt-5 text-sm font-medium text-primary group-hover:text-accent transition-colors flex items-center gap-1.5">
+                  <span className="mt-5 text-sm font-medium text-primary group-hover:text-accent transition-[color,transform] duration-300 flex items-center gap-1.5">
                     {loc.linkLabel}
                     <span className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
                   </span>

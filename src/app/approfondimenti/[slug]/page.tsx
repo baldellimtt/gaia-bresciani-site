@@ -107,6 +107,23 @@ export default function ArticlePage({ params }: PageProps) {
 
           <AnimatedSection delay={0.15}>
             <div className="mt-12 pt-8 border-t border-primary/[0.08]">
+              <div className="card-base p-6 mb-6 bg-accent/[0.04]">
+                <p className="text-sm text-primary/65 leading-relaxed">
+                  Se ti riconosci in quello che hai letto, puoi approfondire{' '}
+                  <Link href="/terapia" className="text-accent hover:underline">
+                    terapia individuale e di coppia
+                  </Link>
+                  , valutare se puo esserti utile un lavoro{' '}
+                  <Link href="/emdr" className="text-accent hover:underline">
+                    EMDR
+                  </Link>{' '}
+                  oppure vedere come raggiungere lo studio dalla{' '}
+                  <Link href="/psicologa-sarnico" className="text-accent hover:underline">
+                    zona di Sarnico e del basso Lago d&apos;Iseo
+                  </Link>
+                  .
+                </p>
+              </div>
               <Link
                 href="/approfondimenti"
                 className="inline-flex items-center gap-2 text-sm font-medium text-primary/60 hover:text-accent transition-colors"
@@ -121,7 +138,7 @@ export default function ArticlePage({ params }: PageProps) {
 
       <InlineCta
         title="Vuoi parlare di quello che stai vivendo?"
-        subtitle="Il primo colloquio serve a capire insieme da dove partire, senza impegno."
+        subtitle="Il primo colloquio serve a capire insieme da dove partire, senza impegno. Se arrivi da Sarnico o dal basso Lago d'Iseo, ricevo a Credaro."
       />
     </>
   );

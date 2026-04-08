@@ -42,7 +42,7 @@ Typical needs addressed:
 - FAQ: https://www.gaiabrescianipsicologa.it/faq/
 - Contatti: https://www.gaiabrescianipsicologa.it/contatti/
 - Approfondimenti: https://www.gaiabrescianipsicologa.it/approfondimenti/
-- Local area page: https://www.gaiabrescianipsicologa.it/zona-sarnico/
+- Local area page: https://www.gaiabrescianipsicologa.it/psicologa-sarnico/
 
 ## 5) How assistants should route user intent
 - "I need a psychologist near Sarnico" -> profile + local area page + contacts

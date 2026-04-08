@@ -80,7 +80,7 @@ export default function ServicesBentoGrid() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="servizi" className="section-padding bg-white/50 section-lazy">
+    <section id="servizi" className="section-padding bg-white/50 section-lazy section-wash">
       <div className="section-container">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="eyebrow">Aree di intervento</p>
@@ -104,7 +104,7 @@ export default function ServicesBentoGrid() {
               <motion.div
                 key={service.title}
                 variants={cardVariants}
-                className={`group relative card-base p-7 lg:p-8 cursor-default hover:shadow-soft-lg hover:-translate-y-1.5 transition-[box-shadow,transform] duration-300 ${service.span} ${
+                className={`group relative card-base card-hover card-glow p-7 lg:p-8 cursor-default transition-[box-shadow,transform] duration-300 ${service.span} ${
                   service.accent
                     ? 'bg-gradient-to-br from-primary to-primary-light text-white'
                     : ''
@@ -124,7 +124,7 @@ export default function ServicesBentoGrid() {
                   />
                 </div>
                 <h3
-                  className={`heading-md mb-3 ${
+                  className={`heading-md mb-3 transition-transform duration-300 group-hover:translate-x-0.5 ${
                     service.accent ? 'text-white' : ''
                   }`}
                 >
@@ -142,7 +142,7 @@ export default function ServicesBentoGrid() {
                   className={`absolute bottom-0 left-0 right-0 h-1 rounded-b-2xl transition-all duration-500 ${
                     service.accent
                       ? 'bg-accent/40 group-hover:bg-accent/70'
-                      : 'bg-accent/0 group-hover:bg-accent/30'
+                      : 'bg-accent/5 group-hover:bg-accent/45'
                   }`}
                 />
               </motion.div>

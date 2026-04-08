@@ -27,7 +27,7 @@ export default function InsightsGrid() {
   const isInView = useInView(ref, { once: true, margin: '-60px' });
 
   return (
-    <section id="approfondimenti" className="section-padding bg-white/50 section-lazy">
+    <section id="approfondimenti" className="section-padding bg-white/50 section-lazy section-wash">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
           <div>
@@ -55,7 +55,7 @@ export default function InsightsGrid() {
               key={article.title}
               href={`/approfondimenti/${article.slug}`}
               variants={cardVariants}
-              className="group card-base p-6 flex flex-col card-hover"
+              className="group card-base card-hover card-glow p-6 flex flex-col"
             >
               <div className="flex items-center gap-3 text-xs text-primary/45 mb-4">
                 <span>{article.date}</span>
@@ -65,7 +65,7 @@ export default function InsightsGrid() {
                 </span>
               </div>
 
-              <h3 className="font-serif font-semibold text-base leading-snug mb-3 group-hover:text-accent transition-colors duration-200">
+              <h3 className="font-serif font-semibold text-base leading-snug mb-3 group-hover:text-accent transition-[color,transform] duration-300 group-hover:translate-x-0.5">
                 {article.title}
               </h3>
 
@@ -73,7 +73,7 @@ export default function InsightsGrid() {
                 {article.excerpt}
               </p>
 
-              <span className="mt-4 text-accent text-sm font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <span className="mt-4 text-accent text-sm font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-[opacity,transform] duration-300 group-hover:translate-x-0.5">
                 Leggi
                 <ArrowUpRight size={14} />
               </span>

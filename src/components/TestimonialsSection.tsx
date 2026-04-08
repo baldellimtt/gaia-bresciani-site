@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
   const isInView = useInView(ref, { once: true, margin: '-60px' });
 
   return (
-    <section className="section-padding bg-white/50 section-lazy">
+    <section className="section-padding bg-white/50 section-lazy section-wash">
       <div className="section-container">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="eyebrow">Recensioni</p>
@@ -81,19 +81,19 @@ export default function TestimonialsSection() {
             <motion.div
               key={i}
               variants={cardVariants}
-              className="card-base p-6 flex flex-col"
+              className="card-base card-hover card-glow p-6 flex flex-col"
             >
               <div className="flex items-center gap-0.5 mb-4">
                 {[...Array(review.rating)].map((_, j) => (
                   <Star
                     key={j}
                     size={14}
-                    className="text-amber-400 fill-amber-400"
+                    className="text-amber-400 fill-amber-400 transition-transform duration-300 group-hover:scale-110"
                   />
                 ))}
               </div>
 
-              <p className="text-sm text-primary/70 leading-relaxed flex-1 italic">
+              <p className="text-sm text-primary/70 leading-relaxed flex-1 italic transition-colors duration-300 group-hover:text-primary/80">
                 &ldquo;{review.text}&rdquo;
               </p>
 
@@ -114,7 +114,7 @@ export default function TestimonialsSection() {
             href={MIODOTTORE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-outline py-3 px-6 text-sm gap-2 inline-flex"
+            className="btn-outline btn-shine py-3 px-6 text-sm gap-2 inline-flex"
           >
             Leggi tutte le recensioni su MioDottore
             <ExternalLink size={14} />

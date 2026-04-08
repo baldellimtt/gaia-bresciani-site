@@ -66,9 +66,16 @@ export default function EmdrPage() {
             </p>
             <p className="body-md">
               Per informazioni su sedi e spostamenti, visita la pagina{' '}
-              <Link href="/zona-sarnico" className="text-accent hover:underline">
+              <Link href="/psicologa-sarnico" className="text-accent hover:underline">
                 zona Sarnico e Lago d&apos;Iseo
               </Link>.
+            </p>
+            <p className="body-md">
+              Se desideri un primo confronto prima di iniziare, puoi usare la pagina{' '}
+              <Link href="/contatti" className="text-accent hover:underline">
+                contatti
+              </Link>{' '}
+              per indicare disponibilità e sede preferita.
             </p>
           </AnimatedSection>
 
@@ -88,8 +95,8 @@ export default function EmdrPage() {
 
       <section className="section-container pb-16">
         <AnimatedSection>
-          <h2 className="heading-lg mb-4">Quando pu&ograve; essere utile l&apos;EMDR</h2>
-          <p className="body-lg max-w-3xl mb-10">Indicazioni cliniche pi&ugrave; frequenti</p>
+          <h2 className="heading-lg mb-4">Quando può essere utile l&apos;EMDR</h2>
+          <p className="body-lg max-w-3xl mb-10">Indicazioni cliniche più frequenti</p>
         </AnimatedSection>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -115,12 +122,18 @@ export default function EmdrPage() {
         <AnimatedSection>
           <div className="max-w-3xl space-y-4">
             <p className="body-md">
-              L&apos;EMDR non &egrave; una scorciatoia, ma un metodo strutturato che
+              L&apos;EMDR non è una scorciatoia, ma un metodo strutturato che
               viene integrato nel percorso psicoterapeutico dopo una valutazione
               iniziale.
             </p>
             <p className="body-md">
               Offro questo lavoro a chi vive tra Lago d&apos;Iseo, Sarnico e aree vicine.
+            </p>
+            <p className="body-md">
+              Se vuoi una panoramica più ampia sul lavoro clinico, puoi leggere anche la pagina{' '}
+              <Link href="/terapia" className="text-accent hover:underline">
+                terapia individuale e di coppia
+              </Link>.
             </p>
           </div>
         </AnimatedSection>

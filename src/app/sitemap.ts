@@ -44,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/approfondimenti/', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: DEFAULT_LASTMOD },
     { path: '/faq/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
     { path: '/contatti/', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
-    { path: '/zona-sarnico/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
+    { path: '/psicologa-sarnico/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
     { path: '/esperienza/', priority: 0.6, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
     { path: '/privacy-policy/', priority: 0.2, changeFrequency: 'yearly' as const, lastModified: DEFAULT_LASTMOD },
     { path: '/cookie-policy/', priority: 0.2, changeFrequency: 'yearly' as const, lastModified: DEFAULT_LASTMOD },

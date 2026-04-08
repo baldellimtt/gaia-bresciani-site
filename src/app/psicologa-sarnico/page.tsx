@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Psicologa vicino Sarnico | Studio a Credaro per il basso Lago d\'Iseo',
   description:
     'Informazioni pratiche per chi vive tra Sarnico e il basso Lago d\'Iseo e desidera raggiungere lo studio di Credaro per un primo colloquio.',
-  alternates: { canonical: '/zona-sarnico' },
+  alternates: { canonical: '/psicologa-sarnico' },
   openGraph: {
     title: 'Psicologa vicino Sarnico | Studio a Credaro',
     description:

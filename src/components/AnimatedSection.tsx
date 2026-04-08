@@ -8,6 +8,7 @@ interface AnimatedSectionProps {
   className?: string;
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right';
+  distance?: number;
 }
 
 const directionMap = {
@@ -22,22 +23,27 @@ export default function AnimatedSection({
   className,
   delay = 0,
   direction = 'up',
+  distance = 40,
 }: AnimatedSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
-  const offset = directionMap[direction];
+  const baseOffset = directionMap[direction];
+  const offset = {
+    x: baseOffset.x === 0 ? 0 : Math.sign(baseOffset.x) * distance,
+    y: baseOffset.y === 0 ? 0 : Math.sign(baseOffset.y) * distance,
+  };
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, ...offset, willChange: 'transform, opacity' }}
+      initial={{ opacity: 0, ...offset, filter: 'blur(10px)', willChange: 'transform, opacity' }}
       animate={
         isInView
-          ? { opacity: 1, x: 0, y: 0, willChange: 'auto' }
-          : { opacity: 0, ...offset, willChange: 'transform, opacity' }
+          ? { opacity: 1, x: 0, y: 0, filter: 'blur(0px)', willChange: 'auto' }
+          : { opacity: 0, ...offset, filter: 'blur(10px)', willChange: 'transform, opacity' }
       }
       transition={{
-        duration: 0.7,
+        duration: 0.8,
         delay,
         ease: [0.21, 0.47, 0.32, 0.98],
       }}

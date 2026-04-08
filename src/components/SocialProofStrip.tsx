@@ -8,7 +8,7 @@ const MIODOTTORE_URL =
 
 export default function SocialProofStrip() {
   return (
-    <section className="py-10 sm:py-12">
+    <section className="py-8 sm:py-12">
       <div className="section-container">
         <AnimatedSection>
           <a
@@ -16,23 +16,23 @@ export default function SocialProofStrip() {
             target="_blank"
             rel="noopener noreferrer"
             className="group flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8
-                       card-base py-6 px-8 hover:shadow-soft-lg transition-shadow duration-300"
+                       card-base card-hover card-glow py-5 sm:py-6 px-6 sm:px-8 transition-shadow duration-300"
           >
             <div className="flex items-center gap-1.5">
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
                   size={18}
-                  className="text-amber-400 fill-amber-400"
+                  className="text-amber-400 fill-amber-400 transition-transform duration-300 group-hover:scale-110"
                 />
               ))}
             </div>
 
             <div className="text-center sm:text-left">
-              <p className="text-sm font-semibold text-primary">
+              <p className="text-sm sm:text-[0.95rem] font-semibold text-primary">
                 Valutazione eccellente su MioDottore
               </p>
-              <p className="text-xs text-primary/50 mt-0.5">
+              <p className="text-xs sm:text-[0.82rem] text-primary/50 mt-1">
                 Leggi le recensioni dei pazienti
               </p>
             </div>

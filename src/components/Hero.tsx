@@ -138,7 +138,7 @@ export default function Hero() {
                 href="https://www.opl.it/psicologi/22433/Bresciani-Gaia-Miriam-Teresa"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute -bottom-3 -left-6 card-base card-glow py-3 px-4 shadow-soft block no-underline hover:shadow-soft-lg transition-shadow duration-300"
+                className="absolute left-4 bottom-4 md:left-5 md:bottom-5 lg:-bottom-3 lg:-left-6 card-base card-glow py-3 px-4 shadow-soft block no-underline hover:shadow-soft-lg transition-shadow duration-300"
               >
                 <p className="text-[0.65rem] text-primary/50 font-medium uppercase tracking-wider">Albo Psicologi</p>
                 <p className="text-sm font-semibold text-primary mt-0.5">N. 22433 &mdash; Lombardia</p>

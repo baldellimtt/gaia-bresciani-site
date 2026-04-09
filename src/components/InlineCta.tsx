@@ -1,5 +1,3 @@
-'use client';
-
 import AnimatedSection from './AnimatedSection';
 import { Phone, Mail, FileText } from 'lucide-react';
 import Link from 'next/link';

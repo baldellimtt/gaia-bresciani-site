@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView } from '@/lib/motion';
+import { motion, useInView, useReducedMotion } from '@/lib/motion';
 import { useRef, type ReactNode } from 'react';
 
 interface AnimatedSectionProps {
@@ -27,23 +27,32 @@ export default function AnimatedSection({
 }: AnimatedSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
+  const prefersReducedMotion = useReducedMotion();
   const baseOffset = directionMap[direction];
   const offset = {
     x: baseOffset.x === 0 ? 0 : Math.sign(baseOffset.x) * distance,
     y: baseOffset.y === 0 ? 0 : Math.sign(baseOffset.y) * distance,
   };
 
+  if (prefersReducedMotion) {
+    return (
+      <div ref={ref} className={className}>
+        {children}
+      </div>
+    );
+  }
+
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, ...offset, filter: 'blur(10px)', willChange: 'transform, opacity' }}
+      initial={{ opacity: 0, ...offset, willChange: 'transform, opacity' }}
       animate={
         isInView
-          ? { opacity: 1, x: 0, y: 0, filter: 'blur(0px)', willChange: 'auto' }
-          : { opacity: 0, ...offset, filter: 'blur(10px)', willChange: 'transform, opacity' }
+          ? { opacity: 1, x: 0, y: 0, willChange: 'auto' }
+          : { opacity: 0, ...offset, willChange: 'transform, opacity' }
       }
       transition={{
-        duration: 0.8,
+        duration: 0.55,
         delay,
         ease: [0.21, 0.47, 0.32, 0.98],
       }}

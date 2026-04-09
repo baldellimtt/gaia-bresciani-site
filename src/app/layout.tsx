@@ -3,7 +3,6 @@ import { Lora, Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CookieBanner from '@/components/CookieBanner';
-import MotionProvider from '@/components/MotionProvider';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -17,14 +16,14 @@ const lora = Lora({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-lora',
-  weight: ['400', '600', '700'],
+  weight: ['400', '700'],
 });
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
-  weight: ['400', '500', '600'],
+  weight: ['400', '500'],
 });
 
 export const metadata: Metadata = {
@@ -315,12 +314,6 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://platform.docplanner.com" />
         <link rel="preconnect" href="https://platform.docplanner.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google.com" />
-        <link
-          rel="preload"
-          as="image"
-          href="/assets/psicologa-sarnico-gaia-bresciani.webp"
-          type="image/webp"
-        />
       </head>
       <body className="bg-background text-primary antialiased">
         <a
@@ -329,12 +322,10 @@ export default function RootLayout({
         >
           Vai al contenuto principale
         </a>
-        <MotionProvider>
-          <Navbar />
-          <main id="main-content">{children}</main>
-          <Footer />
-          <CookieBanner />
-        </MotionProvider>
+        <Navbar />
+        <main id="main-content">{children}</main>
+        <Footer />
+        <CookieBanner />
       </body>
     </html>
   );

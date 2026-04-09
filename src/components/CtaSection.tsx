@@ -1,5 +1,3 @@
-'use client';
-
 import AnimatedSection from './AnimatedSection';
 import MioDottoreWidget from './MioDottoreWidget';
 import { Phone, Mail } from 'lucide-react';

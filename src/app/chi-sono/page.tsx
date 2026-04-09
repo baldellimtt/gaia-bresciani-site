@@ -125,7 +125,7 @@ export default function ChiSonoPage() {
             {
               icon: GraduationCap,
               title: 'Metodo integrato',
-              text: 'Approccio psicodinamico adleriano, con possibilit\u00e0 di integrare EMDR quando indicato.',
+              text: 'Approccio psicodinamico adleriano, con possibilità di integrare EMDR quando indicato.',
             },
           ].map((item, i) => {
             const Icon = item.icon;

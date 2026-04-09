@@ -24,9 +24,9 @@ export default function Hero() {
 
             <p className="body-lg max-w-xl">
               Ricevo a Credaro, vicino a Sarnico, e lavoro con adulti e coppie
-              che stanno attraversando ansia, difficoltÃ  relazionali, momenti di
+              che stanno attraversando ansia, difficoltà relazionali, momenti di
               blocco o esperienze traumatiche. Il mio approccio unisce ascolto
-              clinico, chiarezza e obiettivi condivisi giÃ  dal primo colloquio.
+              clinico, chiarezza e obiettivi condivisi già dal primo colloquio.
             </p>
 
             <div className="grid max-w-2xl gap-3 sm:grid-cols-3">
@@ -57,7 +57,7 @@ export default function Hero() {
                 </div>
                 <p className="mt-2 text-sm text-primary/65">
                   Un primo contatto chiaro, senza pressione, per capire se questo
-                  percorso Ã¨ adatto a te.
+                  percorso è adatto a te.
                 </p>
               </div>
             </div>

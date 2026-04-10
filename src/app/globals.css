@@ -173,4 +173,14 @@
   .card-glow:hover::before {
     opacity: 1;
   }
+
+  /* Horizontal scroll areas (e.g. carousels): hide scrollbar, keep touch/scroll */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }

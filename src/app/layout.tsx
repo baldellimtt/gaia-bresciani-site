@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Lora, Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
+import ScrollProgressBar from '@/components/ScrollProgressBar';
 import Footer from '@/components/Footer';
 import CookieBanner from '@/components/CookieBanner';
 import './globals.css';
@@ -323,6 +324,7 @@ export default function RootLayout({
           Vai al contenuto principale
         </a>
         <Navbar />
+        <ScrollProgressBar />
         <main id="main-content">{children}</main>
         <Footer />
         <CookieBanner />

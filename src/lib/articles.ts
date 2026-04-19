@@ -10,6 +10,23 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    slug: 'burnout-lavoro-italia',
+    date: '24 aprile 2026',
+    readTime: '6 min',
+    title: 'Burnout sul lavoro: cos\'è, segnali e quando intervenire',
+    excerpt:
+      'Dalla fatica cronica al distacco: come riconoscere il burnout lavorativo in Italia oggi e cosa può fare la psicologia prima che la situazione si consolidi.',
+    tags: ['Stress', 'Lavoro'],
+    content: [
+      'Negli ultimi anni, in Italia come altrove, si parla sempre pi\u00f9 spesso di burnout lavorativo. Non \u00e8 una moda da ufficio: \u00e8 un esaurimento prolungato in cui energia, motivazione e senso di competenza calano insieme, spesso dopo periodi di carico elevato, incertezza organizzativa o difficolt\u00e0 a recuperare davvero durante il tempo libero.',
+      'Il burnout non coincide con un periodo stressante che si risolve in un weekend. Tende a installarsi nel tempo: all\'inizio si d\u00e0 tutto, ci si sente indispensabili, si accettano ritmi sostenibili solo a breve. Poi compaiono irritabilit\u00e0, insonnia o sonno non riparatore, difficolt\u00e0 di concentrazione, cinismo verso il lavoro o verso colleghi e clienti, e la sensazione di non ottenere mai risultati "abbastanza" buoni.',
+      'Alcuni segnali utili da osservare: inizio della giornata gi\u00e0 stanchi, evitamento di compiti che prima erano gestibili, aumento degli errori o della lentezza nonostante lo sforzo, mal di testa o tensioni muscolari ricorrenti, isolamento relazionale e pensieri ricorrenti sul lavoro anche fuori orario. Se questi elementi durano settimane e condizionano la vita privata, vale la pena prenderli sul serio.',
+      'In contesti italiani spesso convivono smart working, trasferte, turni e aspettative di disponibilit\u00e0 costante: tutto ci\u00f2 pu\u00f2 amplificare la difficolt\u00e0 a mettere confini chiari tra attivit\u00e0 professionale e recupero psicofisico. Il burnout non dipende dalla "debolezza" della persona: nasce da un equilibrio sfasato tra richieste, risorse e riconoscimento.',
+      'I primi passi non sono solo "staccare di pi\u00f9", che spesso non basta se il carico resta strutturale. Pu\u00f2 aiutare ridefinire priorit\u00e0 realistiche, recuperare momenti di disconnessione veri (non solo pausa con lo smartphone), parlarne con il medico di base se compaiono sintomi fisici importanti e valutare con la propria azienda eventuali aggiustamenti, dove possibile.',
+      'Un percorso psicologico affianca queste scelte: serve a mettere ordine tra emozioni, senso di colpa e paure legate alla performance, e a costruire strategie pi\u00f9 stabili di regolazione dello stress. Intervenire prima che il burnout diventi cronico di solito rende il recupero pi\u00f9 rapido e la ripresa di energia pi\u00f9 credibile.',
+    ],
+  },
+  {
     slug: 'dipendenza-affettiva',
     date: '7 aprile 2026',
     readTime: '7 min',

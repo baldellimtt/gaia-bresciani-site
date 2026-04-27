@@ -5,6 +5,9 @@ import { motion, AnimatePresence } from '@/lib/motion';
 import Link from 'next/link';
 import { Phone } from 'lucide-react';
 
+const MIODOTTORE_BOOKING_URL =
+  'https://www.miodottore.it/gaia-miriam-teresa-bresciani/psicoterapeuta-psicologo-clinico-psicologo/brescia';
+
 const navLinks = [
   { href: '/chi-sono', label: 'Chi sono' },
   { href: '/terapia', label: 'Servizi' },
@@ -83,11 +86,12 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="tel:+393408389958"
+              href={MIODOTTORE_BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-accent gap-2 py-2.5 px-5 text-[0.85rem]"
             >
-              <Phone size={15} strokeWidth={2.2} />
-              Prenota
+              Prenota visita
             </a>
           </div>
 

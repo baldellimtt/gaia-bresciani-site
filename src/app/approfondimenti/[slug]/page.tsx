@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
 import { getAllSlugs, getArticleBySlug } from '@/lib/articles';
 import { Clock, ArrowLeft } from 'lucide-react';
-import Link from 'next/link';
 
 interface PageProps {
   params: { slug: string };
@@ -27,7 +27,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
       title: article.title,
       description: article.excerpt,
       type: 'article',
-      publishedTime: article.date,
+      publishedTime: article.publishedAt,
     },
   };
 }
@@ -51,7 +51,7 @@ export default function ArticlePage({ params }: PageProps) {
       name: 'Gaia Bresciani Psicologa',
       url: 'https://www.gaiabrescianipsicologa.it',
     },
-    datePublished: article.date,
+    datePublished: article.publishedAt,
     mainEntityOfPage: `https://www.gaiabrescianipsicologa.it/approfondimenti/${article.slug}/`,
   };
 
@@ -113,7 +113,7 @@ export default function ArticlePage({ params }: PageProps) {
                   <Link href="/terapia" className="text-accent hover:underline">
                     terapia individuale e di coppia
                   </Link>
-                  , valutare se puo esserti utile un lavoro{' '}
+                  , valutare se può esserti utile un lavoro{' '}
                   <Link href="/emdr" className="text-accent hover:underline">
                     EMDR
                   </Link>{' '}

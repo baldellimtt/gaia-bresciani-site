@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -34,7 +35,7 @@ export default function ApprofondimentiPage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {articles.map((article, i) => (
             <AnimatedSection key={article.title} delay={i * 0.06}>
-              <a
+              <Link
                 href={`/approfondimenti/${article.slug}`}
                 className="group card-base card-hover p-6 flex flex-col h-full"
               >
@@ -69,7 +70,7 @@ export default function ApprofondimentiPage() {
                   Leggi l&apos;articolo
                   <ArrowUpRight size={14} />
                 </span>
-              </a>
+              </Link>
             </AnimatedSection>
           ))}
         </div>

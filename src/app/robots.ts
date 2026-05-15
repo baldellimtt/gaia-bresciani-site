@@ -9,6 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/'],
       },
     ],
+    host: 'https://www.gaiabrescianipsicologa.it',
     sitemap: 'https://www.gaiabrescianipsicologa.it/sitemap.xml',
   };
 }

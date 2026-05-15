@@ -1,6 +1,7 @@
 export interface Article {
   slug: string;
   date: string;
+  publishedAt: string;
   readTime: string;
   title: string;
   excerpt: string;
@@ -10,12 +11,31 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    slug: 'insonnia-ansia-sonno',
+    date: '15 maggio 2026',
+    publishedAt: '2026-05-15T00:00:00.000Z',
+    readTime: '6 min',
+    title: 'Insonnia e ansia: perch\u00e9 la mente non si spegne la sera',
+    excerpt:
+      'Difficolt\u00e0 ad addormentarsi, risvegli notturni e mente in allerta: come riconoscere il legame tra insonnia e ansia e quando pu\u00f2 essere utile un supporto psicologico.',
+    tags: ['Ansia', 'Sonno'],
+    content: [
+      'Capita spesso che la giornata finisca, il corpo sia stanco, ma la mente continui a correre. Ci si sdraia e iniziano pensieri, preoccupazioni, dialoghi interiori, controlli sull\'orario e sulla paura di non dormire abbastanza. Quando succede con frequenza, insonnia e ansia tendono ad alimentarsi a vicenda.',
+      'L\'ansia non compare solo nei momenti di agitazione evidente. Pu\u00f2 restare attiva anche in modo pi\u00f9 silenzioso, sotto forma di tensione fisica, ipervigilanza, battito accelerato, respiro corto o pensieri ripetitivi. La sera, quando gli stimoli esterni diminuiscono, tutto questo pu\u00f2 diventare pi\u00f9 percepibile e trasformare il momento del sonno in un momento di allerta.',
+      'I segnali pi\u00f9 comuni sono: difficolt\u00e0 ad addormentarsi, risvegli durante la notte con la mente subito attiva, sonno leggero e non ristoratore, paura di andare a letto perch\u00e9 "tanto non dormir\u00f2", stanchezza al mattino e maggiore irritabilit\u00e0 durante il giorno. A volte si crea un circolo preciso: pi\u00f9 si teme di non dormire, pi\u00f9 aumenta la tensione, e pi\u00f9 il sonno si allontana.',
+      'Non sempre il problema nasce da una sola causa. Periodi di stress, cambiamenti importanti, preoccupazioni lavorative, crisi relazionali o una fase di ansia pi\u00f9 generale possono riflettersi sul sonno. In altri casi l\'insonnia diventa essa stessa il problema principale, perch\u00e9 la persona comincia a organizzare la giornata in funzione della notte successiva.',
+      'Alcuni passi utili possono essere ridurre la stimolazione mentale nelle ore serali, evitare di usare il letto come luogo di lavoro o di allarme, osservare se ci sono abitudini che mantengono l\'attivazione e non cercare di "forzarsi" a dormire. Ma quando il sonno \u00e8 compromesso da settimane e l\'ansia prende sempre pi\u00f9 spazio, non conviene aspettare che passi da solo.',
+      'Un percorso psicologico pu\u00f2 aiutare a capire cosa mantiene l\'insonnia, distinguere tra stress temporaneo e ansia pi\u00f9 strutturata, e costruire strategie concrete per regolare l\'attivazione emotiva. Dormire meglio non significa solo riposare: significa recuperare lucidit\u00e0, energia e una sensazione pi\u00f9 stabile di sicurezza interna.',
+    ],
+  },
+  {
     slug: 'burnout-lavoro-italia',
     date: '24 aprile 2026',
+    publishedAt: '2026-04-24T00:00:00.000Z',
     readTime: '6 min',
-    title: 'Burnout sul lavoro: cos\'è, segnali e quando intervenire',
+    title: 'Burnout sul lavoro: cos\'\u00e8, segnali e quando intervenire',
     excerpt:
-      'Dalla fatica cronica al distacco: come riconoscere il burnout lavorativo in Italia oggi e cosa può fare la psicologia prima che la situazione si consolidi.',
+      'Dalla fatica cronica al distacco: come riconoscere il burnout lavorativo in Italia oggi e cosa pu\u00f2 fare la psicologia prima che la situazione si consolidi.',
     tags: ['Stress', 'Lavoro'],
     content: [
       'Negli ultimi anni, in Italia come altrove, si parla sempre pi\u00f9 spesso di burnout lavorativo. Non \u00e8 una moda da ufficio: \u00e8 un esaurimento prolungato in cui energia, motivazione e senso di competenza calano insieme, spesso dopo periodi di carico elevato, incertezza organizzativa o difficolt\u00e0 a recuperare davvero durante il tempo libero.',
@@ -29,6 +49,7 @@ const articles: Article[] = [
   {
     slug: 'dipendenza-affettiva',
     date: '7 aprile 2026',
+    publishedAt: '2026-04-07T00:00:00.000Z',
     readTime: '7 min',
     title: 'Dipendenza affettiva: quando l\'amore diventa un bisogno',
     excerpt:
@@ -40,12 +61,13 @@ const articles: Article[] = [
       'I segnali pi\u00f9 frequenti includono: la difficolt\u00e0 a prendere decisioni senza il parere del partner, la paura costante di essere lasciati, la rinuncia ai propri interessi e alle proprie amicizie per assecondare l\'altro, e un senso di vuoto o ansia quando si \u00e8 da soli.',
       'La dipendenza affettiva ha spesso radici nella storia personale: esperienze di trascuratezza emotiva nell\'infanzia, modelli familiari instabili, o relazioni passate in cui il valore personale era condizionato dal comportamento dell\'altro. Non \u00e8 una colpa: \u00e8 un modo che la mente ha trovato per proteggersi dal dolore della solitudine.',
       'Il primo passo \u00e8 riconoscere il meccanismo. Non per giudicarsi, ma per capire che la relazione con s\u00e9 stessi \u00e8 la base da cui partire. Un percorso psicologico pu\u00f2 aiutare a esplorare queste dinamiche in modo sicuro: comprendere da dove nasce il bisogno, distinguere tra amore e dipendenza, e costruire gradualmente un\'autonomia emotiva che non escluda la vicinanza, ma la renda pi\u00f9 libera.',
-      'Se ti riconosci in queste parole, sappi che chiedere aiuto non significa essere deboli. Significa voler stare meglio nelle relazioni \u2014 a partire da quella con te stessa/o.',
+      'Se ti riconosci in queste parole, sappi che chiedere aiuto non significa essere deboli. Significa voler stare meglio nelle relazioni a partire da quella con te stessa/o.',
     ],
   },
   {
     slug: 'ruminazione-mentale-overthinking',
     date: '24 marzo 2026',
+    publishedAt: '2026-03-24T00:00:00.000Z',
     readTime: '6 min',
     title: 'Ruminazione mentale e overthinking: segnali e come fermarsi',
     excerpt:
@@ -63,6 +85,7 @@ const articles: Article[] = [
   {
     slug: 'stanchezza-emotiva',
     date: '2 marzo 2026',
+    publishedAt: '2026-03-02T00:00:00.000Z',
     readTime: '6 min',
     title: 'Stanchezza emotiva: segnali, cause e primi passi utili',
     excerpt:
@@ -79,6 +102,7 @@ const articles: Article[] = [
   {
     slug: 'autostima-bassa',
     date: '16 febbraio 2026',
+    publishedAt: '2026-02-16T00:00:00.000Z',
     readTime: '7 min',
     title: 'Autostima bassa: segnali, errori comuni e percorso psicologico',
     excerpt:
@@ -90,12 +114,13 @@ const articles: Article[] = [
       'Un errore comune \u00e8 pensare che l\'autostima dipenda dai risultati. "Quando raggiunger\u00f2 quel traguardo, star\u00f2 meglio". In realt\u00e0, il meccanismo funziona al contrario: \u00e8 la percezione di s\u00e9 che condiziona il modo in cui si affrontano le sfide, non viceversa.',
       'Un altro malinteso frequente riguarda la differenza tra autostima e sicurezza di s\u00e9. Si pu\u00f2 apparire sicuri e competenti all\'esterno, ma sentirsi profondamente inadeguati dentro. Questa discrepanza genera una fatica invisibile che nel tempo pu\u00f2 portare a burnout, ansia o ritiro sociale.',
       'La bassa autostima ha quasi sempre radici nella storia personale: messaggi ricevuti durante l\'infanzia, esperienze di svalutazione, confronti sistematici con fratelli o compagni, oppure un ambiente familiare in cui l\'errore veniva vissuto come fallimento.',
-      'Un percorso psicologico non punta a "gonfiare" l\'autostima con frasi motivazionali. Il lavoro \u00e8 pi\u00f9 profondo: esplorare come si \u00e8 costruita questa immagine di s\u00e9, riconoscere le convinzioni che la mantengono, e sperimentare gradualmente un modo diverso di guardarsi \u2014 pi\u00f9 realistico e pi\u00f9 compassionevole.',
+      'Un percorso psicologico non punta a "gonfiare" l\'autostima con frasi motivazionali. Il lavoro \u00e8 pi\u00f9 profondo: esplorare come si \u00e8 costruita questa immagine di s\u00e9, riconoscere le convinzioni che la mantengono, e sperimentare gradualmente un modo diverso di guardarsi, pi\u00f9 realistico e pi\u00f9 compassionevole.',
     ],
   },
   {
     slug: 'social-network-adolescenza',
     date: '9 febbraio 2026',
+    publishedAt: '2026-02-09T00:00:00.000Z',
     readTime: '6 min',
     title: 'Social network e adolescenza: rischi, segnali e strategie',
     excerpt:
@@ -106,13 +131,14 @@ const articles: Article[] = [
       'La ricerca scientifica evidenzia che un uso eccessivo dei social pu\u00f2 influenzare negativamente l\'autostima, la qualit\u00e0 del sonno, la capacit\u00e0 di concentrazione e la percezione del proprio corpo. Il confronto costante con immagini filtrate e vite apparentemente perfette alimenta un senso di inadeguatezza che molti adolescenti faticano a gestire.',
       'Alcuni segnali a cui prestare attenzione: cambiamenti improvvisi nell\'umore dopo l\'uso dei social, isolamento dalle relazioni di persona, preoccupazione eccessiva per i "like" e i commenti, difficolt\u00e0 ad addormentarsi per l\'uso dello smartphone a letto, e calo nel rendimento scolastico.',
       'Come genitori, la reazione pi\u00f9 naturale \u00e8 vietare o controllare. Ma l\'approccio pi\u00f9 efficace \u00e8 diverso: mantenere aperto il dialogo, mostrare interesse genuino per il mondo digitale dei figli, e aiutarli a sviluppare un pensiero critico rispetto a ci\u00f2 che vedono online.',
-      'Alcune strategie concrete: stabilire insieme delle regole sull\'uso (non imposte dall\'alto), creare momenti quotidiani senza dispositivi, e soprattutto essere un modello coerente \u2014 difficile chiedere a un adolescente di staccarsi dal telefono se noi stessi siamo sempre connessi.',
-      'Se un adolescente mostra segni di disagio legati ai social \u2014 ritiro sociale, ansia, disturbi alimentari, autolesionismo \u2014 \u00e8 importante non minimizzare e valutare un confronto con un professionista.',
+      'Alcune strategie concrete: stabilire insieme delle regole sull\'uso (non imposte dall\'alto), creare momenti quotidiani senza dispositivi, e soprattutto essere un modello coerente, difficile chiedere a un adolescente di staccarsi dal telefono se noi stessi siamo sempre connessi.',
+      'Se un adolescente mostra segni di disagio legati ai social, ritiro sociale, ansia, disturbi alimentari, autolesionismo, \u00e8 importante non minimizzare e valutare un confronto con un professionista.',
     ],
   },
   {
     slug: 'ansia-attacchi-panico',
     date: '6 febbraio 2026',
+    publishedAt: '2026-02-06T00:00:00.000Z',
     readTime: '6 min',
     title: 'Ansia e attacchi di panico: quando chiedere aiuto',
     excerpt:
@@ -130,6 +156,7 @@ const articles: Article[] = [
   {
     slug: 'terapia-di-coppia',
     date: '6 febbraio 2026',
+    publishedAt: '2026-02-06T00:00:00.000Z',
     readTime: '5 min',
     title: 'Terapia di coppia: segnali precoci e cosa aspettarsi dal primo colloquio',
     excerpt:

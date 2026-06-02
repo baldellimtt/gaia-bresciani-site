@@ -212,49 +212,49 @@ export interface ArticleHero {
 const articleHeroes: Record<string, ArticleHero> = {
   'perfezionismo-ansia-da-prestazione': {
     src: '/assets/approfondimenti/approfondimenti-perfezionismo.webp',
-    alt: 'Illustrazione su perfezionismo e ansia da prestazione',
+    alt: 'Perfezionismo e ansia da prestazione: pressione di dover fare tutto bene',
   },
   'insonnia-ansia-sonno': {
     src: '/assets/approfondimenti/approfondimenti-insonnia.webp',
-    alt: 'Illustrazione su insonnia e ansia notturna',
+    alt: 'Insonnia e ansia la sera: mente attiva quando il corpo è stanco',
   },
   'burnout-lavoro-italia': {
     src: '/assets/approfondimenti/approfondimenti-burnout.webp',
-    alt: 'Illustrazione su burnout e stress lavorativo',
+    alt: 'Segni di burnout sul lavoro: fatica e bisogno di pausa',
   },
   'dipendenza-affettiva': {
     src: '/assets/approfondimenti/approfondimenti-dipendenza-affettiva.webp',
-    alt: 'Illustrazione su dipendenza affettiva e relazioni',
+    alt: 'Dipendenza affettiva: legami stretti e paura di perdere l\'altro',
   },
   'ruminazione-mentale-overthinking': {
     src: '/assets/approfondimenti/approfondimenti-ruminazione.webp',
-    alt: 'Illustrazione su ruminazione mentale e overthinking',
+    alt: 'Ruminazione mentale: pensieri che girano senza trovare una uscita',
   },
   'stanchezza-emotiva': {
     src: '/assets/approfondimenti/approfondimenti-stanchezza-emotiva.webp',
-    alt: 'Illustrazione su stanchezza emotiva',
+    alt: 'Stanchezza emotiva: esaurimento che non passa con il solo riposo',
   },
   'autostima-bassa': {
     src: '/assets/approfondimenti/approfondimenti-autostima.webp',
-    alt: 'Illustrazione su autostima e crescita personale',
+    alt: 'Autostima bassa: fatica a riconoscere il proprio valore',
   },
   'social-network-adolescenza': {
     src: '/assets/approfondimenti/approfondimenti-adolescenza-social.webp',
-    alt: 'Illustrazione su adolescenti e social network',
+    alt: 'Adolescenti e social: equilibrio tra mondo digitale e benessere',
   },
   'ansia-attacchi-panico': {
     src: '/assets/approfondimenti/approfondimenti-ansia-panico.webp',
-    alt: 'Illustrazione su ansia e attacchi di panico',
+    alt: 'Ansia e attacchi di panico: corpo in allerta e bisogno di calma',
   },
   'terapia-di-coppia': {
     src: '/assets/approfondimenti/approfondimenti-terapia-coppia.webp',
-    alt: 'Illustrazione su terapia di coppia',
+    alt: 'Terapia di coppia: spazio per parlarsi e ritrovare dialogo',
   },
 };
 
 const defaultHero: ArticleHero = {
   src: '/assets/approfondimenti/approfondimenti-perfezionismo.webp',
-  alt: 'Illustrazione approfondimento psicologia',
+  alt: 'Approfondimento di psicologia e benessere emotivo',
 };
 
 export function getArticleHero(slug: string): ArticleHero {

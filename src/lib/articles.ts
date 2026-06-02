@@ -11,6 +11,24 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    slug: 'perfezionismo-ansia-da-prestazione',
+    date: '2 giugno 2026',
+    publishedAt: '2026-06-02T00:00:00.000Z',
+    readTime: '7 min',
+    title: 'Perfezionismo e ansia da prestazione: segnali e come uscire dal circolo',
+    excerpt:
+      'Quando "devo fare tutto bene" diventa una fonte di stress: come riconoscere perfezionismo e ansia da prestazione, quali errori mantengono il problema e quando può aiutare un percorso psicologico.',
+    tags: ['Autostima', 'Perfezionismo'],
+    content: [
+      'Il perfezionismo, all\'inizio, può sembrare una qualità: attenzione ai dettagli, responsabilità, desiderio di fare bene. Il problema nasce quando il "fare bene" si trasforma in un "non posso sbagliare". In quel punto la prestazione smette di essere un obiettivo e diventa una prova continua del proprio valore.',
+      'Un segnale tipico è l\'ansia anticipatoria: prima di una consegna, un esame, un colloquio o anche una conversazione importante, la mente inizia a correre. Si ripassano scenari, si controlla più volte, si rimanda finché non ci si sente "pronti". Spesso, però, la prontezza non arriva mai: l\'asticella si sposta sempre un po\' più in alto.',
+      'Il perfezionismo non è solo "volere il massimo". È un modo di proteggersi dal giudizio, dall\'errore e dalla paura di deludere. Può manifestarsi come autocritica costante, difficoltà a delegare, fatica a godersi i risultati ("potevo fare di più"), oppure come paura di iniziare per timore di non essere all\'altezza. In alcuni casi porta a procrastinazione: rimandare diventa l\'unico modo per non misurarsi con un risultato che potrebbe sembrare insufficiente.',
+      'Un altro meccanismo che mantiene il circolo è la selezione delle prove: si notano solo gli errori e si svaluta ciò che funziona. Anche quando il feedback esterno è positivo, la persona può pensare che sia "gentilezza" o "fortuna". Così la sicurezza non si stabilizza e l\'ansia si ripresenta alla prova successiva.',
+      'Cosa può aiutare, in modo concreto? Ridurre i controlli ripetitivi, definire standard realistici (non perfetti), separare la prestazione dal valore personale e allenare la tolleranza dell\'errore. Non è un invito a "accontentarsi": è un modo per recuperare energia mentale e libertà, senza perdere efficacia.',
+      'Un percorso psicologico può essere utile quando l\'ansia da prestazione condiziona lavoro, studio o relazioni, quando l\'autocritica è costante o quando la paura di sbagliare porta a evitare situazioni importanti. L\'obiettivo non è spegnere l\'ambizione, ma renderla sostenibile: costruire un rapporto più stabile con sé stessi, in cui il risultato non sia l\'unico criterio per sentirsi "abbastanza".',
+    ],
+  },
+  {
     slug: 'insonnia-ansia-sonno',
     date: '15 maggio 2026',
     publishedAt: '2026-05-15T00:00:00.000Z',

@@ -1,21 +1,27 @@
 import AnimatedSection from './AnimatedSection';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function QuoteSection() {
   return (
     <section className="py-14 sm:py-20 lg:py-24 overflow-hidden section-lazy">
       <div className="section-container space-y-12">
         <AnimatedSection>
-          <div className="relative max-w-md mx-auto rounded-2xl overflow-hidden shadow-soft-lg">
+          <Link
+            href="/psicologa-sarnico"
+            className="group relative block max-w-md mx-auto rounded-2xl overflow-hidden shadow-soft-lg transition-[box-shadow,transform] duration-300 hover:shadow-soft-xl hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            aria-label="Psicologa a Sarnico e Lago d'Iseo: studio a Credaro e informazioni sulla zona"
+            title="Psicologa vicino a Sarnico e Lago d'Iseo"
+          >
             <Image
               src="/assets/psicologa-lago-iseo-sarnico.webp"
               alt="Studio di psicologia Gaia Bresciani a Credaro, riferimento per percorsi psicologici vicino a Sarnico e Lago d'Iseo"
-              width={450}
-              height={200}
-              className="w-full h-auto object-cover"
-              sizes="(max-width: 768px) 80vw, 450px"
+              width={640}
+              height={540}
+              className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+              sizes="(max-width: 768px) 80vw, 640px"
             />
-          </div>
+          </Link>
         </AnimatedSection>
 
         <AnimatedSection delay={0.15}>

@@ -87,6 +87,6 @@ src/
   components/        # Componenti React
   lib/               # Utility (motion barrel)
 public/
-  assets/            # Immagini WebP
+  assets/            # Unica cartella immagini WebP (servite come /assets/...)
   manifest.json      # Web App Manifest
 ```

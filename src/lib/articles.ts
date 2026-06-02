@@ -26,6 +26,7 @@ const articles: Article[] = [
       'Un altro meccanismo che mantiene il circolo è la selezione delle prove: si notano solo gli errori e si svaluta ciò che funziona. Anche quando il feedback esterno è positivo, la persona può pensare che sia "gentilezza" o "fortuna". Così la sicurezza non si stabilizza e l\'ansia si ripresenta alla prova successiva.',
       'Cosa può aiutare, in modo concreto? Ridurre i controlli ripetitivi, definire standard realistici (non perfetti), separare la prestazione dal valore personale e allenare la tolleranza dell\'errore. Non è un invito a "accontentarsi": è un modo per recuperare energia mentale e libertà, senza perdere efficacia.',
       'Un percorso psicologico può essere utile quando l\'ansia da prestazione condiziona lavoro, studio o relazioni, quando l\'autocritica è costante o quando la paura di sbagliare porta a evitare situazioni importanti. L\'obiettivo non è spegnere l\'ambizione, ma renderla sostenibile: costruire un rapporto più stabile con sé stessi, in cui il risultato non sia l\'unico criterio per sentirsi "abbastanza".',
+      'Se ti riconosci in questi meccanismi e sei in zona Credaro, Sarnico o basso Lago d\'Iseo, un confronto può aiutarti a capire da dove partire e quali obiettivi rendere più sostenibili.',
     ],
   },
   {

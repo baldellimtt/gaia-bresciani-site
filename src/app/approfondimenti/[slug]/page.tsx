@@ -121,6 +121,10 @@ export default function ArticlePage({ params }: PageProps) {
                   <Link href="/psicologa-sarnico" className="text-accent hover:underline">
                     zona di Sarnico e del basso Lago d&apos;Iseo
                   </Link>
+                  . Per informazioni e disponibilità, trovi i riferimenti nella pagina{' '}
+                  <Link href="/contatti" className="text-accent hover:underline">
+                    Contatti
+                  </Link>
                   .
                 </p>
               </div>

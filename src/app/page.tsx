@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import Hero from '@/components/Hero';
+import ReviewSchemaJsonLd from '@/components/ReviewSchemaJsonLd';
 
 const ServicesBentoGrid = dynamic(() => import('@/components/ServicesBentoGrid'));
 const TestimonialsSection = dynamic(() => import('@/components/TestimonialsSection'));
@@ -12,6 +13,7 @@ const CtaSection = dynamic(() => import('@/components/CtaSection'));
 export default function HomePage() {
   return (
     <>
+      <ReviewSchemaJsonLd />
       <Hero />
       <ServicesBentoGrid />
       <TestimonialsSection />

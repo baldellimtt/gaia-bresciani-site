@@ -203,3 +203,91 @@ export function getArticleBySlug(slug: string): Article | undefined {
 export function getAllSlugs(): string[] {
   return articles.map((a) => a.slug);
 }
+
+export interface ArticleHero {
+  src: string;
+  alt: string;
+}
+
+const articleHeroes: Record<string, ArticleHero> = {
+  'perfezionismo-ansia-da-prestazione': {
+    src: '/assets/psicologa-gaia-bresciani.webp',
+    alt: 'Supporto psicologico per perfezionismo e ansia da prestazione',
+  },
+  'insonnia-ansia-sonno': {
+    src: '/assets/studio-psicologia-lago-iseo-sarnico.webp',
+    alt: 'Studio di psicologia a Credaro per insonnia e ansia',
+  },
+  'burnout-lavoro-italia': {
+    src: '/assets/studio-psicologia-lago-iseo-sarnico.webp',
+    alt: 'Percorsi psicologici per stress e burnout lavorativo',
+  },
+  'dipendenza-affettiva': {
+    src: '/assets/psicologa-lago-iseo-sarnico.webp',
+    alt: 'Supporto psicologico per relazioni e dipendenza affettiva',
+  },
+  'ruminazione-mentale-overthinking': {
+    src: '/assets/psicologa-gaia-bresciani.webp',
+    alt: 'Psicologa per ruminazione mentale e overthinking',
+  },
+  'stanchezza-emotiva': {
+    src: '/assets/studio-psicologia-lago-iseo-sarnico.webp',
+    alt: 'Studio psicologico per stanchezza emotiva e stress',
+  },
+  'autostima-bassa': {
+    src: '/assets/psicologa-gaia-bresciani.webp',
+    alt: 'Percorso psicologico per autostima e benessere emotivo',
+  },
+  'social-network-adolescenza': {
+    src: '/assets/consulenza-psicologica-online-bergamo.webp',
+    alt: 'Supporto psicologico per adolescenti e uso dei social',
+  },
+  'ansia-attacchi-panico': {
+    src: '/assets/terapia-emdr-lago-iseo.webp',
+    alt: 'Terapia per ansia e attacchi di panico vicino Sarnico',
+  },
+  'terapia-di-coppia': {
+    src: '/assets/psicologa-lago-iseo-sarnico.webp',
+    alt: 'Terapia di coppia con psicologa a Credaro vicino Sarnico',
+  },
+};
+
+const defaultHero: ArticleHero = {
+  src: '/assets/studio-psicologia-lago-iseo-sarnico.webp',
+  alt: 'Studio di psicologia Gaia Bresciani a Credaro',
+};
+
+export function getArticleHero(slug: string): ArticleHero {
+  return articleHeroes[slug] ?? defaultHero;
+}
+
+export function getRelatedArticles(slug: string, limit = 3): Article[] {
+  const current = getArticleBySlug(slug);
+  if (!current) return [];
+
+  const scored = articles
+    .filter((a) => a.slug !== slug)
+    .map((a) => ({
+      article: a,
+      score: a.tags.filter((tag) => current.tags.includes(tag)).length,
+    }))
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return (
+        new Date(b.article.publishedAt).getTime() -
+        new Date(a.article.publishedAt).getTime()
+      );
+    });
+
+  const withSharedTags = scored.filter(({ score }) => score > 0).slice(0, limit);
+  if (withSharedTags.length >= limit) {
+    return withSharedTags.map(({ article }) => article);
+  }
+
+  const usedSlugs = new Set([slug, ...withSharedTags.map(({ article }) => article.slug)]);
+  const fallback = scored
+    .filter(({ article }) => !usedSlugs.has(article.slug))
+    .slice(0, limit - withSharedTags.length);
+
+  return [...withSharedTags, ...fallback].map(({ article }) => article);
+}

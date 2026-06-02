@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
-import { getAllArticles } from '@/lib/articles';
+import { getAllArticles, getArticleHero } from '@/lib/articles';
 import { ArrowUpRight, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -33,12 +34,24 @@ export default function ApprofondimentiPage() {
 
       <section className="section-container pb-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {articles.map((article, i) => (
+          {articles.map((article, i) => {
+            const hero = getArticleHero(article.slug);
+            return (
             <AnimatedSection key={article.title} delay={i * 0.06}>
               <Link
                 href={`/approfondimenti/${article.slug}`}
-                className="group card-base card-hover p-6 flex flex-col h-full"
+                className="group card-base card-hover overflow-hidden flex flex-col h-full"
               >
+                <div className="relative aspect-[16/9] overflow-hidden bg-primary/[0.04]">
+                  <Image
+                    src={hero.src}
+                    alt={hero.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-3 text-xs text-primary/45 mb-4">
                   <span>{article.date}</span>
                   <span className="flex items-center gap-1">
@@ -70,9 +83,11 @@ export default function ApprofondimentiPage() {
                   Leggi l&apos;articolo
                   <ArrowUpRight size={14} />
                 </span>
+                </div>
               </Link>
             </AnimatedSection>
-          ))}
+            );
+          })}
         </div>
       </section>
 

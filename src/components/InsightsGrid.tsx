@@ -1,10 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, useInView } from '@/lib/motion';
 import { useRef } from 'react';
 import { ArrowUpRight, Clock } from 'lucide-react';
-import { getAllArticles } from '@/lib/articles';
+import { getAllArticles, getArticleHero } from '@/lib/articles';
 
 const insights = getAllArticles().slice(0, 4);
 
@@ -51,12 +52,24 @@ export default function InsightsGrid() {
           animate={isInView ? 'visible' : 'hidden'}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
         >
-          {insights.map((article) => (
+          {insights.map((article) => {
+            const hero = getArticleHero(article.slug);
+            return (
             <motion.div key={article.title} variants={cardVariants}>
               <Link
                 href={`/approfondimenti/${article.slug}`}
-                className="group card-base card-hover card-glow p-6 flex flex-col h-full"
+                className="group card-base card-hover card-glow overflow-hidden flex flex-col h-full"
               >
+                <div className="relative aspect-[16/9] overflow-hidden bg-primary/[0.04]">
+                  <Image
+                    src={hero.src}
+                    alt={hero.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-3 text-xs text-primary/45 mb-4">
                   <span>{article.date}</span>
                   <span className="flex items-center gap-1">
@@ -77,9 +90,11 @@ export default function InsightsGrid() {
                   Leggi
                   <ArrowUpRight size={14} />
                 </span>
+                </div>
               </Link>
             </motion.div>
-          ))}
+            );
+          })}
         </motion.div>
       </div>
     </section>

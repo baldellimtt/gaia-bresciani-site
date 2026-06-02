@@ -1,10 +1,17 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
-import { getAllSlugs, getArticleBySlug } from '@/lib/articles';
+import RelatedArticles from '@/components/RelatedArticles';
+import {
+  getAllSlugs,
+  getArticleBySlug,
+  getArticleHero,
+  getRelatedArticles,
+} from '@/lib/articles';
 import { Clock, ArrowLeft } from 'lucide-react';
 
 interface PageProps {
@@ -28,6 +35,12 @@ export function generateMetadata({ params }: PageProps): Metadata {
       description: article.excerpt,
       type: 'article',
       publishedTime: article.publishedAt,
+      images: [
+        {
+          url: getArticleHero(article.slug).src,
+          alt: getArticleHero(article.slug).alt,
+        },
+      ],
     },
   };
 }
@@ -36,11 +49,15 @@ export default function ArticlePage({ params }: PageProps) {
   const article = getArticleBySlug(params.slug);
   if (!article) notFound();
 
+  const hero = getArticleHero(article.slug);
+  const relatedArticles = getRelatedArticles(article.slug, 3);
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: article.title,
     description: article.excerpt,
+    image: `https://www.gaiabrescianipsicologa.it${hero.src}`,
     author: {
       '@type': 'Person',
       name: 'Gaia Bresciani',
@@ -85,6 +102,17 @@ export default function ArticlePage({ params }: PageProps) {
 
             <h1 className="heading-lg mb-5 text-balance">{article.title}</h1>
 
+            <div className="relative aspect-[16/9] overflow-hidden rounded-2xl mb-8 shadow-soft">
+              <Image
+                src={hero.src}
+                alt={hero.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 672px"
+                priority
+              />
+            </div>
+
             <div className="flex items-center gap-4 text-sm text-primary/45 mb-10 pb-8 border-b border-primary/[0.08]">
               <span>{article.date}</span>
               <span className="flex items-center gap-1.5">
@@ -104,6 +132,8 @@ export default function ArticlePage({ params }: PageProps) {
               ))}
             </div>
           </AnimatedSection>
+
+          <RelatedArticles articles={relatedArticles} />
 
           <AnimatedSection delay={0.15}>
             <div className="mt-12 pt-8 border-t border-primary/[0.08]">

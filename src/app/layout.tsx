@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     siteName: 'Gaia Bresciani Psicologa',
     images: [
       {
-        url: '/assets/psicologa-gaia-bresciani.webp',
+        url: '/assets/og-share.webp',
         width: 1200,
         height: 630,
-        alt: 'Dott.ssa Gaia Bresciani, psicologa e psicoterapeuta',
+        alt: 'Gaia Bresciani, psicologa e psicoterapeuta a Credaro vicino Sarnico e Lago d\'Iseo',
       },
     ],
     locale: 'it_IT',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: 'Psicologa a Credaro vicino Sarnico e Lago d\'Iseo | Gaia Bresciani',
     description:
       'Percorsi psicologici in presenza a Credaro, vicino a Sarnico e Lago d\'Iseo, con primo colloquio orientativo.',
-    images: ['/assets/psicologa-gaia-bresciani.webp'],
+    images: ['/assets/og-share.webp'],
   },
   robots: {
     index: true,
@@ -226,43 +226,6 @@ function SchemaOrgJsonLd() {
         identifier: '22433',
       },
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '25',
-      bestRating: '5',
-    },
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        q: 'Dove trovo una psicologa a Sarnico',
-        a: 'Sono una psicologa e psicoterapeuta con studio a Credaro (BG), facilmente raggiungibile da Sarnico e Lago d\'Iseo. Offro terapia individuale, di coppia e EMDR per ansia, attacchi di panico e traumi.',
-      },
-      {
-        q: 'Quale psicoterapeuta tratta l\'ansia sul Lago d\'Iseo',
-        a: 'Offro terapia per ansia e attacchi di panico a Sarnico e Lago d\'Iseo utilizzando approcci scientificamente validati, tra cui la Terapia EMDR.',
-      },
-      {
-        q: 'Come posso prenotare una seduta con una psicologa vicino a Sarnico',
-        a: 'Puoi contattarmi telefonicamente al +39 340 8389 958, via email a gaia.bresciani23@gmail.com, oppure prenotare online tramite MioDottore.',
-      },
-      {
-        q: 'Quanto dura un percorso di psicoterapia',
-        a: 'La durata varia in base alle esigenze individuali. Alcuni percorsi possono essere brevi (3-6 mesi), altri pi\u00f9 approfonditi. Durante il primo colloquio valutiamo insieme il percorso pi\u00f9 adatto.',
-      },
-      {
-        q: '\u00c8 possibile fare terapia online con una psicologa di Sarnico',
-        a: 'S\u00ec, offro colloqui psicologici online sicuri ed efficaci per chi ha difficolt\u00e0 logistiche o preferisce ricevere supporto da casa.',
-      },
-    ].map(({ q, a }) => ({
-      '@type': 'Question',
-      name: q,
-      acceptedAnswer: { '@type': 'Answer', text: a },
-    })),
   };
 
   const websiteSchema = {
@@ -284,10 +247,6 @@ function SchemaOrgJsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
         type="application/ld+json"

@@ -4,6 +4,7 @@ import CookiePreferencesButton from './CookiePreferencesButton';
 
 const footerLinks = [
   { href: '/chi-sono', label: 'Chi sono' },
+  { href: '/esperienza', label: 'Esperienza' },
   { href: '/terapia', label: 'Servizi' },
   { href: '/emdr', label: 'EMDR' },
   { href: '/approfondimenti', label: 'Approfondimenti' },
@@ -11,11 +12,16 @@ const footerLinks = [
   { href: '/contatti', label: 'Contatti' },
 ];
 
+const zoneLinks = [
+  { href: '/psicologa-sarnico', label: 'Sarnico e Lago d\'Iseo' },
+  { href: '/contatti', label: 'Contatti e sedi' },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-primary text-white/80">
       <div className="section-container py-16 lg:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="font-serif text-white font-bold text-xl block mb-4">
               Gaia Bresciani
@@ -32,6 +38,24 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {footerLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white/55 hover:text-accent transition-colors duration-200"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
+              Zona
+            </h4>
+            <ul className="space-y-3">
+              {zoneLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

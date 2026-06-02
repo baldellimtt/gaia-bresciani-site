@@ -3,40 +3,7 @@
 import { motion, useInView } from '@/lib/motion';
 import { useRef } from 'react';
 import { Star, ExternalLink } from 'lucide-react';
-
-const MIODOTTORE_URL =
-  'https://www.miodottore.it/gaia-miriam-teresa-bresciani/psicoterapeuta-psicologo-clinico-psicologo/brescia#opinions';
-
-/*
- * ISTRUZIONI: sostituisci il testo di queste recensioni con quelle reali
- * copiate dal tuo profilo MioDottore. Modifica nome (o iniziale), testo e rating.
- */
-const reviews = [
-  {
-    name: 'S.',
-    text: 'Gaia mi ha dato uno spazio sicuro per esprimermi e mi ha sempre lasciato il tempo per elaborare i miei pensieri. La sua attenzione e cura non mancano mai. Mi guida nel ragionamento per affrontare e capire le tematiche affrontate.',
-    rating: 5,
-    source: 'MioDottore',
-  },
-  {
-    name: 'C.C.',
-    text: 'La dott.ssa Bresciani \u00e8 stata fin da subito molto paziente e disponibile, in grado di aiutarmi a superare ottimamente degli eventi importanti della mia vita riuscendo ad affrontarli al meglio.',
-    rating: 5,
-    source: 'MioDottore',
-  },
-  {
-    name: 'Anna',
-    text: 'La Dottoressa \u00e8 molto gentile, mi ha fatta sentire sempre a mio agio. Ha sempre ascoltato in maniera attenta, intervenendo in modo opportuno e comprensivo.',
-    rating: 5,
-    source: 'MioDottore',
-  },
-  {
-    name: 'Daniele',
-    text: 'Grazie alla sua professionalit\u00e0 ed empatia, sono riuscito a gestire meglio ansia e stress, superare un lutto familiare e persino alleviare dolori che non avevano cause fisiche. La sua guida mi ha permesso di raggiungere una maggiore consapevolezza di me stesso.',
-    rating: 5,
-    source: 'MioDottore',
-  },
-];
+import { MIODOTTORE_REVIEWS_URL, reviews } from '@/lib/reviews';
 
 const containerVariants = {
   hidden: {},
@@ -116,7 +83,7 @@ export default function TestimonialsSection() {
 
         <div className="text-center mt-10">
           <a
-            href={MIODOTTORE_URL}
+            href={MIODOTTORE_REVIEWS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline btn-shine py-3 px-6 text-sm gap-2 inline-flex"

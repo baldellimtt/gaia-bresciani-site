@@ -5,6 +5,7 @@ import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import Accordion from '@/components/Accordion';
 import InlineCta from '@/components/InlineCta';
+import FaqSchemaJsonLd from '@/components/FaqSchemaJsonLd';
 
 export const metadata: Metadata = {
   title: 'FAQ Psicologa a Sarnico e Lago d\'Iseo | Gaia Bresciani',
@@ -84,6 +85,7 @@ const faqItems = [
 export default function FaqPage() {
   return (
     <>
+      <FaqSchemaJsonLd items={faqItems} />
       <Breadcrumb items={[{ label: 'FAQ' }]} />
       <PageHeader
         eyebrow="Domande frequenti"

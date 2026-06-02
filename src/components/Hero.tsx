@@ -18,15 +18,15 @@ export default function Hero() {
             </p>
 
             <h1 className="heading-xl text-balance">
-              Psicologa e psicoterapeuta a Credaro,
-              <span className="block text-accent">vicino a Sarnico e Lago d&apos;Iseo</span>
+              So che chiedere aiuto
+              <span className="block text-accent">non &egrave; facile</span>
             </h1>
 
             <p className="body-lg max-w-xl">
-              So che chiedere aiuto non &egrave; facile. Lavoro con adulti e coppie
-              per ansia, difficolt&agrave; relazionali, autostima, momenti di blocco ed
-              esperienze traumatiche, con terapia individuale, di coppia ed EMDR.
-              Il primo colloquio &egrave; un passo concreto, senza pressione.
+              Ricevo a Credaro e lavoro con adulti e coppie che stanno attraversando
+              ansia, difficolt&agrave; relazionali, momenti di blocco o esperienze
+              traumatiche. Il mio approccio unisce ascolto clinico, chiarezza e
+              obiettivi condivisi gi&agrave; dal primo colloquio.
             </p>
 
             <div className="grid max-w-2xl gap-3 sm:grid-cols-3">

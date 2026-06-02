@@ -211,50 +211,50 @@ export interface ArticleHero {
 
 const articleHeroes: Record<string, ArticleHero> = {
   'perfezionismo-ansia-da-prestazione': {
-    src: '/assets/psicologa-gaia-bresciani.webp',
-    alt: 'Supporto psicologico per perfezionismo e ansia da prestazione',
+    src: '/assets/approfondimenti/approfondimenti-perfezionismo.webp',
+    alt: 'Illustrazione su perfezionismo e ansia da prestazione',
   },
   'insonnia-ansia-sonno': {
-    src: '/assets/studio-psicologia-lago-iseo-sarnico.webp',
-    alt: 'Studio di psicologia a Credaro per insonnia e ansia',
+    src: '/assets/approfondimenti/approfondimenti-insonnia.webp',
+    alt: 'Illustrazione su insonnia e ansia notturna',
   },
   'burnout-lavoro-italia': {
-    src: '/assets/studio-psicologia-lago-iseo-sarnico.webp',
-    alt: 'Percorsi psicologici per stress e burnout lavorativo',
+    src: '/assets/approfondimenti/approfondimenti-burnout.webp',
+    alt: 'Illustrazione su burnout e stress lavorativo',
   },
   'dipendenza-affettiva': {
-    src: '/assets/psicologa-lago-iseo-sarnico.webp',
-    alt: 'Supporto psicologico per relazioni e dipendenza affettiva',
+    src: '/assets/approfondimenti/approfondimenti-dipendenza-affettiva.webp',
+    alt: 'Illustrazione su dipendenza affettiva e relazioni',
   },
   'ruminazione-mentale-overthinking': {
-    src: '/assets/psicologa-gaia-bresciani.webp',
-    alt: 'Psicologa per ruminazione mentale e overthinking',
+    src: '/assets/approfondimenti/approfondimenti-ruminazione.webp',
+    alt: 'Illustrazione su ruminazione mentale e overthinking',
   },
   'stanchezza-emotiva': {
-    src: '/assets/studio-psicologia-lago-iseo-sarnico.webp',
-    alt: 'Studio psicologico per stanchezza emotiva e stress',
+    src: '/assets/approfondimenti/approfondimenti-stanchezza-emotiva.webp',
+    alt: 'Illustrazione su stanchezza emotiva',
   },
   'autostima-bassa': {
-    src: '/assets/psicologa-gaia-bresciani.webp',
-    alt: 'Percorso psicologico per autostima e benessere emotivo',
+    src: '/assets/approfondimenti/approfondimenti-autostima.webp',
+    alt: 'Illustrazione su autostima e crescita personale',
   },
   'social-network-adolescenza': {
-    src: '/assets/consulenza-psicologica-online-bergamo.webp',
-    alt: 'Supporto psicologico per adolescenti e uso dei social',
+    src: '/assets/approfondimenti/approfondimenti-adolescenza-social.webp',
+    alt: 'Illustrazione su adolescenti e social network',
   },
   'ansia-attacchi-panico': {
-    src: '/assets/terapia-emdr-lago-iseo.webp',
-    alt: 'Terapia per ansia e attacchi di panico vicino Sarnico',
+    src: '/assets/approfondimenti/approfondimenti-ansia-panico.webp',
+    alt: 'Illustrazione su ansia e attacchi di panico',
   },
   'terapia-di-coppia': {
-    src: '/assets/psicologa-lago-iseo-sarnico.webp',
-    alt: 'Terapia di coppia con psicologa a Credaro vicino Sarnico',
+    src: '/assets/approfondimenti/approfondimenti-terapia-coppia.webp',
+    alt: 'Illustrazione su terapia di coppia',
   },
 };
 
 const defaultHero: ArticleHero = {
-  src: '/assets/studio-psicologia-lago-iseo-sarnico.webp',
-  alt: 'Studio di psicologia Gaia Bresciani a Credaro',
+  src: '/assets/approfondimenti/approfondimenti-perfezionismo.webp',
+  alt: 'Illustrazione approfondimento psicologia',
 };
 
 export function getArticleHero(slug: string): ArticleHero {

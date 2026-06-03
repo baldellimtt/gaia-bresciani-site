@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="space-y-8 lg:col-span-3">
             <p className="eyebrow flex items-center gap-2">
               <MapPin size={14} strokeWidth={2.5} />
-              Studio a Credaro
+              Studio zona Lago d&apos;Iseo
             </p>
 
             <h1 className="heading-xl text-balance">

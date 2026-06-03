@@ -13,8 +13,8 @@ const footerLinks = [
 ];
 
 const zoneLinks = [
-  { href: '/psicologa-sarnico', label: 'Sarnico e Lago d\'Iseo' },
-  { href: '/contatti', label: 'Contatti e sedi' },
+  { href: '/psicologa-sarnico', label: 'Credaro - zona Sarnico e Lago d\'Iseo' },
+  { href: '/contatti', label: 'Castenedolo - zona Brescia' },
 ];
 
 export default function Footer() {

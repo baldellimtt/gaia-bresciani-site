@@ -1,10 +1,13 @@
-import { Phone, MessageCircle } from 'lucide-react';
+import { CalendarCheck, MessageCircle } from 'lucide-react';
 
 const WHATSAPP_URL =
   'https://wa.me/393408389958?text=' +
   encodeURIComponent(
     'Salve, vorrei informazioni per un primo colloquio.'
   );
+
+const MIODOTTORE_BOOKING_URL =
+  'https://www.miodottore.it/gaia-miriam-teresa-bresciani/psicoterapeuta-psicologo-clinico-psicologo/brescia';
 
 export default function FloatingContact() {
   return (
@@ -13,12 +16,14 @@ export default function FloatingContact() {
       style={{ paddingBottom: 'calc(0.625rem + env(safe-area-inset-bottom))' }}
     >
       <a
-        href="tel:+393408389958"
+        href={MIODOTTORE_BOOKING_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         className="flex flex-1 items-center justify-center gap-2 rounded-full bg-accent px-4 py-3 text-sm font-medium text-white active:scale-[0.98] transition-transform"
-        aria-label="Chiama la Dott.ssa Gaia Bresciani"
+        aria-label="Prenota una visita con la Dott.ssa Gaia Bresciani su MioDottore"
       >
-        <Phone size={17} strokeWidth={2} />
-        Chiama
+        <CalendarCheck size={17} strokeWidth={2} />
+        Prenota
       </a>
       <a
         href={WHATSAPP_URL}

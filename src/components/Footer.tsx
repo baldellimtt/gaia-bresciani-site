@@ -20,7 +20,7 @@ const zoneLinks = [
 export default function Footer() {
   return (
     <footer className="bg-primary text-white/80">
-      <div className="section-container py-16 lg:py-20">
+      <div className="section-container py-16 lg:py-20 pb-28 lg:pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="font-serif text-white font-bold text-xl block mb-4">

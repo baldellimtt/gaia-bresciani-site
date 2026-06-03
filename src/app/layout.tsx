@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import ScrollProgressBar from '@/components/ScrollProgressBar';
 import Footer from '@/components/Footer';
 import CookieBanner from '@/components/CookieBanner';
+import FloatingContact from '@/components/FloatingContact';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -286,6 +287,7 @@ export default function RootLayout({
         <ScrollProgressBar />
         <main id="main-content">{children}</main>
         <Footer />
+        <FloatingContact />
         <CookieBanner />
       </body>
     </html>

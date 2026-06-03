@@ -62,6 +62,7 @@ export default function ArticlePage({ params }: PageProps) {
       '@type': 'Person',
       name: 'Gaia Bresciani',
       jobTitle: 'Psicologa e Psicoterapeuta',
+      url: 'https://www.gaiabrescianipsicologa.it/chi-sono/',
     },
     publisher: {
       '@type': 'Organization',
@@ -69,6 +70,7 @@ export default function ArticlePage({ params }: PageProps) {
       url: 'https://www.gaiabrescianipsicologa.it',
     },
     datePublished: article.publishedAt,
+    dateModified: article.updatedAt ?? article.publishedAt,
     mainEntityOfPage: `https://www.gaiabrescianipsicologa.it/approfondimenti/${article.slug}/`,
   };
 
@@ -125,11 +127,31 @@ export default function ArticlePage({ params }: PageProps) {
 
           <AnimatedSection delay={0.1}>
             <div className="space-y-5">
-              {article.content.map((paragraph, i) => (
-                <p key={i} className="body-md leading-[1.85]">
-                  {paragraph}
-                </p>
-              ))}
+              {article.content.map((block, i) => {
+                if (typeof block === 'string') {
+                  return (
+                    <p key={i} className="body-md leading-[1.85]">
+                      {block}
+                    </p>
+                  );
+                }
+                if (block.type === 'h2') {
+                  return (
+                    <h2 key={i} className="heading-md pt-4">
+                      {block.text}
+                    </h2>
+                  );
+                }
+                return (
+                  <ul key={i} className="space-y-2 pl-5 list-disc marker:text-accent">
+                    {block.items.map((item, j) => (
+                      <li key={j} className="body-md leading-[1.7]">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                );
+              })}
             </div>
           </AnimatedSection>
 

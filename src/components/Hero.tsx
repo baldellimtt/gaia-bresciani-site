@@ -1,12 +1,39 @@
-import { ArrowRight, Clock3, MapPin, ShieldCheck } from 'lucide-react';
+'use client';
+
+import { useRef } from 'react';
 import Image from 'next/image';
+import { ArrowRight, Clock3, MapPin, ShieldCheck } from 'lucide-react';
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useReducedMotion,
+  EASE,
+} from '@/lib/motion';
+
+const headlineLines = ['So che chiedere aiuto', 'non è facile'];
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const reduce = useReducedMotion();
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  });
+  const portraitY = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [0, 70]);
+
   return (
-    <section className="relative overflow-hidden">
+    <section ref={sectionRef} className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute top-20 -right-32 h-[500px] w-[500px] rounded-full bg-accent/[0.07] blur-3xl gpu" />
-        <div className="absolute -bottom-20 -left-32 h-[400px] w-[400px] rounded-full bg-primary/[0.04] blur-3xl gpu" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(120% 85% at 82% -10%, rgba(209,166,132,0.12), transparent 52%), radial-gradient(95% 75% at -5% 105%, rgba(45,70,76,0.06), transparent 55%)',
+          }}
+        />
+        <div className="grain-overlay" />
       </div>
 
       <div className="section-container w-full pt-24 pb-16 lg:pt-28 lg:pb-20">
@@ -18,8 +45,22 @@ export default function Hero() {
             </p>
 
             <h1 className="heading-xl text-balance">
-              So che chiedere aiuto
-              <span className="block text-accent">non &egrave; facile</span>
+              {headlineLines.map((line, i) => (
+                <span key={line} className="reveal-mask">
+                  <motion.span
+                    className="block"
+                    initial={reduce ? { y: 0 } : { y: '115%' }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 0.8, ease: EASE, delay: 0.05 + i * 0.12 }}
+                  >
+                    {i === headlineLines.length - 1 ? (
+                      <span className="text-accent">{line}</span>
+                    ) : (
+                      line
+                    )}
+                  </motion.span>
+                </span>
+              ))}
             </h1>
 
             <p className="body-lg max-w-xl">
@@ -74,7 +115,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-4 text-sm text-primary/50">
               <span className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-green-500" />
+                <span className="h-2 w-2 rounded-full bg-accent" />
                 Primo colloquio orientativo
               </span>
               <span>Credaro (BG) &middot; Vicino a Sarnico</span>
@@ -83,8 +124,13 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-center lg:col-span-2 lg:justify-end">
-            <div className="relative">
-              <div className="relative aspect-[3/4] w-[300px] overflow-hidden rounded-3xl shadow-soft-lg lg:w-[350px]">
+            <motion.div className="relative" style={{ y: portraitY }}>
+              <div
+                className="absolute -inset-6 -z-10 bg-accent/15 blur-2xl gpu"
+                style={{ borderRadius: '60% 40% 55% 45% / 55% 50% 50% 45%' }}
+                aria-hidden="true"
+              />
+              <div className="photo-grade relative aspect-[3/4] w-[300px] overflow-hidden rounded-[200px_200px_28px_28px] shadow-soft-lg lg:w-[350px]">
                 <div className="absolute inset-0 transition-transform duration-500 ease-out hover:scale-[1.03]">
                   <Image
                     src="/assets/psicologa-sarnico-gaia-bresciani.webp"
@@ -107,7 +153,7 @@ export default function Hero() {
                 <p className="text-[0.65rem] font-medium uppercase tracking-wider text-primary/50">Albo Psicologi</p>
                 <p className="mt-0.5 text-sm font-semibold text-primary">N. 22433 &mdash; Lombardia</p>
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

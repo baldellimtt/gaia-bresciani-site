@@ -104,7 +104,7 @@ export default function ArticlePage({ params }: PageProps) {
 
             <h1 className="heading-lg mb-5 text-balance">{article.title}</h1>
 
-            <div className="relative aspect-[16/9] overflow-hidden rounded-2xl mb-8 shadow-soft">
+            <div className="photo-grade relative aspect-[16/9] overflow-hidden rounded-2xl mb-8 shadow-soft">
               <Image
                 src={hero.src}
                 alt={hero.alt}

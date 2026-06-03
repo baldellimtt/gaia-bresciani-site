@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Lora, Inter } from 'next/font/google';
+import { Fraunces, Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import ScrollProgressBar from '@/components/ScrollProgressBar';
 import Footer from '@/components/Footer';
@@ -14,11 +14,11 @@ export const viewport: Viewport = {
   themeColor: '#2D464C',
 };
 
-const lora = Lora({
+const fraunces = Fraunces({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-lora',
-  weight: ['400', '700'],
+  variable: '--font-fraunces',
+  weight: ['400', '500', '600', '700'],
 });
 
 const inter = Inter({
@@ -263,7 +263,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="it" className={`${lora.variable} ${inter.variable}`}>
+    <html lang="it" className={`${fraunces.variable} ${inter.variable}`}>
       <head>
         <SchemaOrgJsonLd />
         <meta httpEquiv="X-DNS-Prefetch-Control" content="on" />

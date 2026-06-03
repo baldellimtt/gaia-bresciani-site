@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView } from '@/lib/motion';
+import { motion, useInView, useReducedMotion } from '@/lib/motion';
 import { useRef } from 'react';
 import Link from 'next/link';
 import { MessageCircle, Compass, ClipboardList, TrendingUp } from 'lucide-react';
@@ -54,6 +54,7 @@ const stepVariants = {
 export default function MethodologySteps() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-60px' });
+  const reduce = useReducedMotion();
 
   return (
     <section id="metodo" className="section-padding section-lazy">
@@ -84,8 +85,8 @@ export default function MethodologySteps() {
         <motion.div
           ref={ref}
           variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
+          initial={reduce ? 'visible' : 'hidden'}
+          animate={reduce || isInView ? 'visible' : 'hidden'}
           className="relative"
         >
           <div className="hidden lg:block absolute top-24 left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] h-[2px] bg-gradient-to-r from-accent/20 via-accent/40 to-accent/20" />
@@ -100,12 +101,15 @@ export default function MethodologySteps() {
                   className="relative text-center lg:text-center"
                 >
                   <div className="relative inline-flex mb-6">
+                    <span
+                      aria-hidden="true"
+                      className="section-index absolute -top-10 left-1/2 -translate-x-1/2 text-6xl"
+                    >
+                      {step.number}
+                    </span>
                     <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center relative z-10">
                       <Icon size={24} strokeWidth={1.6} className="text-accent" />
                     </div>
-                    <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center z-20">
-                      {step.number}
-                    </span>
                   </div>
 
                   <h3 className="heading-md mb-3">{step.title}</h3>

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView } from '@/lib/motion';
+import { motion, useInView, useReducedMotion } from '@/lib/motion';
 import { useRef } from 'react';
 import {
   Brain,
@@ -78,6 +78,7 @@ const cardVariants = {
 export default function ServicesBentoGrid() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
+  const reduce = useReducedMotion();
 
   return (
     <section id="servizi" className="section-padding bg-white/50 section-lazy section-wash">
@@ -94,8 +95,8 @@ export default function ServicesBentoGrid() {
         <motion.div
           ref={ref}
           variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
+          initial={reduce ? 'visible' : 'hidden'}
+          animate={reduce || isInView ? 'visible' : 'hidden'}
           className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5"
         >
           {services.map((service) => {

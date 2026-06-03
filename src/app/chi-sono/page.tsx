@@ -28,11 +28,11 @@ export default function ChiSonoPage() {
         subtitle="Metto al centro la persona, non la diagnosi. Ogni percorso parte da te, dalla tua storia e da quello che stai vivendo."
       />
 
-      <section className="section-container pb-16">
+      <section className="section-container pb-20">
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
-          <AnimatedSection className="lg:col-span-3 space-y-12">
+          <AnimatedSection className="lg:col-span-3 space-y-10">
             <div className="space-y-4">
-              <p className="body-md">
+              <p className="body-lg">
                 Sono Gaia Bresciani, <strong>psicologa e psicoterapeuta</strong>.
                 Ricevo a Credaro, in una sede facilmente raggiungibile anche da
                 Sarnico e dai comuni vicini del Lago d&apos;Iseo.
@@ -43,63 +43,97 @@ export default function ChiSonoPage() {
               </p>
             </div>
 
-            <div className="card-base p-6 bg-accent/[0.04] border-l-4 border-accent/30 space-y-3">
-              <h3 className="font-serif font-semibold text-base text-primary">
-                Perch&eacute; faccio questo lavoro
-              </h3>
-              <p className="body-md">
+            <figure className="relative pl-6 border-l-2 border-accent/40">
+              <span
+                aria-hidden="true"
+                className="absolute -left-1 -top-7 font-serif text-6xl leading-none text-accent/25 select-none"
+              >
+                &ldquo;
+              </span>
+              <blockquote className="font-serif text-xl sm:text-2xl leading-snug text-primary">
                 Ho scelto di diventare psicoterapeuta perch&eacute; credo che ognuno
                 meriti uno spazio in cui sentirsi ascoltato senza giudizio.
+              </blockquote>
+              <figcaption className="body-md mt-4">
                 So che chiedere aiuto &egrave; difficile &mdash; spesso chi arriva in
-                studio ci ha pensato a lungo prima di farlo.
-              </p>
-              <p className="body-md">
-                Il mio obiettivo &egrave; creare le condizioni perch&eacute; quel
-                primo passo non sia spaventoso, ma l&apos;inizio di un cambiamento
-                reale e sostenibile.
-              </p>
-            </div>
+                studio ci ha pensato a lungo prima di farlo. Il mio obiettivo &egrave;
+                creare le condizioni perch&eacute; quel primo passo non sia spaventoso,
+                ma l&apos;inizio di un cambiamento reale e sostenibile.
+              </figcaption>
+            </figure>
 
-            <div className="space-y-4">
-              <p className="body-md">
-                Mi sono formata in Psicologia Clinica e della Salute e sono
-                iscritta all&apos;
-                <a
-                  href="https://www.opl.it/psicologi/22433/Bresciani-Gaia-Miriam-Teresa"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent hover:underline"
-                >
-                  Albo Professionale degli Psicologi della Lombardia
-                </a>{' '}
-                (n. 22433).
-              </p>
-              <p className="body-md">
-                La specializzazione in <strong>Psicoterapia Psicodinamica
-                Adleriana</strong> presso l&apos;
-                <a
-                  href="https://www.scuolaadleriana.it/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent hover:underline"
-                >
-                  Istituto Alfred Adler
-                </a>{' '}
-                orienta il mio metodo: ascolto clinico, obiettivi condivisi
-                e rispetto dei tuoi tempi.
-              </p>
-            </div>
+            <dl className="border-t border-primary/[0.08] divide-y divide-primary/[0.08]">
+              <div className="grid sm:grid-cols-[150px_1fr] gap-1 sm:gap-6 py-4">
+                <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent pt-0.5">
+                  Formazione
+                </dt>
+                <dd className="body-md">Psicologia Clinica e della Salute.</dd>
+              </div>
+              <div className="grid sm:grid-cols-[150px_1fr] gap-1 sm:gap-6 py-4">
+                <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent pt-0.5">
+                  Albo
+                </dt>
+                <dd className="body-md">
+                  Iscritta all&apos;
+                  <a
+                    href="https://www.opl.it/psicologi/22433/Bresciani-Gaia-Miriam-Teresa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:underline"
+                  >
+                    Albo Professionale degli Psicologi della Lombardia
+                  </a>{' '}
+                  (n. 22433).
+                </dd>
+              </div>
+              <div className="grid sm:grid-cols-[150px_1fr] gap-1 sm:gap-6 py-4">
+                <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent pt-0.5">
+                  Specializzazione
+                </dt>
+                <dd className="body-md">
+                  Psicoterapia Psicodinamica Adleriana presso l&apos;
+                  <a
+                    href="https://www.scuolaadleriana.it/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:underline"
+                  >
+                    Istituto Alfred Adler
+                  </a>
+                  .
+                </dd>
+              </div>
+              <div className="grid sm:grid-cols-[150px_1fr] gap-1 sm:gap-6 py-4">
+                <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent pt-0.5">
+                  Approccio
+                </dt>
+                <dd className="body-md">
+                  Ascolto clinico, obiettivi condivisi e rispetto dei tuoi tempi.
+                </dd>
+              </div>
+            </dl>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.2} className="lg:col-span-2">
-            <div className="relative aspect-[3/4] max-w-[220px] mx-auto lg:max-w-[240px] rounded-2xl overflow-hidden shadow-soft-lg">
-              <Image
-                src="/assets/studio-psicologia-lago-iseo-sarnico.webp"
-                alt="Ritratto professionale Gaia Bresciani, psicologa psicoterapeuta a Sarnico e Lago d'Iseo"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 220px, 240px"
+          <AnimatedSection delay={0.2} className="lg:col-span-2 lg:sticky lg:top-28">
+            <div className="relative mx-auto max-w-[280px]">
+              <div
+                className="absolute -inset-5 -z-10 bg-accent/12 blur-2xl gpu"
+                style={{ borderRadius: '60% 40% 55% 45% / 55% 50% 50% 45%' }}
+                aria-hidden="true"
               />
+              <div className="photo-grade relative aspect-[3/4] overflow-hidden rounded-[180px_180px_24px_24px] shadow-soft-lg">
+                <Image
+                  src="/assets/studio-psicologia-lago-iseo-sarnico.webp"
+                  alt="Ritratto professionale Gaia Bresciani, psicologa psicoterapeuta a Sarnico e Lago d'Iseo"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 280px, 280px"
+                />
+              </div>
+              <div className="mt-4 flex items-center gap-3 text-sm text-primary/55">
+                <span className="h-px w-8 bg-accent/50" />
+                Studio di Credaro (BG)
+              </div>
             </div>
           </AnimatedSection>
         </div>
@@ -107,22 +141,26 @@ export default function ChiSonoPage() {
 
       <section className="section-container pb-16">
         <AnimatedSection>
+          <p className="eyebrow">Il metodo</p>
           <h2 className="heading-lg mb-10">Come lavoro</h2>
         </AnimatedSection>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
+              number: '01',
               icon: Handshake,
               title: 'Accoglienza',
               text: 'Il primo incontro serve a comprendere cosa stai vivendo: sintomi, contesto e bisogno principale.',
             },
             {
+              number: '02',
               icon: Target,
               title: 'Obiettivi concreti',
               text: 'Costruiamo un percorso sostenibile, con obiettivi realistici e una direzione clinica chiara.',
             },
             {
+              number: '03',
               icon: GraduationCap,
               title: 'Metodo integrato',
               text: 'Approccio psicodinamico adleriano, con possibilità di integrare EMDR quando indicato.',
@@ -131,12 +169,18 @@ export default function ChiSonoPage() {
             const Icon = item.icon;
             return (
               <AnimatedSection key={item.title} delay={i * 0.1}>
-                <div className="card-base p-7">
-                  <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+                <div className="card-base p-7 relative overflow-hidden h-full">
+                  <span
+                    aria-hidden="true"
+                    className="section-index absolute top-4 right-5 text-5xl"
+                  >
+                    {item.number}
+                  </span>
+                  <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4 relative z-10">
                     <Icon size={22} strokeWidth={1.6} className="text-accent" />
                   </div>
-                  <h3 className="heading-md mb-2">{item.title}</h3>
-                  <p className="body-md">{item.text}</p>
+                  <h3 className="heading-md mb-2 relative z-10">{item.title}</h3>
+                  <p className="body-md relative z-10">{item.text}</p>
                 </div>
               </AnimatedSection>
             );

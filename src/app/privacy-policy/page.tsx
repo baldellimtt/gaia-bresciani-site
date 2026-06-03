@@ -33,7 +33,7 @@ export default function PrivacyPolicyPage() {
                 </a><br />
                 Telefono:{' '}
                 <a href="tel:+393408389958" className="text-accent hover:underline">
-                  +39 340 8389 958
+                  +39 340 838 9958
                 </a><br />
                 P.IVA: 04558220168
               </p>

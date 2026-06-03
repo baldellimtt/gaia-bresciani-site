@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     title: 'Chi sono | Psicologa vicino Sarnico con studio a Credaro',
     description:
       'Approccio clinico adleriano ed EMDR, con percorsi personalizzati per ansia, relazioni, autostima e momenti di crisi.',
+    images: ['/assets/og-share.webp'],
   },
 };
 

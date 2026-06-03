@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     title: 'FAQ - Domande su psicoterapia e primo colloquio | Gaia Bresciani',
     description:
       'Risposte pratiche su psicoterapia: sedi, primo incontro, approccio clinico, durata del percorso e modalità online.',
+    images: ['/assets/og-share.webp'],
   },
 };
 

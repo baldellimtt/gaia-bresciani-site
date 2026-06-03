@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     title: 'Psicologa vicino Sarnico | Studio a Credaro',
     description:
       'Tempi di percorrenza, aree servite e prime informazioni utili per chi desidera raggiungere la sede di Credaro.',
+    images: ['/assets/og-share.webp'],
   },
 };
 

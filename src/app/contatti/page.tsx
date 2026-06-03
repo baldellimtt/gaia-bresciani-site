@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     title: 'Contatti | Studio a Credaro vicino Sarnico',
     description:
       'Contatti rapidi per fissare un primo colloquio e chiarire sede, orari e modalità del percorso.',
+    images: ['/assets/og-share.webp'],
   },
 };
 
@@ -23,7 +24,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Telefono',
-    value: '+39 340 8389 958',
+    value: '+39 340 838 9958',
     href: 'tel:+393408389958',
   },
   {

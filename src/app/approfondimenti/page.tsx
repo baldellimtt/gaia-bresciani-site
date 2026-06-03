@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     title: 'Approfondimenti | Psicologa Sarnico e Lago d\'Iseo | Gaia Bresciani',
     description:
       'Articoli pratici su ansia, stress e lavoro, burnout, relazioni, autostima, perfezionismo e adolescenza per capire meglio i sintomi e quando chiedere supporto psicologico.',
+    images: ['/assets/og-share.webp'],
   },
 };
 

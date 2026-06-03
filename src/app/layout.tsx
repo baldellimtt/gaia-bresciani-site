@@ -72,7 +72,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/assets/favicon.webp',
+    icon: [
+      { url: '/assets/favicon.ico', sizes: 'any' },
+      { url: '/assets/icon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/assets/icon-512.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: '/assets/apple-touch-icon.png',
   },
   manifest: '/manifest.json',
   other: {
@@ -85,6 +90,7 @@ function SchemaOrgJsonLd() {
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': 'https://www.gaiabrescianipsicologa.it/#person',
     name: 'Gaia Bresciani',
     jobTitle: 'Psicologa e Psicoterapeuta',
     description:

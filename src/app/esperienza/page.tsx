@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     title: 'Esperienza clinica e metodo | Gaia Bresciani Psicologa',
     description:
       'Metodo clinico chiaro e personalizzato, con studio a Credaro per chi cerca un riferimento vicino a Sarnico e basso Lago d\'Iseo.',
+    images: ['/assets/og-share.webp'],
   },
 };
 

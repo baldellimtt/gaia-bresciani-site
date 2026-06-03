@@ -63,6 +63,10 @@ export default function Hero() {
               ))}
             </h1>
 
+            <h2 className="text-lg lg:text-xl font-medium text-primary/70 max-w-xl">
+              Psicologa e Psicoterapeuta a Credaro, vicino a Sarnico e al Lago d&apos;Iseo
+            </h2>
+
             <p className="body-lg max-w-xl">
               Ricevo a Credaro e lavoro con adulti e coppie che stanno attraversando
               ansia, difficolt&agrave; relazionali, momenti di blocco o esperienze

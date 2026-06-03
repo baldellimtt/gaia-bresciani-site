@@ -95,7 +95,7 @@ export default function Footer() {
                   className="flex gap-3 text-sm hover:text-accent transition-colors"
                 >
                   <Phone size={16} className="text-accent shrink-0 mt-0.5" />
-                  +39 340 8389 958
+                  +39 340 838 9958
                 </a>
               </li>
               <li>

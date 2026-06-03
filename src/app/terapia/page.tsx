@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     title: 'Terapia individuale e di coppia | Gaia Bresciani',
     description:
       'Percorsi individuali e di coppia per ansia, relazioni, autostima e fasi di cambiamento, con metodo chiaro e personalizzato.',
+    images: ['/assets/og-share.webp'],
   },
 };
 

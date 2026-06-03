@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     title: 'EMDR per traumi e ansia vicino Sarnico | Gaia Bresciani',
     description:
       'EMDR a Credaro per traumi, ansia e blocchi emotivi, con valutazione iniziale e piano di lavoro personalizzato.',
+    images: ['/assets/og-share.webp'],
   },
 };
 

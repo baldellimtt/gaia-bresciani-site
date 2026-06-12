@@ -36,7 +36,7 @@ export default function Accordion({ items }: AccordionProps) {
               className="w-full flex items-start justify-between gap-4 p-5 sm:p-6 text-left group"
               aria-expanded={isOpen}
             >
-              <span className="font-serif font-semibold text-base sm:text-lg leading-snug text-primary group-hover:text-accent transition-colors pr-2">
+              <span className="font-serif font-semibold text-base sm:text-lg leading-snug text-primary group-hover:text-accent-deep transition-colors pr-2">
                 {item.question}
               </span>
               <ChevronDown

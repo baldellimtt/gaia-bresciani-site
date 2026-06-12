@@ -37,7 +37,7 @@ export default function SocialProofStrip() {
               </p>
             </div>
 
-            <span className="inline-flex items-center gap-1.5 text-xs font-medium text-accent group-hover:underline">
+            <span className="inline-flex items-center gap-1.5 text-xs font-medium text-accent-deep group-hover:underline">
               Vedi tutte
               <ExternalLink size={12} />
             </span>

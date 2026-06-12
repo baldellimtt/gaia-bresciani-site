@@ -61,7 +61,7 @@ export default function ApprofondimentiPage() {
                   </span>
                 </div>
 
-                <h2 className="font-serif font-semibold text-base leading-snug mb-3 group-hover:text-accent transition-colors">
+                <h2 className="font-serif font-semibold text-base leading-snug mb-3 group-hover:text-accent-deep transition-colors">
                   {article.title}
                 </h2>
 
@@ -73,14 +73,14 @@ export default function ApprofondimentiPage() {
                   {article.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[0.65rem] font-medium uppercase tracking-wider text-accent/70 bg-accent/[0.07] px-2.5 py-1 rounded-full"
+                      className="text-[0.65rem] font-medium uppercase tracking-wider text-accent-deep bg-accent/[0.07] px-2.5 py-1 rounded-full"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <span className="text-accent text-sm font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-accent-deep text-sm font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                   Leggi l&apos;articolo
                   <ArrowUpRight size={14} />
                 </span>

@@ -100,11 +100,11 @@ export default function FaqPage() {
             <Accordion items={faqItems} />
             <p className="text-sm text-primary/60 mt-8">
               Se vuoi informazioni pratiche sugli spostamenti, puoi vedere anche la pagina{' '}
-              <Link href="/psicologa-sarnico" className="text-accent hover:underline">
+              <Link href="/psicologa-sarnico" className="text-accent-deep hover:underline">
                 dedicata a Sarnico e al basso Lago d&apos;Iseo
               </Link>
               . Per una panoramica sui percorsi disponibili puoi consultare anche{' '}
-              <Link href="/terapia" className="text-accent hover:underline">
+              <Link href="/terapia" className="text-accent-deep hover:underline">
                 terapia individuale e di coppia
               </Link>
               .

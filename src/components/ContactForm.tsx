@@ -262,11 +262,11 @@ export default function ContactForm() {
           checked={data.privacy}
           onChange={handleChange}
           onBlur={() => handleBlur('privacy')}
-          className="mt-1 h-5 w-5 shrink-0 rounded border-primary/20 text-accent focus:ring-accent/30"
+          className="mt-1 h-5 w-5 shrink-0 rounded border-primary/20 text-accent-deep focus:ring-accent/30"
         />
         <span className="text-sm text-primary/60 leading-relaxed">
           Ho letto e accetto la{' '}
-          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-accent-deep hover:underline">
             Privacy Policy
           </a>
         </span>

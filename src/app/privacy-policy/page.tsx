@@ -28,11 +28,11 @@ export default function PrivacyPolicyPage() {
                 <strong>Dott.ssa Gaia Bresciani</strong> &ndash; Psicologa e Psicoterapeuta<br />
                 Via Piave 7, 24060 Credaro (BG)<br />
                 Email:{' '}
-                <a href="mailto:gaia.bresciani23@gmail.com" className="text-accent hover:underline">
+                <a href="mailto:gaia.bresciani23@gmail.com" className="text-accent-deep hover:underline">
                   gaia.bresciani23@gmail.com
                 </a><br />
                 Telefono:{' '}
-                <a href="tel:+393408389958" className="text-accent hover:underline">
+                <a href="tel:+393408389958" className="text-accent-deep hover:underline">
                   +39 340 838 9958
                 </a><br />
                 P.IVA: 04558220168
@@ -106,7 +106,7 @@ export default function PrivacyPolicyPage() {
                 Formspree (Formspree Inc., USA) per consentire la ricezione del messaggio
                 via email. Formspree agisce in qualit&agrave; di responsabile del trattamento.
                 I dati non vengono conservati oltre il tempo necessario all&apos;invio.{' '}
-                <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-accent-deep hover:underline">
                   Privacy Policy di Formspree
                 </a>.
               </p>
@@ -116,7 +116,7 @@ export default function PrivacyPolicyPage() {
                 Nella pagina Contatti, previo consenso dell&apos;utente, vengono caricate
                 mappe interattive fornite da Google LLC. Google pu&ograve; impostare cookie
                 e raccogliere dati secondo la propria informativa.{' '}
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-accent-deep hover:underline">
                   Privacy Policy di Google
                 </a>.
               </p>
@@ -128,7 +128,7 @@ export default function PrivacyPolicyPage() {
                 Per informazioni dettagliate sui cookie utilizzati, sulle categorie,
                 sulla gestione del consenso e sulle modalit&agrave; di revoca, consulta
                 la{' '}
-                <Link href="/cookie-policy" className="text-accent hover:underline">
+                <Link href="/cookie-policy" className="text-accent-deep hover:underline">
                   Cookie Policy
                 </Link>.
               </p>
@@ -172,7 +172,7 @@ export default function PrivacyPolicyPage() {
               </ul>
               <p className="body-md mt-3">
                 Le richieste possono essere inviate via email a{' '}
-                <a href="mailto:gaia.bresciani23@gmail.com" className="text-accent hover:underline">
+                <a href="mailto:gaia.bresciani23@gmail.com" className="text-accent-deep hover:underline">
                   gaia.bresciani23@gmail.com
                 </a>.
               </p>
@@ -184,7 +184,7 @@ export default function PrivacyPolicyPage() {
                 L&apos;utente ha il diritto di proporre reclamo all&apos;Autorit&agrave;
                 Garante per la protezione dei dati personali qualora ritenga che il
                 trattamento dei propri dati violi la normativa vigente:{' '}
-                <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" className="text-accent-deep hover:underline">
                   www.garanteprivacy.it
                 </a>.
               </p>
@@ -200,7 +200,7 @@ export default function PrivacyPolicyPage() {
             </div>
 
             <div className="pt-4">
-              <Link href="/cookie-policy" className="text-accent hover:underline font-medium">
+              <Link href="/cookie-policy" className="text-accent-deep hover:underline font-medium">
                 &larr; Consulta anche la Cookie Policy
               </Link>
             </div>

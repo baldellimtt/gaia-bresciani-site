@@ -38,7 +38,7 @@ export default function InsightsGrid() {
           </div>
           <Link
             href="/approfondimenti"
-            className="text-accent hover:text-accent-dark font-medium text-sm transition-colors flex items-center gap-1 self-start sm:self-auto"
+            className="text-accent-deep hover:text-primary font-medium text-sm transition-colors flex items-center gap-1 self-start sm:self-auto"
           >
             Vedi tutti
             <ArrowUpRight size={15} />
@@ -78,7 +78,7 @@ export default function InsightsGrid() {
                   </span>
                 </div>
 
-                <h3 className="font-serif font-semibold text-base leading-snug mb-3 group-hover:text-accent transition-[color,transform] duration-300 group-hover:translate-x-0.5">
+                <h3 className="font-serif font-semibold text-base leading-snug mb-3 group-hover:text-accent-deep transition-[color,transform] duration-300 group-hover:translate-x-0.5">
                   {article.title}
                 </h3>
 
@@ -86,7 +86,7 @@ export default function InsightsGrid() {
                   {article.excerpt}
                 </p>
 
-                <span className="mt-4 text-accent text-sm font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-[opacity,transform] duration-300 group-hover:translate-x-0.5">
+                <span className="mt-4 text-accent-deep text-sm font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-[opacity,transform] duration-300 group-hover:translate-x-0.5">
                   Leggi
                   <ArrowUpRight size={14} />
                 </span>

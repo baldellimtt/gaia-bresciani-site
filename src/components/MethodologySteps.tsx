@@ -75,7 +75,7 @@ export default function MethodologySteps() {
           </p>
           <p className="text-sm text-primary/60 mt-4">
             Se vuoi capire come raggiungere lo studio, puoi vedere anche{' '}
-            <Link href="/psicologa-sarnico" className="text-accent hover:underline">
+            <Link href="/psicologa-sarnico" className="text-accent-deep hover:underline">
               la pagina dedicata a Sarnico e al basso Lago d&apos;Iseo
             </Link>
             .

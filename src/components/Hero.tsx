@@ -54,7 +54,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: EASE, delay: 0.05 + i * 0.12 }}
                   >
                     {i === headlineLines.length - 1 ? (
-                      <span className="text-accent">{line}</span>
+                      <span className="text-accent-deep">{line}</span>
                     ) : (
                       line
                     )}

@@ -42,13 +42,13 @@ export default function RelatedArticles({ articles }: RelatedArticlesProps) {
                       {related.readTime}
                     </span>
                   </div>
-                  <h3 className="font-serif font-semibold text-base leading-snug mb-2 group-hover:text-accent transition-colors">
+                  <h3 className="font-serif font-semibold text-base leading-snug mb-2 group-hover:text-accent-deep transition-colors">
                     {related.title}
                   </h3>
                   <p className="text-sm text-primary/60 leading-relaxed flex-1 line-clamp-3">
                     {related.excerpt}
                   </p>
-                  <span className="mt-4 text-accent text-sm font-medium flex items-center gap-1">
+                  <span className="mt-4 text-accent-deep text-sm font-medium flex items-center gap-1">
                     Leggi
                     <ArrowUpRight size={14} />
                   </span>

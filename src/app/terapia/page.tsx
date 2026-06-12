@@ -98,7 +98,7 @@ export default function TerapiaPage() {
               </p>
               <p className="body-md">
                 Quando indicato, integro la{' '}
-                <Link href="/emdr" className="text-accent hover:underline">
+                <Link href="/emdr" className="text-accent-deep hover:underline">
                   terapia EMDR
                 </Link>{' '}
                 per elaborare traumi, blocchi emotivi e stati di allerta persistenti.

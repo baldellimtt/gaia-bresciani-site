@@ -65,13 +65,13 @@ export default function ChiSonoPage() {
 
             <dl className="border-t border-primary/[0.08] divide-y divide-primary/[0.08]">
               <div className="grid sm:grid-cols-[150px_1fr] gap-1 sm:gap-6 py-4">
-                <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent pt-0.5">
+                <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent-deep pt-0.5">
                   Formazione
                 </dt>
                 <dd className="body-md">Psicologia Clinica e della Salute.</dd>
               </div>
               <div className="grid sm:grid-cols-[150px_1fr] gap-1 sm:gap-6 py-4">
-                <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent pt-0.5">
+                <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent-deep pt-0.5">
                   Albo
                 </dt>
                 <dd className="body-md">
@@ -80,7 +80,7 @@ export default function ChiSonoPage() {
                     href="https://www.opl.it/psicologi/22433/Bresciani-Gaia-Miriam-Teresa"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-accent hover:underline"
+                    className="text-accent-deep hover:underline"
                   >
                     Albo Professionale degli Psicologi della Lombardia
                   </a>{' '}
@@ -88,7 +88,7 @@ export default function ChiSonoPage() {
                 </dd>
               </div>
               <div className="grid sm:grid-cols-[150px_1fr] gap-1 sm:gap-6 py-4">
-                <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent pt-0.5">
+                <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent-deep pt-0.5">
                   Specializzazione
                 </dt>
                 <dd className="body-md">
@@ -97,7 +97,7 @@ export default function ChiSonoPage() {
                     href="https://www.scuolaadleriana.it/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-accent hover:underline"
+                    className="text-accent-deep hover:underline"
                   >
                     Istituto Alfred Adler
                   </a>
@@ -105,7 +105,7 @@ export default function ChiSonoPage() {
                 </dd>
               </div>
               <div className="grid sm:grid-cols-[150px_1fr] gap-1 sm:gap-6 py-4">
-                <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent pt-0.5">
+                <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent-deep pt-0.5">
                   Approccio
                 </dt>
                 <dd className="body-md">

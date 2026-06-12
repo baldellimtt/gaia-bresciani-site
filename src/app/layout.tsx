@@ -160,7 +160,7 @@ function SchemaOrgJsonLd() {
         addressCountry: 'IT',
       },
     ],
-    geo: { '@type': 'GeoCoordinates', latitude: '45.6337', longitude: '9.9328' },
+    geo: { '@type': 'GeoCoordinates', latitude: '45.6670', longitude: '9.9310' },
     hasMap: 'https://www.google.com/maps/place/Gaia+Bresciani+Psicologa/',
     telephone: '+393408389958',
     email: 'gaia.bresciani23@gmail.com',

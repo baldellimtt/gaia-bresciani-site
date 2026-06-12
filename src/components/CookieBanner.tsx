@@ -75,7 +75,7 @@ export default function CookieBanner() {
                     Utilizziamo cookie tecnici necessari al funzionamento del sito e, con il tuo
                     consenso, cookie funzionali per le mappe interattive di Google Maps.
                     Puoi accettare, rifiutare o personalizzare le tue preferenze.{' '}
-                    <Link href="/cookie-policy" className="text-accent hover:underline">
+                    <Link href="/cookie-policy" className="text-accent-deep hover:underline">
                       Cookie Policy
                     </Link>
                   </p>
@@ -133,7 +133,7 @@ export default function CookieBanner() {
                 Scegli quali categorie di cookie autorizzare. I cookie tecnici sono sempre
                 attivi perch&eacute; necessari al funzionamento del sito.
                 Per maggiori informazioni consulta la{' '}
-                <Link href="/cookie-policy" className="text-accent hover:underline">
+                <Link href="/cookie-policy" className="text-accent-deep hover:underline">
                   Cookie Policy
                 </Link>.
               </p>

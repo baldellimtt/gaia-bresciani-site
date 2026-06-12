@@ -15,6 +15,8 @@ const config: Config = {
           DEFAULT: '#D1A684',
           light: '#E0C4A8',
           dark: '#B8875F',
+          /* Variante "funzionale" per testo e CTA: contrasto AA col bianco (4.8:1) */
+          deep: '#9C6644',
         },
       },
       fontFamily: {

@@ -107,7 +107,7 @@ export default function LocationCards() {
                       />
                     </motion.div>
                     {loc.primary && (
-                      <span className="absolute top-3 right-3 text-[0.65rem] font-bold uppercase tracking-widest text-accent bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                      <span className="absolute top-3 right-3 text-[0.65rem] font-bold uppercase tracking-widest text-accent-deep bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
                         Sede principale
                       </span>
                     )}
@@ -125,12 +125,12 @@ export default function LocationCards() {
                   </div>
 
                   <h3 className="heading-md mb-1 transition-transform duration-300 group-hover:translate-x-0.5">{loc.title}</h3>
-                  <p className="text-sm text-accent font-medium mb-3">
+                  <p className="text-sm text-accent-deep font-medium mb-3">
                     {loc.subtitle}
                   </p>
                   <p className="body-md flex-1">{loc.description}</p>
 
-                  <span className="mt-5 text-sm font-medium text-primary group-hover:text-accent transition-[color,transform] duration-300 flex items-center gap-1.5">
+                  <span className="mt-5 text-sm font-medium text-primary group-hover:text-accent-deep transition-[color,transform] duration-300 flex items-center gap-1.5">
                     {loc.linkLabel}
                     <span className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
                   </span>

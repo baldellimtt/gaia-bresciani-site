@@ -87,7 +87,7 @@ export default function ArticlePage({ params }: PageProps) {
               {article.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-[0.65rem] font-medium uppercase tracking-wider text-accent/70 bg-accent/[0.07] px-2.5 py-1 rounded-full"
+                  className="text-[0.65rem] font-medium uppercase tracking-wider text-accent-deep bg-accent/[0.07] px-2.5 py-1 rounded-full"
                 >
                   {tag}
                 </span>
@@ -154,19 +154,19 @@ export default function ArticlePage({ params }: PageProps) {
               <div className="card-base p-6 mb-6 bg-accent/[0.04]">
                 <p className="text-sm text-primary/65 leading-relaxed">
                   Se ti riconosci in quello che hai letto, puoi approfondire{' '}
-                  <Link href="/terapia" className="text-accent hover:underline">
+                  <Link href="/terapia" className="text-accent-deep hover:underline">
                     terapia individuale e di coppia
                   </Link>
                   , valutare se può esserti utile un lavoro{' '}
-                  <Link href="/emdr" className="text-accent hover:underline">
+                  <Link href="/emdr" className="text-accent-deep hover:underline">
                     EMDR
                   </Link>{' '}
                   oppure vedere come raggiungere lo studio dalla{' '}
-                  <Link href="/psicologa-sarnico" className="text-accent hover:underline">
+                  <Link href="/psicologa-sarnico" className="text-accent-deep hover:underline">
                     zona di Sarnico e del basso Lago d&apos;Iseo
                   </Link>
                   . Per informazioni e disponibilità, trovi i riferimenti nella pagina{' '}
-                  <Link href="/contatti" className="text-accent hover:underline">
+                  <Link href="/contatti" className="text-accent-deep hover:underline">
                     Contatti
                   </Link>
                   .
@@ -174,7 +174,7 @@ export default function ArticlePage({ params }: PageProps) {
               </div>
               <Link
                 href="/approfondimenti"
-                className="inline-flex items-center gap-2 text-sm font-medium text-primary/60 hover:text-accent transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-primary/60 hover:text-accent-deep transition-colors"
               >
                 <ArrowLeft size={15} />
                 Tutti gli approfondimenti

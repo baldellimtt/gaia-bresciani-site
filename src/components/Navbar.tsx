@@ -3,10 +3,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from '@/lib/motion';
 import Link from 'next/link';
-import { Phone } from 'lucide-react';
+import { Phone, MessageCircle } from 'lucide-react';
 
-const MIODOTTORE_BOOKING_URL =
-  'https://www.miodottore.it/gaia-miriam-teresa-bresciani/psicoterapeuta-psicologo-clinico-psicologo/brescia';
+const WHATSAPP_URL =
+  'https://wa.me/393408389958?text=' +
+  encodeURIComponent('Salve, vorrei informazioni per un primo colloquio.');
 
 const navLinks = [
   { href: '/chi-sono', label: 'Chi sono' },
@@ -84,12 +85,14 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href={MIODOTTORE_BOOKING_URL}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-accent gap-2 py-2.5 px-5 text-[0.85rem]"
+              aria-label="Scrivi su WhatsApp alla Dott.ssa Gaia Bresciani"
             >
-              Prenota visita
+              <MessageCircle size={16} strokeWidth={2} />
+              Scrivimi su WhatsApp
             </a>
           </div>
 
@@ -157,7 +160,7 @@ export default function Navbar() {
                       href={link.href}
                       onClick={closeMenu}
                       className="block text-primary py-3 text-lg font-medium border-b border-primary/[0.06]
-                                 hover:text-accent transition-colors"
+                                 hover:text-accent-deep transition-colors"
                     >
                       {link.label}
                     </Link>

@@ -46,7 +46,7 @@ export default function EmdrPage() {
                 href="https://emdr.it/emdr-2023/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent font-semibold hover:underline"
+                className="text-accent-deep font-semibold hover:underline"
               >
                 EMDR
               </a>{' '}
@@ -60,20 +60,20 @@ export default function EmdrPage() {
                 href="https://emdr.it/terapeuti/lombardia/provincia/bergamo/comune/credaro/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:underline"
+                className="text-accent-deep hover:underline"
               >
                 terapeuti EMDR della Lombardia
               </a>.
             </p>
             <p className="body-md">
               Per informazioni su sedi e spostamenti, visita la pagina{' '}
-              <Link href="/psicologa-sarnico" className="text-accent hover:underline">
+              <Link href="/psicologa-sarnico" className="text-accent-deep hover:underline">
                 zona Sarnico e Lago d&apos;Iseo
               </Link>.
             </p>
             <p className="body-md">
               Se desideri un primo confronto prima di iniziare, puoi usare la pagina{' '}
-              <Link href="/contatti" className="text-accent hover:underline">
+              <Link href="/contatti" className="text-accent-deep hover:underline">
                 contatti
               </Link>{' '}
               per indicare disponibilità e sede preferita.
@@ -132,7 +132,7 @@ export default function EmdrPage() {
             </p>
             <p className="body-md">
               Se vuoi una panoramica più ampia sul lavoro clinico, puoi leggere anche la pagina{' '}
-              <Link href="/terapia" className="text-accent hover:underline">
+              <Link href="/terapia" className="text-accent-deep hover:underline">
                 terapia individuale e di coppia
               </Link>.
             </p>

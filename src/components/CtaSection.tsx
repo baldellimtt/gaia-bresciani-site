@@ -24,7 +24,7 @@ export default function CtaSection() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href="tel:+393408389958"
-                  className="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-accent-light hover:shadow-soft active:scale-[0.98]"
+                  className="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent-deep text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-accent-dark hover:shadow-soft active:scale-[0.98]"
                 >
                   <Phone size={17} />
                   Prenota un colloquio

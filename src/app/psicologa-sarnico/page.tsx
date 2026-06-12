@@ -114,7 +114,7 @@ export default function ZonaSarnicoPage() {
               <p className="body-md">
                 Quando indicato, puo essere integrato un lavoro specifico sul
                 trauma con{' '}
-                <Link href="/emdr" className="text-accent hover:underline">
+                <Link href="/emdr" className="text-accent-deep hover:underline">
                   approccio EMDR
                 </Link>.
               </p>
@@ -145,7 +145,7 @@ export default function ZonaSarnicoPage() {
             <p className="body-md">
               Se preferisci evitare lo spostamento, e possibile iniziare
               o proseguire il percorso con{' '}
-              <Link href="/contatti" className="text-accent hover:underline">
+              <Link href="/contatti" className="text-accent-deep hover:underline">
                 colloqui online
               </Link>{' '}
               sicuri e riservati.
@@ -160,11 +160,11 @@ export default function ZonaSarnicoPage() {
             <Clock size={20} className="text-accent shrink-0 mt-0.5" />
             <p className="body-md">
               Approfondisci i trattamenti:{' '}
-              <Link href="/terapia" className="text-accent hover:underline">
+              <Link href="/terapia" className="text-accent-deep hover:underline">
                 terapia individuale e di coppia
               </Link>{' '}
               e{' '}
-              <Link href="/emdr" className="text-accent hover:underline">
+              <Link href="/emdr" className="text-accent-deep hover:underline">
                 terapia EMDR
               </Link>.
             </p>
